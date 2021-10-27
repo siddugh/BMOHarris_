@@ -6,10 +6,13 @@
 //
 
 import UIKit
-
+protocol TransactionCollectionViewDelegate: AnyObject {
+  func selectedTransaction(transaction: TransactionModel)
+}
 class TransactionCollectionView: UICollectionView {
 
   var transactions: [TransactionModel]?
+  weak var transDelegate: TransactionCollectionViewDelegate?
   
   override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
     super.init(frame: frame, collectionViewLayout: layout)
@@ -57,7 +60,9 @@ extension TransactionCollectionView: UICollectionViewDataSource, UICollectionVie
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+    print("Show Transactions Details.....")
+    guard let transaction = transactions?[indexPath.item]  else { return }
+    transDelegate?.selectedTransaction(transaction: transaction)
   }
   
 }

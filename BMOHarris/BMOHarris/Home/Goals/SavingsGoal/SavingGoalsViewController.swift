@@ -47,8 +47,8 @@ class SavingGoalsViewController: UIViewController {
     view.addSubview(addButton)
     addButton.addTarget(self, action: #selector(addnewGoal), for: .touchUpInside)
     addButton.translatesAutoresizingMaskIntoConstraints = false
-    addButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-    addButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80).isActive = true
+    addButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
+    addButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
     
     let lbl = UILabel()
     view.addSubview(lbl)
@@ -130,7 +130,7 @@ class SavingGoalsViewController: UIViewController {
     goalsCollectionsView.translatesAutoresizingMaskIntoConstraints = false
     goalsCollectionsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
     goalsCollectionsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15).isActive = true
-    goalsCollectionsView.topAnchor.constraint(equalTo: view.topAnchor, constant: 300).isActive = true
+    goalsCollectionsView.topAnchor.constraint(equalTo: view.topAnchor, constant: 260).isActive = true
     goalsCollectionsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
     
     goalsCollectionsView.backgroundColor = .white
@@ -158,8 +158,7 @@ extension SavingGoalsViewController: UICollectionViewDelegate, UICollectionViewD
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GoalCell.reuseIdentifier, for: indexPath) as! GoalCell
     let goal = goals[indexPath.section]
-    //cell.removeShadow()
-    //cell.configureCell(goalModel: goal[indexPath.row])
+    cell.configure(goal[indexPath.row], indexPath: indexPath)
     return cell
   }
   
@@ -200,7 +199,12 @@ extension SavingGoalsViewController: UICollectionViewDelegate, UICollectionViewD
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     print("Selected Section \(indexPath.section)")
-    
+
+    if indexPath.section == 0, indexPath.item == 0 {
+      let controller = DepositGoalAmountViewController()
+      self.navigationController?.pushViewController(controller, animated: true)
+    }
+
     if indexPath.section == 1 {
       let controller = DepositGoalAmountViewController()
       self.navigationController?.pushViewController(controller, animated: true)

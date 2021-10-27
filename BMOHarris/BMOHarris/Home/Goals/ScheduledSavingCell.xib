@@ -87,6 +87,12 @@
                 <constraint firstItem="UGd-br-P9Q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fax-W7-eOG"/>
             </constraints>
             <size key="customSize" width="364" height="85"/>
+            <connections>
+                <outlet property="logoImageView" destination="o1I-kn-mEq" id="sKe-qU-evS"/>
+                <outlet property="price" destination="CPU-ez-j2J" id="B2i-ft-YO8"/>
+                <outlet property="saving" destination="NL7-wz-YrT" id="PWI-rj-wzX"/>
+                <outlet property="timeStamp" destination="4gR-aa-Ajm" id="9ss-s2-Cfb"/>
+            </connections>
             <point key="canvasLocation" x="236.23188405797103" y="49.888392857142854"/>
         </collectionViewCell>
     </objects>

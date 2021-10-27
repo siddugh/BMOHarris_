@@ -48,8 +48,9 @@ class NewGoalListView: UIView {
     collectionView.register(NewGoalCell.nib, forCellWithReuseIdentifier: NewGoalCell.reuseIdentifier)
     collectionView.backgroundColor = .clear
     collectionView.reloadData()
-    
   }
+  
+  
 
 }
 

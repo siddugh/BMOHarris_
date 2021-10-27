@@ -7,8 +7,7 @@
 
 import UIKit
 
-class TransactionsViewController: UIViewController {
-
+class TransactionsViewController: UIViewController{
     var transactionsViewModel: TransactionViewModel!
   
     override func viewDidLoad() {
@@ -41,6 +40,8 @@ class TransactionsViewController: UIViewController {
     transactionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 15).isActive = true
     transactionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     transactionView.enableScrolling(bEnable: true)
+    transactionView.selectedItem = self
+    transactionView.transactionCollectionView.transDelegate = self
   }
   
   func enableSrolling() {
@@ -48,3 +49,22 @@ class TransactionsViewController: UIViewController {
   }
     
 }
+
+extension TransactionsViewController: SelectedItemDelegate {
+  func selectedItem(item: TransactionModel) {
+   let controller = TransactionDetailViewController()
+    navigationController?.pushViewController(controller, animated: true)
+  }
+}
+
+extension TransactionsViewController: TransactionCollectionViewDelegate {
+  func selectedTransaction(transaction: TransactionModel) {
+    let controller = TransactionDetailViewController()    
+    navigationController?.pushViewController(controller, animated: true)
+  }  
+}
+
+
+
+
+

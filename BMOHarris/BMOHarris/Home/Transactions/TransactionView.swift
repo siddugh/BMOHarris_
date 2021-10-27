@@ -12,11 +12,16 @@ protocol TransactionViewDelegate: AnyObject {
   func viewAll()
 }
 
+protocol SelectedItemDelegate: AnyObject {
+  func selectedItem(item: TransactionModel)
+}
+
 class TransactionView: UIView {
 
   var transactionsViewModel: TransactionViewModel?
   var transactionCollectionView: TransactionCollectionView!
   weak var delegate: TransactionViewDelegate?
+  weak var selectedItem: SelectedItemDelegate?
   
   let viewAllButton = UIButton()
   
@@ -87,7 +92,7 @@ class TransactionView: UIView {
     transactionCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     transactionCollectionView.topAnchor.constraint(equalTo: labelBGView.bottomAnchor, constant: 10).isActive = true
     transactionCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true
-    
+    transactionCollectionView.transDelegate = self
     //self.transactionsViewModel
   }
   
@@ -133,4 +138,11 @@ class TransactionView: UIView {
     transactionCollectionView.isScrollEnabled = bEnable
   }
   
+}
+
+
+extension TransactionView: TransactionCollectionViewDelegate {
+  func selectedTransaction(transaction: TransactionModel) {
+    selectedItem?.selectedItem(item: transaction)
+  }
 }

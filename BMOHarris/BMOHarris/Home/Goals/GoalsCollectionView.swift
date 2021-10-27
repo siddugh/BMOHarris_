@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol GoalsCollectionViewDelegate: AnyObject {
+  func showDetailsOf(goal: GoalModel)
+}
+
 class GoalsCollectionView: UICollectionView {
+  
+  var goals: [GoalModel] = [GoalModel]()
+  weak var goalsDelegate: GoalsCollectionViewDelegate?
   
   override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
     super.init(frame: frame, collectionViewLayout: layout)
@@ -22,6 +29,7 @@ class GoalsCollectionView: UICollectionView {
   
   private func setupView() {
     self.showsHorizontalScrollIndicator = false
+    self.showsVerticalScrollIndicator = false
     self.delegate = self
     self.dataSource = self
     self.register(GoalCell.nib, forCellWithReuseIdentifier: GoalCell.reuseIdentifier)
@@ -29,6 +37,10 @@ class GoalsCollectionView: UICollectionView {
     self.backgroundColor = .white
   }
   
+  func loadGoals(goals: [GoalModel]) {
+    self.goals = goals
+    reloadData()
+  }
   //Mark: - Public functions
   
 }
@@ -36,13 +48,13 @@ class GoalsCollectionView: UICollectionView {
 extension GoalsCollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-    return 25
+    return goals.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GoalCell.reuseIdentifier, for: indexPath) as! GoalCell
-    
+    cell.configure(goals[indexPath.item], indexPath: indexPath)
     return  cell
   }
   
@@ -52,6 +64,10 @@ extension GoalsCollectionView: UICollectionViewDataSource, UICollectionViewDeleg
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    if indexPath.item == 1 {
+      print("SHow emergency view....")
+      goalsDelegate?.showDetailsOf(goal: goals[indexPath.item])
+    }
     
   }
   

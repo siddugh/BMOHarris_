@@ -51,6 +51,8 @@ class NewGoalView: UIView {
     let newgoalsview = NewGoalListView(frame: goalView.frame,viewModel: newGoalViewModel)
     goalView.addSubview(newgoalsview)
     newgoalsview.frame = goalView.bounds
+    
+    newgoalsview.collectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .left, animated: true)
   }
     
     

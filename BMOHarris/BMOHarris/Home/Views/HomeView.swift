@@ -96,8 +96,8 @@ class HomeView: UIView {
   }
   
   private func addGoalView() {
-    let goalModel = NewGoalModel()
-    goalView = GoalView(goalViewModel: GoalsViewModel(newgoalmodel: [goalModel]))
+    let goalModel = DataProvider().getGoals()
+    goalView = GoalView(goalViewModel: GoalsViewModel(goals: goalModel))
     self.addSubview(goalView)
     goalView.enableScrolling(bEnable:true)
     goalView.translatesAutoresizingMaskIntoConstraints = false
@@ -106,12 +106,13 @@ class HomeView: UIView {
     goalView.topAnchor.constraint(equalTo: transactionView.bottomAnchor, constant: 15).isActive = true
     goalView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     
-    goalView.showViewALlButton()
+    goalView.showViewALlButton()    
     self.layoutIfNeeded()
   }
   
   private func addPaymentView() {
-    scheduledPaymentView = ScheduledPaymentView(paymentViewModel: PaymentViewModel())
+    let payments = DataProvider().getScheduledPayments()
+    scheduledPaymentView = ScheduledPaymentView(paymentViewModel: PaymentViewModel(payments: payments))
     self.addSubview(scheduledPaymentView)
     scheduledPaymentView.enableScrolling(bEnable: false)
     scheduledPaymentView.translatesAutoresizingMaskIntoConstraints = false

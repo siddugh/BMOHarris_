@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol ScheduledPaymentViewDelegate: AnyObject {
+  func showAllScheduledPayments()
+}
+
 class ScheduledPaymentView: UIView {
 
   var paymentViewModel: PaymentViewModel?
   var paymentCollectionView: PaymentCollectionView!
+  
+  weak var delegate: ScheduledPaymentViewDelegate?
   
   let viewAllButton = UIButton()
   
@@ -27,6 +33,7 @@ class ScheduledPaymentView: UIView {
     self.paymentViewModel = paymentViewModel
     addPaymentView()
     self.backgroundColor = .white
+    paymentCollectionView.loadPayments(payments: paymentViewModel.payments)
   }
   
   private func addPaymentView() {
@@ -111,7 +118,7 @@ class ScheduledPaymentView: UIView {
   }
   
   @objc func viewAllAction() {
-    print("viewAllAction...")
+    delegate?.showAllScheduledPayments()
   }
   
   func enableScrolling(bEnable: Bool) {

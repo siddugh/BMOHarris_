@@ -20,6 +20,9 @@ class GoalCell: UICollectionViewCell, ConfigurableCell {
   @IBOutlet weak var nextPayAmtLabel:UILabel!
   @IBOutlet weak var comletedOnLabel:UILabel!
 
+  var optionsView: [OptionView] = [OptionView]()
+  var numOfSelectedOptions: Int = 0
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -45,13 +48,53 @@ class GoalCell: UICollectionViewCell, ConfigurableCell {
       let optionView = OptionView(frame: frame)
       instalmentsScrollView.addSubview(optionView)
       x += 20
-      optionView.selectView()
+      //optionView.selectView()
+      optionsView.append(optionView)
     }
   }
   
-  
-  func configure(_ item: GoalModel, indexPath: IndexPath) {
+  func reset() {
+    containerView.backgroundColor = .white
+    categoryBgView.backgroundColor = .white
     
+    categoryLabel.text = ""
+    goalLabel.text = ""
+    nextPaymentLabel.text = ""
+    totalAmountLabel.text = ""
+    nextPayAmtLabel.text = ""
+    comletedOnLabel.text = ""
+    resetOptionsView()
+  }
+  
+  func resetOptionsView() {
+    optionsView.forEach { optionView in
+      optionView.unSelectView()
+    }
+  }
+
+  func setOptionsView(optionsNum: Int) {
+    
+    if optionsNum < optionsView.count {
+      for i in 0..<optionsNum {
+        optionsView[i].selectView()
+      }
+    }    
+  }
+
+  func configure(_ item: GoalModel, indexPath: IndexPath) {
+    reset()
+    containerView.backgroundColor  = UIColor(hexString: item.categoryColor, alpha: item.colorOpacity)
+    
+    categoryLabel.text = item.category
+    goalLabel.text = item.goal
+    nextPaymentLabel.text = item.nextPayment
+    totalAmountLabel.text = item.totalSavings
+    nextPayAmtLabel.text = item.nextPaymentAmount
+    comletedOnLabel.text = item.completedOn
+    
+    numOfSelectedOptions = item.payedInstalments
+    setOptionsView(optionsNum: numOfSelectedOptions)
+
   }
 
 }

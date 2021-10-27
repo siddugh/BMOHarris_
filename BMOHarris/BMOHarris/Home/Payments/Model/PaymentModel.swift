@@ -8,6 +8,12 @@
 import Foundation
 
 
-struct PaymentModel {
-  
+struct PaymentModel {  
+  var transferTo: String
+  var logoImage: String
+  var timeStamp: String
+  var category: String
+  var categorybgColor: String
+  var colorOpacity: Double
+  var price: String
 }

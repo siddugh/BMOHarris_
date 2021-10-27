@@ -27,6 +27,10 @@ class GoalView: UIView {
     self.goalViewModel = goalViewModel
     addGoalView()
     self.backgroundColor = .white
+    if let goals = goalViewModel.goals {
+      goalsCollectionView.loadGoals(goals: goals)
+    }
+    
   }
 
   private func addGoalView() {
@@ -80,6 +84,7 @@ class GoalView: UIView {
     goalsCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     goalsCollectionView.topAnchor.constraint(equalTo: labelBGView.bottomAnchor, constant: 15).isActive = true
     goalsCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+    
     
     
     

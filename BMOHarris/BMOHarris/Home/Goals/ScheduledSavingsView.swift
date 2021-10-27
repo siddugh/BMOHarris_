@@ -78,8 +78,7 @@ class ScheduledSavingsView: UIView {
     scheduledSavCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     scheduledSavCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     scheduledSavCollectionView.topAnchor.constraint(equalTo: labelBGView.bottomAnchor, constant: 10).isActive = true
-    scheduledSavCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true
-    
+    scheduledSavCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true            
   }
 
   func showViewALlButton() {

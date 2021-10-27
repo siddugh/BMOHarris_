@@ -15,7 +15,14 @@ class ViewFactory {
     headerView.addMenuButton()
     return headerView
   }
-  
+
+  func getTransDetailHeader() -> Header {
+    let headerView = UINib(nibName: "Header", bundle: nil).instantiate(withOwner: nil, options: nil).first as! Header
+    headerView.titleLabel.text = "Transactions"
+    headerView.titleLabel.font =  UIFont(name: "Rubik-Medium", size: 12)
+    return headerView
+  }
+
   func getHeaderViewWithbackButton() -> Header {
     let headerView = UINib(nibName: "Header", bundle: nil).instantiate(withOwner: nil, options: nil).first as! Header    
     return headerView
@@ -52,7 +59,5 @@ class ViewFactory {
     headerView.titleLabel.textColor = UIColor(hexString: "4D31BE",alpha: 1.0)
 
     return headerView
-
   }
-
 }

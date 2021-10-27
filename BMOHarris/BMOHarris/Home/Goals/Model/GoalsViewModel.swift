@@ -10,8 +10,15 @@ import UIKit
 class GoalsViewModel {
   
   var newGoals: [NewGoalModel]?
-  
+
   init(newgoalmodel: [NewGoalModel]) {
     self.newGoals = newgoalmodel
   }
+  
+  var goals: [GoalModel]?
+  
+  init(goals: [GoalModel]) {
+    self.goals = goals
+  }
+
 }

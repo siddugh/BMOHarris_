@@ -83,7 +83,7 @@ class AccountsSummaryView: UIView {
     stackViewContainer.translatesAutoresizingMaskIntoConstraints = false
     stackViewContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     stackViewContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-    stackViewContainer.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 25).isActive = true
+    stackViewContainer.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 15).isActive = true
     stackViewContainer.heightAnchor.constraint(equalToConstant: 25).isActive = true
     stackViewContainer.backgroundColor = .yellow
 
@@ -147,13 +147,14 @@ class AccountsSummaryView: UIView {
   }
   
   private func addTransactionView() {
-    transactionView = TransactionView(transactionsViewModel: TransactionViewModel())
+    let transactions = DataProvider().getTransactions()
+    transactionView = TransactionView(transactionsViewModel: TransactionViewModel(transactionModel: transactions))
     self.addSubview(transactionView)
     transactionView.enableScrolling(bEnable: false)
     transactionView.translatesAutoresizingMaskIntoConstraints = false
     transactionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     transactionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-    transactionView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 15).isActive = true
+    transactionView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 55).isActive = true
     transactionView.heightAnchor.constraint(equalToConstant: 310).isActive = true
     
     transactionView.showViewALlButton()
@@ -187,7 +188,10 @@ class AccountsSummaryView: UIView {
     
     goalCollectionView.backgroundColor = .white
     
-    let scheduledSavView = ScheduledSavingsView(goalsViewModel: GoalsViewModel(newgoalmodel: [NewGoalModel()]))
+    let goals = DataProvider().getGoals()
+    goalCollectionView.loadGoals(goals: goals)
+    
+    let scheduledSavView = ScheduledSavingsView(goalsViewModel: GoalsViewModel(goals: goals))
     self.addSubview(scheduledSavView)    
     scheduledSavView.frame = CGRect(x: 0, y: 225, width: self.bounds.width, height: 200)
     scheduledSavView.enableScrolling(bEnable: false)

@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
       setupUI()
       self.perform(#selector(updatePhysicalMessage), with: nil, afterDelay: 0.0)
+      self.perform(#selector(setDelayedDelegate), with: nil, afterDelay: 0.3)
+      
     }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -164,6 +166,19 @@ class HomeViewController: UIViewController {
     super.viewDidDisappear(animated)
     print("viewDidDisappear....")
   }
+  
+  @objc func setDelayedDelegate() {
+    homeCell?.homeView.cardView.delegate = self
+    homeCell?.homeView.cardView.showMoreDelegate = self
+    homeCell?.homeView.serviceView.delegate = self
+    homeCell?.homeView.transactionView.delegate = self
+    homeCell?.homeView.transactionView.selectedItem = self
+    homeCell?.homeView.scheduledPaymentView.delegate = self
+    homeCell?.homeView.goalView.goalsCollectionView.goalsDelegate = self
+    homeCell?.homeView.spendAnalysisView.transactionCollectionView.transDelegate = self
+    homeCell?.homeView.spendAnalysisView.delegate = self
+
+  }
 }
 
 
@@ -193,10 +208,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath) as! HomeCell
-    cell.homeView.cardView.delegate = self
-    cell.homeView.cardView.showMoreDelegate = self
-    cell.homeView.serviceView.delegate = self
-    cell.homeView.transactionView.delegate = self
     homeCell = cell
     return cell
   }
@@ -278,16 +289,55 @@ extension HomeViewController: TransactionViewDelegate {
   func viewAll() {
     let transactions = DataProvider().getTransactions()
    let controller = TransactionsViewController(transactionsViewModel: TransactionViewModel(transactionModel: transactions))
+    let nv = UINavigationController(rootViewController: controller)
+    nv.setNavigationBarHidden(true, animated: false)
+    navigationController?.present(nv, animated: true, completion: nil)
+  }
+}
+
+extension HomeViewController: SelectedItemDelegate {
+  func selectedItem(item: TransactionModel) {
+    let controller = TransactionDetailViewController()
+    navigationController?.pushViewController(controller, animated: true)
+  }
+}
+
+extension HomeViewController: ScheduledPaymentViewDelegate {
+  func showAllScheduledPayments() {
+    print("Show all scheduled payments...")
+    let controller = ScheduledPaymentViewController()
     navigationController?.present(controller, animated: true, completion: nil)
   }
 }
 
+extension HomeViewController: GoalsCollectionViewDelegate {
+  func showDetailsOf(goal: GoalModel) {
+    let controller = DepositGoalAmountViewController()
+    self.navigationController?.pushViewController(controller, animated: true)
+  }
+}
+
+extension HomeViewController: TransactionCollectionViewDelegate {
+  func selectedTransaction(transaction: TransactionModel) {
+    let controller = TransactionDetailViewController()
+    navigationController?.pushViewController(controller, animated: true)
+  }
+}
+
+extension HomeViewController: SpendAnalysisViewDelegate {
+  func showAllTransactions() {
+    let controller = SpendAnalysisViewController()
+    navigationController?.present(controller, animated: true, completion: nil)
+  }
+}
+
+
 extension HomeViewController {
-  func showAccountAndCard() {
-   
+  func showAccountAndCard() {   
     let aacCardViewCotroller = AccountAndCardServiceController()
     navigationController?.pushViewController(aacCardViewCotroller, animated: true)
   }
 }
+
 
 

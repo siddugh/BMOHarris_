@@ -9,8 +9,12 @@ import UIKit
 
 class ScheduledSavCollectionView: UICollectionView {
   
+  
+  var savings:[SavingModel] = [SavingModel]()
+  
   override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
     super.init(frame: frame, collectionViewLayout: layout)
+    addScheduledSavings()
     setupView()
   }
   
@@ -29,20 +33,24 @@ class ScheduledSavCollectionView: UICollectionView {
     self.backgroundColor = .white
   }
   
-  //Mark: - Public functions
+  func addScheduledSavings() {
+    
+    savings.append(SavingModel(saving: "Round up", timeStamp: "14:34", image: "roundup", price: "+$8.05"))
+    savings.append(SavingModel(saving: "Recurring transfer", timeStamp: "13:27", image: "recurring", price: "+$25.00"))
+  }
   
 }
 
 extension ScheduledSavCollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-    return 25
+    return savings.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScheduledSavingCell.reuseIdentifier, for: indexPath) as! ScheduledSavingCell
-    
+    cell.configure(savings[indexPath.item], indexPath: indexPath)
     return  cell
   }
   

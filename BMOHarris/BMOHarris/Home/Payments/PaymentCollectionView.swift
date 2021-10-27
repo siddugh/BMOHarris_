@@ -8,6 +8,8 @@
 import UIKit
 
 class PaymentCollectionView: UICollectionView {
+    
+  var payments: [PaymentModel] = [PaymentModel]()
   
   override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
     super.init(frame: frame, collectionViewLayout: layout)
@@ -29,18 +31,22 @@ class PaymentCollectionView: UICollectionView {
   
   //Mark: - Public functions
   
+  func loadPayments(payments: [PaymentModel]) {
+    self.payments = payments
+    reloadData()
+  }
 }
 
 extension PaymentCollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-    return 25
+    return payments.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PaymentCell.reuseIdentifier, for: indexPath) as! PaymentCell
-    
+    cell.configure(payments[indexPath.item], indexPath: indexPath)
     return  cell
   }
   
@@ -49,8 +55,7 @@ extension PaymentCollectionView: UICollectionViewDataSource, UICollectionViewDel
     return CGSize(width: collectionView.bounds.width, height: 60)
   }
   
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {    
   }
   
 }

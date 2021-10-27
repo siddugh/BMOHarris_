@@ -10,4 +10,12 @@ import Foundation
 
 class PaymentViewModel {
   
+  var payments: [PaymentModel] = [PaymentModel]()
+  init() {
+    
+  }
+  
+  init(payments: [PaymentModel]) {
+    self.payments = payments
+  }
 }

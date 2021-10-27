@@ -120,7 +120,16 @@ class SpendAnalysis: UIView {
     var xPos: Int = 0
     for i in  0..<cagagories.count {
       let catagory = cagagories[i]
-      let catViewWidth = (totalSpaceToDraw * Int(catagory.percentage)) / 100
+      var catViewWidth = (totalSpaceToDraw * Int(catagory.percentage)) / 100
+      if catViewWidth < 25 {
+        catViewWidth = 25
+      }
+      if catViewWidth > 100 {
+        catViewWidth = 100
+      }
+
+      
+      print("Category : \(catagory.category) ,  width: \(catViewWidth)")
       let frm = CGRect(x: xPos, y: 0, width: catViewWidth, height: 57)
       
       let catView = SpendCategoryView(frame: frm)
@@ -139,47 +148,8 @@ class SpendAnalysis: UIView {
       stackView.addArrangedSubview(categoryView)
       categoryView.setCategory(color: UIColor(hexString: catagory.color), txt: catagory.category)
       
-      xPos += catViewWidth + 10
+      xPos += catViewWidth + 15
     }
-    
-    
-    
-//
-//
-//    let clothingCatWidth = (totalSpaceToDraw * 13) / 100
-//    let frm = CGRect(x: 0, y: 0, width: clothingCatWidth, height: 57)
-//    let clothingView = SpendCategoryView(frame: frm)
-//    clothingView.decorateView(price: "$129", percentage: "13%", color: UIColor(hexString: "76BFD5"))
-//
-//    self.addSubview(clothingView)
-//
-//
-//
-//    let diningCatWidth = (totalSpaceToDraw * 21) / 100
-//    let diningView = UIView()
-//    diningView.backgroundColor = UIColor(hexString: "70C25A")
-//    self.addSubview(diningView)
-//    diningView.frame = CGRect(x: clothingCatWidth + 10, y: 0, width: diningCatWidth, height: 57)
-//
-//
-//
-//    let utilityCatWidth = (totalSpaceToDraw * 6) / 100
-//    let uitilityView = UIView()
-//    uitilityView.backgroundColor = UIColor(hexString: "9A7EC5")
-//    self.addSubview(uitilityView)
-//    uitilityView.frame = CGRect(x: Int(diningView.frame.origin.x + diningView.frame.width) + 10, y: 0, width: utilityCatWidth, height: 57)
-//
-//    let groceryCatWidth = (totalSpaceToDraw * 48) / 100
-//    let groceryView = UIView()
-//    groceryView.backgroundColor = UIColor(hexString: "CD6464")
-//    self.addSubview(groceryView)
-//    groceryView.frame = CGRect(x: Int(uitilityView.frame.origin.x + uitilityView.frame.width) + 10, y: 0, width: groceryCatWidth, height: 57)
-//
-//    let fdCatWidth = (totalSpaceToDraw * 12) / 100
-//    let fdView = UIView()
-//    fdView.backgroundColor = UIColor(hexString: "E5966A")
-//    self.addSubview(fdView)
-//    fdView.frame = CGRect(x: Int(groceryView.frame.origin.x + groceryView.frame.width) + 10, y: 0, width: fdCatWidth, height: 57)
 
   }
   

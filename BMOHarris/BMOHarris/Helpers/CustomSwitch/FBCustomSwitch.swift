@@ -81,6 +81,28 @@ protocol FBCustomSwitchDelegate: AnyObject {
     setContainerBackgroundColor(bgColor: containerColor)
   }
   
+//  init() {
+//    super.init(frame: .zero)
+//    self.perform(#selector(delayedSetUP), with: nil, afterDelay: 0.1)
+//  }
+  
+  func setUpView() {
+    self.perform(#selector(delayedSetUP), with: nil, afterDelay: 0.1)
+  }
+  
+  @objc func delayedSetUP() {
+    initilize()
+    addLockedAndUnlockedImage()
+    initilizeNobView()
+    setCornorRadius(cornerRadius: 10)
+    setDefaultColors()
+    setContainerBackgroundColor(bgColor: containerColor)
+  }
+  
+//  required init?(coder: NSCoder) {
+//    super.init(coder: coder)
+//  }
+  
   @objc func initilizeNobView() {
     containerView.addSubview(nobView)
     nobView.translatesAutoresizingMaskIntoConstraints = false
@@ -326,36 +348,46 @@ protocol FBCustomSwitchDelegate: AnyObject {
     self.unLockedImage = nil
   }
   
-  private func setDefaultColors() {
+  func setDefaultColors() {
     
-    self.nobLockedColor = .systemOrange
-    self.nobUnLockedColor = .systemOrange
-    
-    self.nobLockedImage = nil
-    self.nobUnLockedImage = nil
-    
-    self.lockedColor = .systemOrange
-    self.unLockedColor = .systemOrange
+//    self.nobLockedColor = .systemOrange
+//    self.nobUnLockedColor = .systemOrange
+//
+//    self.nobLockedImage = nil
+//    self.nobUnLockedImage = nil
+//
+//    self.lockedColor = .systemOrange
+//    self.unLockedColor = .systemOrange
     
     self.lockedImage = nil
     self.unLockedImage = nil
     
-    if self.containerColor == nil {
-      self.containerColor = .systemTeal
-    }
+//    if self.containerColor == nil {
+//      self.containerColor = .systemTeal
+//    }
     
     
-    lockedColor = .systemOrange
-    unLockedColor = .systemOrange
+    containerColor = UIColor(hexString: "EDEDED")
+    nobLockedColor = UIColor(hexString: "53C984")
+    nobLockedColor = UIColor(hexString: "53C984")
+    nobUnLockedColor = UIColor(hexString: "53C984")
+
     
-    nobLockedColor = .systemGreen
-    nobUnLockedColor = .systemRed
     
-    nobView.immageView.backgroundColor = .yellow
+//    lockedColor = .systemOrange
+//    unLockedColor = .systemOrange
+//
+//    nobLockedColor = .systemGreen
+//    nobUnLockedColor = .systemRed
+//
+//    nobView.immageView.backgroundColor = .yellow
     
     setLockedColor(lockedColor: lockedColor)
     setUnLockedColor(unLOckedColor: unLockedColor)
     setNobLockedColor(nobColor: nobLockedColor)
     setContainerBackgroundColor(bgColor: containerColor)
+    unLockedImageView.backgroundColor = .clear
+    lockedImageView.backgroundColor = .clear
+
   }
 }

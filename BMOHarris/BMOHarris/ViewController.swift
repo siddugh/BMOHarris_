@@ -55,7 +55,7 @@ class ViewController: UIViewController {
   }
   
   func addAccountSummary() {
-    let accsummary =  AccountSummary(frame: CGRect(x: 0, y: 200, width: self.view.bounds.width, height: 55), type: .kSaving)
+    let accsummary =  AccountSummary(frame: CGRect(x: 0, y: 200, width: self.view.bounds.width, height: 55), type: .kChecking)
     accsummary.backgroundColor = .white
     view.addSubview(accsummary)
     //accsummary.backgroundColor = .brown

@@ -72,6 +72,7 @@ class AccountSummary: UIView {
     self.layer.cornerRadius = 15
     self.backgroundColor = .white
     initilize()
+    addSummary(type: type)
   }
   
   private func initilize() {

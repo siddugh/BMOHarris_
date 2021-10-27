@@ -24,10 +24,15 @@ class AccountAndCardServiceController: UIViewController {
       addHeaderView()
       addAccountSelectionView()
       addCardView()
-      addAccountSummary()
-      addSavingAccSummary()
-      showCheckingAccount()
+      self.perform(#selector(delayedView), with: nil, afterDelay: 0.0)
     }
+  
+  @objc private func delayedView() {
+    addAccountSummary()
+    addSavingAccSummary()
+    showCheckingAccount()
+
+  }
   
   private func addHeaderView() {
     headerView = ViewFactory().getAccountCardServiceHeaderView()
@@ -71,7 +76,11 @@ class AccountAndCardServiceController: UIViewController {
     cardView.customSwitch.isLocked = true
     cardView.delegate = self
     cardView.showMoreDelegate = self
-    lockCardView()    
+    cardViewHeightConstraint.constant = 60
+    self.cardView.nameBgView.alpha = 0
+    self.cardView.nameLabel.alpha  = 0
+    self.cardView.moreButton.alpha = 0
+    self.cardView.showShadow(bShodow: false)    
   }
   
   func lockCardView() {

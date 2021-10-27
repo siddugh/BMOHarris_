@@ -17,6 +17,7 @@ class TransactionCell: UICollectionViewCell, ConfigurableCell {
   @IBOutlet weak var categoryBackgroundView: UIView!
   @IBOutlet weak var priceLabel: UILabel!
   
+  var transactionItem:TransactionModel?
   
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,11 +35,11 @@ class TransactionCell: UICollectionViewCell, ConfigurableCell {
     timeStamp.text = ""
     category.text = ""
     priceLabel.text = ""
-
+    transactionItem = nil
   }
   func configure(_ item: TransactionModel, indexPath: IndexPath) {
     reset()
-    
+    transactionItem = item
     if let img = item.brandLogo {
       imageView.image = UIImage(named: img)
     }

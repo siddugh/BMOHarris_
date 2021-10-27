@@ -7,11 +7,20 @@
 
 import UIKit
 
+protocol SpendAnalysisViewDelegate: AnyObject {
+  func showAllTransactions()
+}
+
 class SpendAnalysisView: UIView {
 
   var spendViewModel: SpendViewModel?
   var transactionCollectionView: TransactionCollectionView!
   var spView: SpendAnalysis!
+  var customSwitch: FBCustomSwitch!
+  var lastMonthLabel: UILabel = UILabel()
+  var thisMonthLabel: UILabel = UILabel()
+  
+  weak var delegate: SpendAnalysisViewDelegate?
   
   let viewAllButton = UIButton()
   
@@ -70,8 +79,55 @@ class SpendAnalysisView: UIView {
     layout.minimumLineSpacing = 0
     layout.minimumInteritemSpacing = 0
     layout.scrollDirection = .vertical
-        
+    
+    setMonthslabels()
+    updateLabels(thisMonth: true)
   }
+  
+  
+  func setMonthslabels() {
+    
+    customSwitch = FBCustomSwitch()
+    self.addSubview(thisMonthLabel)
+    self.addSubview(customSwitch)
+    self.addSubview(lastMonthLabel)
+    
+    thisMonthLabel.text = "This\nMonth"
+    thisMonthLabel.numberOfLines = 2
+    thisMonthLabel.font = UIFont(name: "Rubik Regular", size: 10)
+    thisMonthLabel.textAlignment = .right
+    thisMonthLabel.translatesAutoresizingMaskIntoConstraints = false
+    thisMonthLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -2).isActive = true
+    thisMonthLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
+    
+    
+    
+    self.addSubview(customSwitch)
+    customSwitch.delegate = self
+    customSwitch.translatesAutoresizingMaskIntoConstraints = false
+    customSwitch.trailingAnchor.constraint(equalTo: thisMonthLabel.leadingAnchor, constant: -5).isActive = true
+    customSwitch.centerYAnchor.constraint(equalTo: thisMonthLabel.centerYAnchor, constant: 0).isActive = true
+    customSwitch.widthAnchor.constraint(equalToConstant: 55).isActive = true
+    customSwitch.heightAnchor.constraint(equalToConstant: 22).isActive = true
+    
+    customSwitch.containerColor = UIColor(hexString: "EDEDED")
+    customSwitch.nobLockedColor = UIColor(hexString: "53C984")
+    customSwitch.nobLockedColor = UIColor(hexString: "53C984")
+    customSwitch.nobUnLockedColor = UIColor(hexString: "53C984")
+    customSwitch.setUpView()
+    
+    
+    lastMonthLabel.text = "Last\nMonth"
+    lastMonthLabel.numberOfLines = 2
+    lastMonthLabel.font = UIFont(name: "Rubik Regular", size: 10)
+    thisMonthLabel.textAlignment = .left
+    lastMonthLabel.translatesAutoresizingMaskIntoConstraints = false
+    lastMonthLabel.trailingAnchor.constraint(equalTo: customSwitch.leadingAnchor, constant: -4).isActive = true
+    lastMonthLabel.centerYAnchor.constraint(equalTo: thisMonthLabel.centerYAnchor, constant: 0).isActive = true
+
+
+  }
+  
   
   
   @objc private func showSpendAnalysis() {
@@ -99,7 +155,9 @@ class SpendAnalysisView: UIView {
     layout.minimumInteritemSpacing = 0
     layout.scrollDirection = .vertical
     
+    let transactions = DataProvider().getTransactions()
     transactionCollectionView = TransactionCollectionView(frame: .zero, collectionViewLayout: layout)
+    transactionCollectionView.updateTransactions(transactions: transactions)
     self.addSubview(transactionCollectionView)
 
     transactionCollectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -107,7 +165,7 @@ class SpendAnalysisView: UIView {
     transactionCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     transactionCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     transactionCollectionView.topAnchor.constraint(equalTo: spView.bottomAnchor, constant: 10).isActive = true
-    transactionCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true
+    transactionCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true    
 
     enableScrolling(bEnable: false)
   }
@@ -147,7 +205,48 @@ class SpendAnalysisView: UIView {
   }
   
   @objc func viewAllAction() {
-    print("viewAllAction...")
+    delegate?.showAllTransactions()
   }
 
+}
+
+
+extension SpendAnalysisView: FBCustomSwitchDelegate {
+  func onSwitchActionCompletion() {
+  
+    if self.customSwitch.isLocked {
+      print("Switch Locked")
+      updateLabels(thisMonth: true)
+    } else {
+      print("Switch UnLocked")
+      updateLabels(thisMonth: false)
+    }
+  }
+  
+  func switchAction() {
+    self.customSwitch.switchAction()
+  }
+  
+  func updateLabels(thisMonth: Bool) {
+    if thisMonth {
+      UIView.animate(withDuration: 0.5) {
+        //self.lastMonthLabel.alpha = 1
+        //self.thisMonthLabel.alpha = 1
+
+        self.lastMonthLabel.textColor = .black
+        self.thisMonthLabel.textColor = UIColor(hexString: "B3B3B3")
+      }
+      
+    } else {
+      
+      UIView.animate(withDuration: 0.5) {
+        //self.lastMonthLabel.alpha = 1
+        //self.thisMonthLabel.alpha = 1
+
+        self.lastMonthLabel.textColor = UIColor(hexString: "B3B3B3")
+        self.thisMonthLabel.textColor = .black
+      }
+    }
+  }
+  
 }

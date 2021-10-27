@@ -22,6 +22,16 @@ class PaymentCell: UICollectionViewCell, ConfigurableCell {
         // Initialization code
       setupView()
     }
+  
+  func reset() {
+    logoImageView.image = nil
+    payment.text = ""
+    timeStampLabel.text = ""
+    typeLabel.text = ""
+    typeBackgroundView.backgroundColor = .white
+    amountLabel.text = ""
+
+  }
 
   private func setupView() {
     typeBackgroundView.layer.cornerRadius = 8
@@ -29,5 +39,12 @@ class PaymentCell: UICollectionViewCell, ConfigurableCell {
     
   func configure(_ item: PaymentModel, indexPath: IndexPath) {
     
+    logoImageView.image = UIImage(named: item.logoImage)
+    payment.text = item.transferTo
+    timeStampLabel.text = item.timeStamp
+    typeLabel.text = item.category
+    typeBackgroundView.backgroundColor = UIColor(hexString: item.categorybgColor, alpha: item.colorOpacity)
+    amountLabel.text = item.price
+
   }
 }
