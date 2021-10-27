@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ScheduledSavingCell" customModule="BMOHarris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="85"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGd-br-P9Q" userLabel="ContainerView">
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="85"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundup" translatesAutoresizingMaskIntoConstraints="NO" id="o1I-kn-mEq">
+                                <rect key="frame" x="15" y="25" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="h96-ln-vEq"/>
+                                    <constraint firstAttribute="height" constant="35" id="kM0-Pf-1mI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Round up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NL7-wz-YrT">
+                                <rect key="frame" x="60" y="25" width="55.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gR-aa-Ajm">
+                                <rect key="frame" x="60" y="39.5" width="30.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRV-NI-djy" userLabel="NextButton">
+                                <rect key="frame" x="336" y="27.5" width="20" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="3CC-iD-1Go"/>
+                                    <constraint firstAttribute="height" constant="30" id="eKw-Eg-2GS"/>
+                                </constraints>
+                                <state key="normal" image="rightarrow">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+$8.05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPU-ez-j2J">
+                                <rect key="frame" x="287" y="34" width="49" height="17"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                                <color key="textColor" red="0.28627450980392155" green="0.58431372549019611" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o1I-kn-mEq" firstAttribute="centerY" secondItem="UGd-br-P9Q" secondAttribute="centerY" id="1Nt-vX-vrU"/>
+                            <constraint firstAttribute="trailing" secondItem="pRV-NI-djy" secondAttribute="trailing" constant="8" id="C3R-V2-d6g"/>
+                            <constraint firstItem="4gR-aa-Ajm" firstAttribute="top" secondItem="NL7-wz-YrT" secondAttribute="bottom" id="aXy-jW-Di5"/>
+                            <constraint firstItem="CPU-ez-j2J" firstAttribute="centerY" secondItem="pRV-NI-djy" secondAttribute="centerY" id="dba-a2-LOf"/>
+                            <constraint firstItem="pRV-NI-djy" firstAttribute="centerY" secondItem="UGd-br-P9Q" secondAttribute="centerY" id="hwc-q6-1Ww"/>
+                            <constraint firstItem="NL7-wz-YrT" firstAttribute="top" secondItem="o1I-kn-mEq" secondAttribute="top" id="j9Y-E6-YU6"/>
+                            <constraint firstItem="o1I-kn-mEq" firstAttribute="leading" secondItem="UGd-br-P9Q" secondAttribute="leading" constant="15" id="lMr-ws-Sih"/>
+                            <constraint firstItem="4gR-aa-Ajm" firstAttribute="leading" secondItem="NL7-wz-YrT" secondAttribute="leading" id="uDt-0t-HFX"/>
+                            <constraint firstItem="pRV-NI-djy" firstAttribute="leading" secondItem="CPU-ez-j2J" secondAttribute="trailing" id="y8l-yg-sMh"/>
+                            <constraint firstItem="NL7-wz-YrT" firstAttribute="leading" secondItem="o1I-kn-mEq" secondAttribute="trailing" constant="10" id="yCS-f8-B7R"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UGd-br-P9Q" secondAttribute="bottom" id="1XO-w9-2Qd"/>
+                <constraint firstItem="UGd-br-P9Q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1qb-FW-fAt"/>
+                <constraint firstAttribute="trailing" secondItem="UGd-br-P9Q" secondAttribute="trailing" id="YBF-G4-Gij"/>
+                <constraint firstItem="UGd-br-P9Q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fax-W7-eOG"/>
+            </constraints>
+            <size key="customSize" width="364" height="85"/>
+            <point key="canvasLocation" x="236.23188405797103" y="49.888392857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="rightarrow" width="5" height="8"/>
+        <image name="roundup" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

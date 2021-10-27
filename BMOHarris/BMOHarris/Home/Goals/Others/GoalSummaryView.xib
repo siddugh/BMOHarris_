@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GoalSummaryView" customModule="BMO_Harris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="333"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHt-YY-UcA">
+                    <rect key="frame" x="0.0" y="24" width="95" height="17"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRE-h1-EJP">
+                    <rect key="frame" x="286" y="19" width="44" height="27"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                    <state key="normal" title="View All"/>
+                    <connections>
+                        <action selector="viewAllButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="5r9-gv-dLu"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g95-5d-D1p">
+                    <rect key="frame" x="0.0" y="61" width="370" height="272"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yRE-h1-EJP" secondAttribute="trailing" constant="40" id="5g6-nx-07k"/>
+                <constraint firstAttribute="trailing" secondItem="g95-5d-D1p" secondAttribute="trailing" id="ArI-Vn-7Jt"/>
+                <constraint firstAttribute="bottom" secondItem="g95-5d-D1p" secondAttribute="bottom" id="P9x-ud-t3j"/>
+                <constraint firstItem="qHt-YY-UcA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="aPU-9a-d5I"/>
+                <constraint firstItem="qHt-YY-UcA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dt3-aL-00f"/>
+                <constraint firstItem="g95-5d-D1p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="haX-DD-bXo"/>
+                <constraint firstItem="g95-5d-D1p" firstAttribute="top" secondItem="yRE-h1-EJP" secondAttribute="bottom" constant="15" id="vD1-HX-e1P"/>
+                <constraint firstItem="yRE-h1-EJP" firstAttribute="centerY" secondItem="qHt-YY-UcA" secondAttribute="centerY" id="ydI-15-81o"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="g95-5d-D1p" id="V7X-Oz-Fb2"/>
+                <outlet property="titleLabel" destination="qHt-YY-UcA" id="Hrr-JJ-IRh"/>
+                <outlet property="viewALlButton" destination="yRE-h1-EJP" id="0F3-0A-OkH"/>
+            </connections>
+            <point key="canvasLocation" x="323.1884057971015" y="-52.566964285714285"/>
+        </view>
+    </objects>
+</document>

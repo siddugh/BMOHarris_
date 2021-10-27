@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CouponCell" customModule="BMOHarris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="292" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="292" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Bz-yc-1cU">
+                        <rect key="frame" x="0.0" y="0.0" width="292" height="128"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon1" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-11-SkH">
+                                <rect key="frame" x="0.0" y="0.0" width="292" height="128"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbucks" translatesAutoresizingMaskIntoConstraints="NO" id="o0i-Kz-vhu">
+                                <rect key="frame" x="8" y="39" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="AIC-Dg-hJh"/>
+                                    <constraint firstAttribute="height" constant="50" id="NGr-cE-YLA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.50 OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-gv-Zad">
+                                <rect key="frame" x="96.5" y="52" width="99" height="24"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pym-HL-twE">
+                                <rect key="frame" x="201.5" y="50.5" width="78" height="27"/>
+                                <color key="backgroundColor" red="0.18431372549019609" green="0.58431372549019611" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reedeem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLn-U8-m4W">
+                                <rect key="frame" x="209" y="55.5" width="63" height="17"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8bZ-11-SkH" secondAttribute="bottom" id="6Pi-GX-OJx"/>
+                            <constraint firstItem="lfF-gv-Zad" firstAttribute="centerX" secondItem="0Bz-yc-1cU" secondAttribute="centerX" id="6dx-0c-iC6"/>
+                            <constraint firstAttribute="trailing" secondItem="XLn-U8-m4W" secondAttribute="trailing" constant="20" id="DHd-O7-Va2"/>
+                            <constraint firstItem="Pym-HL-twE" firstAttribute="centerY" secondItem="XLn-U8-m4W" secondAttribute="centerY" id="M1B-ki-RcA"/>
+                            <constraint firstAttribute="trailing" secondItem="8bZ-11-SkH" secondAttribute="trailing" id="MRd-1n-ZQ5"/>
+                            <constraint firstItem="Pym-HL-twE" firstAttribute="width" secondItem="XLn-U8-m4W" secondAttribute="width" constant="15" id="Nza-xi-376"/>
+                            <constraint firstItem="8bZ-11-SkH" firstAttribute="top" secondItem="0Bz-yc-1cU" secondAttribute="top" id="ejn-ON-GgG"/>
+                            <constraint firstItem="Pym-HL-twE" firstAttribute="height" secondItem="XLn-U8-m4W" secondAttribute="height" constant="10" id="gTM-Os-jvm"/>
+                            <constraint firstItem="8bZ-11-SkH" firstAttribute="leading" secondItem="0Bz-yc-1cU" secondAttribute="leading" id="jN1-pu-Ocw"/>
+                            <constraint firstItem="o0i-Kz-vhu" firstAttribute="leading" secondItem="0Bz-yc-1cU" secondAttribute="leading" constant="8" id="jsx-Cz-UY2"/>
+                            <constraint firstItem="Pym-HL-twE" firstAttribute="centerX" secondItem="XLn-U8-m4W" secondAttribute="centerX" id="rfB-lb-9wn"/>
+                            <constraint firstItem="lfF-gv-Zad" firstAttribute="centerY" secondItem="0Bz-yc-1cU" secondAttribute="centerY" id="voJ-rx-fcT"/>
+                            <constraint firstItem="XLn-U8-m4W" firstAttribute="centerY" secondItem="lfF-gv-Zad" secondAttribute="centerY" id="xn1-6M-F55"/>
+                            <constraint firstItem="o0i-Kz-vhu" firstAttribute="centerY" secondItem="0Bz-yc-1cU" secondAttribute="centerY" id="zVe-Dr-ISs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0Bz-yc-1cU" secondAttribute="bottom" id="AfB-8B-18J"/>
+                <constraint firstAttribute="trailing" secondItem="0Bz-yc-1cU" secondAttribute="trailing" id="Gli-V4-I5b"/>
+                <constraint firstItem="0Bz-yc-1cU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SWJ-0e-GJw"/>
+                <constraint firstItem="0Bz-yc-1cU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vuo-iU-Nhi"/>
+            </constraints>
+            <size key="customSize" width="292" height="128"/>
+            <connections>
+                <outlet property="bannerImageView" destination="8bZ-11-SkH" id="J5d-OY-ahn"/>
+                <outlet property="containerView" destination="0Bz-yc-1cU" id="NfU-Xk-ESW"/>
+                <outlet property="couponlogoImageView" destination="o0i-Kz-vhu" id="PkL-ib-yyC"/>
+                <outlet property="offerPriceLabel" destination="lfF-gv-Zad" id="UiI-5T-uj2"/>
+                <outlet property="redeemBackgroundView" destination="Pym-HL-twE" id="Dvb-GK-fl5"/>
+                <outlet property="redeemLabel" destination="XLn-U8-m4W" id="jxI-8V-ROO"/>
+            </connections>
+            <point key="canvasLocation" x="136.23188405797103" y="16.741071428571427"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="coupon1" width="353" height="127"/>
+        <image name="starbucks" width="71" height="71"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

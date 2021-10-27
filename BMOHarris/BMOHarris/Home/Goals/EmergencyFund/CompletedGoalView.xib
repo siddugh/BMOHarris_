@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CompletedGoalView" customModule="BMO_Harris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You’ve reached your goal!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AY4-Uc-w74">
+                    <rect key="frame" x="110.5" y="15" width="209" height="20.5"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                    <color key="textColor" red="0.19215686274509802" green="0.64313725490196072" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9N-CV-83G">
+                    <rect key="frame" x="130" y="43.5" width="170.5" height="17"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEz-qE-N8S" userLabel="ContinueBGView">
+                    <rect key="frame" x="47.5" y="89.5" width="127" height="30"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGb-pz-o0J" userLabel="CreageBGView">
+                    <rect key="frame" x="246" y="89.5" width="136.5" height="30"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue saving" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBt-1j-aMy">
+                    <rect key="frame" x="60" y="97" width="102" height="15"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.47843137254901957" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nr6-Cd-CHH">
+                    <rect key="frame" x="258.5" y="97" width="111.5" height="15"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.47843137254901957" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHt-DX-ZDh" userLabel="LineLabel">
+                    <rect key="frame" x="25" y="145" width="380" height="1"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="gE0-Ig-m7M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AY4-Uc-w74" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="33Z-aZ-I6U"/>
+                <constraint firstItem="I9N-CV-83G" firstAttribute="top" secondItem="AY4-Uc-w74" secondAttribute="bottom" constant="8" id="B9D-Iq-j61"/>
+                <constraint firstItem="mHt-DX-ZDh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="B9g-tp-ADw"/>
+                <constraint firstItem="ZEz-qE-N8S" firstAttribute="centerY" secondItem="eBt-1j-aMy" secondAttribute="centerY" id="CEZ-LN-YVB"/>
+                <constraint firstItem="mHt-DX-ZDh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="145" id="JSm-31-DRo"/>
+                <constraint firstAttribute="trailing" secondItem="nr6-Cd-CHH" secondAttribute="trailing" constant="60" id="Lab-N9-mB7"/>
+                <constraint firstItem="aGb-pz-o0J" firstAttribute="width" secondItem="nr6-Cd-CHH" secondAttribute="width" constant="25" id="O12-VQ-SKa"/>
+                <constraint firstItem="AY4-Uc-w74" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QNz-h3-z5W"/>
+                <constraint firstAttribute="trailing" secondItem="mHt-DX-ZDh" secondAttribute="trailing" constant="25" id="W5f-pP-4SX"/>
+                <constraint firstItem="eBt-1j-aMy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="XP0-jW-ubY"/>
+                <constraint firstItem="ZEz-qE-N8S" firstAttribute="centerX" secondItem="eBt-1j-aMy" secondAttribute="centerX" id="YEq-0N-oMZ"/>
+                <constraint firstItem="aGb-pz-o0J" firstAttribute="height" secondItem="nr6-Cd-CHH" secondAttribute="height" constant="15" id="a8m-au-BXu"/>
+                <constraint firstItem="eBt-1j-aMy" firstAttribute="top" secondItem="I9N-CV-83G" secondAttribute="bottom" constant="36.5" id="by0-ID-4TS"/>
+                <constraint firstItem="aGb-pz-o0J" firstAttribute="centerY" secondItem="nr6-Cd-CHH" secondAttribute="centerY" id="eSC-jY-quM"/>
+                <constraint firstItem="aGb-pz-o0J" firstAttribute="centerX" secondItem="nr6-Cd-CHH" secondAttribute="centerX" id="g2O-64-mY1"/>
+                <constraint firstItem="I9N-CV-83G" firstAttribute="centerX" secondItem="AY4-Uc-w74" secondAttribute="centerX" id="t25-4b-V31"/>
+                <constraint firstItem="ZEz-qE-N8S" firstAttribute="height" secondItem="eBt-1j-aMy" secondAttribute="height" constant="15" id="u5H-aM-nEh"/>
+                <constraint firstItem="ZEz-qE-N8S" firstAttribute="width" secondItem="eBt-1j-aMy" secondAttribute="width" constant="25" id="wd0-6f-NMw"/>
+                <constraint firstItem="nr6-Cd-CHH" firstAttribute="centerY" secondItem="eBt-1j-aMy" secondAttribute="centerY" id="z92-rz-wsc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgViewOne" destination="ZEz-qE-N8S" id="Uk2-xL-g8w"/>
+                <outlet property="bgViewTwo" destination="aGb-pz-o0J" id="wNB-ot-KXI"/>
+            </connections>
+            <point key="canvasLocation" x="420.28985507246381" y="-113.83928571428571"/>
+        </view>
+    </objects>
+</document>

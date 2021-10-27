@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GoalAmountDeposited" customModule="BMO_Harris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="308"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bh2-c0-Pjx">
+                    <rect key="frame" x="20" y="10" width="302" height="16"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sil-am-6KA" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlp-xg-M2f">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="ZxE-35-Vke"/>
+                                        <constraint firstAttribute="width" constant="10" id="tjS-JM-tls"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="EBm-bw-UWl"/>
+                                <constraint firstItem="jlp-xg-M2f" firstAttribute="centerX" secondItem="Sil-am-6KA" secondAttribute="centerX" id="YV0-18-8MX"/>
+                                <constraint firstItem="jlp-xg-M2f" firstAttribute="centerY" secondItem="Sil-am-6KA" secondAttribute="centerY" id="cNc-yd-TbM"/>
+                                <constraint firstAttribute="height" constant="16" id="o98-AD-IQX"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="jlp-xg-M2f" id="soS-pK-bdP"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxt-Wp-XXt" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="26" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47n-ph-L2M">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="g7n-D8-1F2"/>
+                                        <constraint firstAttribute="width" constant="10" id="mMi-hf-3N0"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="47n-ph-L2M" firstAttribute="centerX" secondItem="cxt-Wp-XXt" secondAttribute="centerX" id="92T-ie-Kzo"/>
+                                <constraint firstItem="47n-ph-L2M" firstAttribute="centerY" secondItem="cxt-Wp-XXt" secondAttribute="centerY" id="sHJ-2k-8Fb"/>
+                                <constraint firstAttribute="width" constant="16" id="txl-Au-ADY"/>
+                                <constraint firstAttribute="height" constant="16" id="yjs-HO-NOQ"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="47n-ph-L2M" id="9Am-AJ-xNU"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LlA-Ja-OzT" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="52" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-ES-p4X">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="FV1-QC-K0g"/>
+                                        <constraint firstAttribute="height" constant="10" id="is4-5e-S1R"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Vgr-ES-p4X" firstAttribute="centerY" secondItem="LlA-Ja-OzT" secondAttribute="centerY" id="Fyq-5i-crs"/>
+                                <constraint firstAttribute="height" constant="16" id="Rsy-xk-PVt"/>
+                                <constraint firstItem="Vgr-ES-p4X" firstAttribute="centerX" secondItem="LlA-Ja-OzT" secondAttribute="centerX" id="VGa-WF-kvN"/>
+                                <constraint firstAttribute="width" constant="16" id="WHX-ao-pG8"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="Vgr-ES-p4X" id="d2O-tB-GwW"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7p-T0-UbK" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="78" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TL-Zq-frb">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="2wp-53-nzZ"/>
+                                        <constraint firstAttribute="height" constant="10" id="PQy-ud-kib"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="0TL-Zq-frb" firstAttribute="centerY" secondItem="C7p-T0-UbK" secondAttribute="centerY" id="XhS-XH-fdY"/>
+                                <constraint firstAttribute="width" constant="16" id="YSA-SF-Gyn"/>
+                                <constraint firstAttribute="height" constant="16" id="a4j-yk-wkb"/>
+                                <constraint firstItem="0TL-Zq-frb" firstAttribute="centerX" secondItem="C7p-T0-UbK" secondAttribute="centerX" id="eMR-D1-Irc"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="0TL-Zq-frb" id="VID-qd-o9F"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCd-hD-76L" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="104" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSl-B6-D8h">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="EzE-fc-yA6"/>
+                                        <constraint firstAttribute="width" constant="10" id="TNV-em-mTz"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="14S-v0-ci3"/>
+                                <constraint firstItem="zSl-B6-D8h" firstAttribute="centerX" secondItem="VCd-hD-76L" secondAttribute="centerX" id="3aj-Sd-L18"/>
+                                <constraint firstItem="zSl-B6-D8h" firstAttribute="centerY" secondItem="VCd-hD-76L" secondAttribute="centerY" id="iGF-Vj-s9a"/>
+                                <constraint firstAttribute="width" constant="16" id="pPU-rC-cQl"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="zSl-B6-D8h" id="1dD-rn-xB2"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1f6-Lz-TTp" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="130" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsV-oE-xAe">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="KC0-PG-RNH"/>
+                                        <constraint firstAttribute="height" constant="10" id="dF2-or-Jjg"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ZsV-oE-xAe" firstAttribute="centerX" secondItem="1f6-Lz-TTp" secondAttribute="centerX" id="Cph-bc-xKK"/>
+                                <constraint firstAttribute="height" constant="16" id="S5R-qs-c97"/>
+                                <constraint firstItem="ZsV-oE-xAe" firstAttribute="centerY" secondItem="1f6-Lz-TTp" secondAttribute="centerY" id="SiE-cR-OZv"/>
+                                <constraint firstAttribute="width" constant="16" id="kDm-va-JhD"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="ZsV-oE-xAe" id="P1i-Sc-eeg"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJV-bO-hO1" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="156" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-zk-466">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="jlI-o3-5tV"/>
+                                        <constraint firstAttribute="height" constant="10" id="mN8-Bo-EYw"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="OyB-zk-466" firstAttribute="centerY" secondItem="fJV-bO-hO1" secondAttribute="centerY" id="9mc-MY-Hfh"/>
+                                <constraint firstItem="OyB-zk-466" firstAttribute="centerX" secondItem="fJV-bO-hO1" secondAttribute="centerX" id="HZq-JN-dmo"/>
+                                <constraint firstAttribute="width" constant="16" id="wlD-4b-Qa7"/>
+                                <constraint firstAttribute="height" constant="16" id="xZQ-2S-W8b"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="OyB-zk-466" id="ijN-KV-MR3"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1L-OM-TaF" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="182" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrr-5A-tIB">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="8IB-7z-C1M"/>
+                                        <constraint firstAttribute="width" constant="10" id="JPv-Qd-0GC"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="7qb-Bb-b9O"/>
+                                <constraint firstItem="Mrr-5A-tIB" firstAttribute="centerX" secondItem="V1L-OM-TaF" secondAttribute="centerX" id="W5J-xr-4Ee"/>
+                                <constraint firstItem="Mrr-5A-tIB" firstAttribute="centerY" secondItem="V1L-OM-TaF" secondAttribute="centerY" id="Z0M-Fe-BnL"/>
+                                <constraint firstAttribute="height" constant="16" id="dzX-vh-at5"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="Mrr-5A-tIB" id="Lh6-bv-Nlf"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZe-cB-5GH" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="208" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN7-5v-hMt">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="62d-Sd-SK8"/>
+                                        <constraint firstAttribute="width" constant="10" id="Pmb-Jl-EVF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="3kC-9E-MEj"/>
+                                <constraint firstItem="dN7-5v-hMt" firstAttribute="centerY" secondItem="RZe-cB-5GH" secondAttribute="centerY" id="HYe-Os-mgD"/>
+                                <constraint firstAttribute="height" constant="16" id="JEX-tJ-aDI"/>
+                                <constraint firstItem="dN7-5v-hMt" firstAttribute="centerX" secondItem="RZe-cB-5GH" secondAttribute="centerX" id="V4P-Nh-8bu"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="dN7-5v-hMt" id="gIu-D7-fZZ"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-iP-KVL" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="234" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxp-Zj-pNt">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="Ndf-6W-Pvs"/>
+                                        <constraint firstAttribute="height" constant="10" id="yjH-jY-6Uo"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="EmG-2B-qY8"/>
+                                <constraint firstAttribute="height" constant="16" id="LlY-nK-M2t"/>
+                                <constraint firstItem="hxp-Zj-pNt" firstAttribute="centerX" secondItem="Qqx-iP-KVL" secondAttribute="centerX" id="fRl-S7-Cfa"/>
+                                <constraint firstItem="hxp-Zj-pNt" firstAttribute="centerY" secondItem="Qqx-iP-KVL" secondAttribute="centerY" id="u4F-PK-LNn"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="hxp-Zj-pNt" id="K6I-6l-YSm"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nez-ID-flJ" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="260" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc7-y6-UNC">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="XP0-yC-yUo"/>
+                                        <constraint firstAttribute="height" constant="10" id="sK6-fn-mCk"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="1zU-qd-SIi"/>
+                                <constraint firstAttribute="height" constant="16" id="fDh-fp-MbQ"/>
+                                <constraint firstItem="nc7-y6-UNC" firstAttribute="centerX" secondItem="Nez-ID-flJ" secondAttribute="centerX" id="rCV-B3-ON0"/>
+                                <constraint firstItem="nc7-y6-UNC" firstAttribute="centerY" secondItem="Nez-ID-flJ" secondAttribute="centerY" id="wgq-hf-LQd"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="nc7-y6-UNC" id="eNK-Yp-4C4"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnN-CR-1Nj" customClass="DotView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="286" y="0.0" width="16" height="16"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-hz-Bb6">
+                                    <rect key="frame" x="3" y="3" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="sbG-0S-edc"/>
+                                        <constraint firstAttribute="height" constant="10" id="vOk-9j-JhI"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="KKW-Uq-Bvy"/>
+                                <constraint firstItem="TlK-hz-Bb6" firstAttribute="centerX" secondItem="LnN-CR-1Nj" secondAttribute="centerX" id="MFw-iO-3jc"/>
+                                <constraint firstAttribute="width" constant="16" id="Q7c-PD-eDj"/>
+                                <constraint firstItem="TlK-hz-Bb6" firstAttribute="centerY" secondItem="LnN-CR-1Nj" secondAttribute="centerY" id="iNR-mC-PzL"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="inerDotView" destination="TlK-hz-Bb6" id="b79-GO-3Ee"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$30 to next milestone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmP-a9-JxF">
+                    <rect key="frame" x="115" y="51" width="148.5" height="17"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="CIE-XY-hLj">
+                    <rect key="frame" x="96" y="52.5" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="4CH-TN-66h"/>
+                        <constraint firstAttribute="height" constant="14" id="7E5-hy-b7M"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrx-v5-pKT">
+                    <rect key="frame" x="20" y="96.5" width="318" height="40"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scheduledpaymentblue" translatesAutoresizingMaskIntoConstraints="NO" id="KKA-1G-eKQ">
+                            <rect key="frame" x="15" y="13" width="14" height="14"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="T1w-JW-J8o"/>
+                                <constraint firstAttribute="width" constant="14" id="lri-cf-9dy"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scheduled saving" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efu-SX-XMy">
+                            <rect key="frame" x="46" y="11.5" width="119.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 4, 2021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAH-xp-63C">
+                            <rect key="frame" x="227" y="11.5" width="76" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="efu-SX-XMy" firstAttribute="centerY" secondItem="KKA-1G-eKQ" secondAttribute="centerY" id="7On-YT-whf"/>
+                        <constraint firstItem="efu-SX-XMy" firstAttribute="leading" secondItem="KKA-1G-eKQ" secondAttribute="trailing" constant="17" id="9IF-hH-JAQ"/>
+                        <constraint firstItem="KKA-1G-eKQ" firstAttribute="leading" secondItem="qrx-v5-pKT" secondAttribute="leading" constant="15" id="Eej-hE-tbu"/>
+                        <constraint firstAttribute="height" constant="40" id="I2k-GW-vcV"/>
+                        <constraint firstItem="KKA-1G-eKQ" firstAttribute="centerY" secondItem="qrx-v5-pKT" secondAttribute="centerY" id="gS9-Pz-VWG"/>
+                        <constraint firstItem="GAH-xp-63C" firstAttribute="centerY" secondItem="qrx-v5-pKT" secondAttribute="centerY" id="oOf-oR-ZIR"/>
+                        <constraint firstAttribute="trailing" secondItem="GAH-xp-63C" secondAttribute="trailing" constant="15" id="sWW-yi-xMj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qrx-v5-pKT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="2ia-yk-Snp"/>
+                <constraint firstItem="XmP-a9-JxF" firstAttribute="top" secondItem="bh2-c0-Pjx" secondAttribute="bottom" constant="25" id="2rq-R4-tEx"/>
+                <constraint firstItem="qrx-v5-pKT" firstAttribute="top" secondItem="CIE-XY-hLj" secondAttribute="bottom" constant="30" id="WBy-7m-5mf"/>
+                <constraint firstItem="bh2-c0-Pjx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="eG4-lL-L8Y"/>
+                <constraint firstAttribute="trailing" secondItem="qrx-v5-pKT" secondAttribute="trailing" constant="30" id="hrX-7o-djg"/>
+                <constraint firstItem="XmP-a9-JxF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="5" id="itS-Ht-NFe"/>
+                <constraint firstItem="CIE-XY-hLj" firstAttribute="centerY" secondItem="XmP-a9-JxF" secondAttribute="centerY" id="k6H-Ee-thD"/>
+                <constraint firstItem="XmP-a9-JxF" firstAttribute="leading" secondItem="CIE-XY-hLj" secondAttribute="trailing" constant="5" id="lpn-8F-yTR"/>
+                <constraint firstItem="bh2-c0-Pjx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="xqy-Rc-crD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="qrx-v5-pKT" id="6e3-yZ-fe7"/>
+                <outletCollection property="dotViews" destination="Sil-am-6KA" collectionClass="NSMutableArray" id="lSJ-0V-SjD"/>
+                <outletCollection property="dotViews" destination="cxt-Wp-XXt" collectionClass="NSMutableArray" id="8ji-8Q-CNM"/>
+                <outletCollection property="dotViews" destination="LlA-Ja-OzT" collectionClass="NSMutableArray" id="VaU-Z0-Mdj"/>
+                <outletCollection property="dotViews" destination="C7p-T0-UbK" collectionClass="NSMutableArray" id="Pr7-e7-qB2"/>
+                <outletCollection property="dotViews" destination="VCd-hD-76L" collectionClass="NSMutableArray" id="Bam-QE-rIc"/>
+                <outletCollection property="dotViews" destination="1f6-Lz-TTp" collectionClass="NSMutableArray" id="4g8-wK-rWw"/>
+                <outletCollection property="dotViews" destination="fJV-bO-hO1" collectionClass="NSMutableArray" id="lTZ-gr-SZi"/>
+                <outletCollection property="dotViews" destination="V1L-OM-TaF" collectionClass="NSMutableArray" id="i3m-co-RAc"/>
+                <outletCollection property="dotViews" destination="RZe-cB-5GH" collectionClass="NSMutableArray" id="tZb-5p-jGi"/>
+                <outletCollection property="dotViews" destination="Qqx-iP-KVL" collectionClass="NSMutableArray" id="DJf-20-4sp"/>
+                <outletCollection property="dotViews" destination="Nez-ID-flJ" collectionClass="NSMutableArray" id="F5Z-3o-I1W"/>
+                <outletCollection property="dotViews" destination="LnN-CR-1Nj" collectionClass="NSMutableArray" id="JwT-sF-eNc"/>
+            </connections>
+            <point key="canvasLocation" x="253.62318840579712" y="-121.875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="scheduledpaymentblue" width="22" height="18"/>
+        <image name="trophy" width="17" height="18"/>
+    </resources>
+</document>
