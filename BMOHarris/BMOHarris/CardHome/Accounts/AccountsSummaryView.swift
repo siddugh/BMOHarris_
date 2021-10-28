@@ -219,9 +219,7 @@ extension AccountsSummaryView: TransactionViewDelegate {
   }
 }
 
-
 extension String{
-
     func widthWithConstrainedHeight(_ height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
 

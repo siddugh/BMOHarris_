@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
   
   func setupUI() {
     self.view.backgroundColor = .white
-    self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     self.navigationController?.setNavigationBarHidden(true, animated: false)
     addImageView()
@@ -27,12 +26,12 @@ class HomeViewController: UIViewController {
   }
   
   @objc private func addImageView() {
-    let imageView = UIImageView(frame: CGRect.zero)
+    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height / 2))
     self.view.addSubview(imageView)
-    imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.image = UIImage(named: "homebg")
     imageView.contentMode = .scaleAspectFill
-    imageView.backgroundColor = .green
+    imageView.backgroundColor = .yellow
+    imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
     imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
     imageView.topAnchor.constraint(equalTo: self.view.topAnchor , constant: 0).isActive = true
@@ -98,6 +97,8 @@ extension HomeViewController:HomeViewDelegate {
 
 extension HomeViewController: UIGestureRecognizerDelegate {
   func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-      return true
+      //return true
+
+    return navigationController!.viewControllers.count > 1
   }
 }

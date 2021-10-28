@@ -21,6 +21,9 @@ class CardHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      navigationController?.interactivePopGestureRecognizer?.delegate = self
+      navigationController?.setNavigationBarHidden(true, animated: false)
+
       setupUI()
       self.perform(#selector(updatePhysicalMessage), with: nil, afterDelay: 0.0)
       self.perform(#selector(setDelayedDelegate), with: nil, afterDelay: 0.3)
@@ -233,12 +236,12 @@ extension CardHomeViewController: UICollectionViewDelegate, UICollectionViewData
 extension CardHomeViewController: CardViewDelegate {
   func onAuthenticationSuccess(bLocked: Bool) {
     print("onAuthenticationSuccess...")
-    if bLocked {
+    if !bLocked {
       homeCell?.homeView.unLockCardView()
     } else {
       homeCell?.homeView.lockCardView()
     }
-    homeCell?.homeView.cardView.customSwitch.isLocked = Helper.getVirtualCardStatus()
+    //homeCell?.homeView.cardView.customSwitch.isLocked = Helper.getVirtualCardStatus()
     //homeCell?.homeView.cardView.switchAction()
   }
   
@@ -352,5 +355,11 @@ extension CardHomeViewController {
 }
 
 
+extension CardHomeViewController: UIGestureRecognizerDelegate {
+  func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+      
+    return navigationController!.viewControllers.count > 1
+  }
+}
 
 

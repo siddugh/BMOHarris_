@@ -53,7 +53,7 @@ class ContainerViewController: UIViewController {
     }
     
     navController.view.addSubview(shadowView)
-    shadowView.backgroundColor = .white
+    shadowView.backgroundColor = .clear
     shadowView.translatesAutoresizingMaskIntoConstraints = false
     shadowView.leadingAnchor.constraint(equalTo: navController.view.leadingAnchor, constant: 0).isActive = true
     shadowView.topAnchor.constraint(equalTo: navController.view.topAnchor, constant: 0).isActive = true
@@ -170,10 +170,10 @@ extension ContainerViewController: MenuDelegate {
       removeTapGesture()
       UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.3, options: .curveEaseInOut) {
         self.navController.view.frame.origin.x = 0
-        
         self.shadowView.layer.shadowOffset = .zero
         self.shadowView.layer.shadowRadius = 0
         self.shadowView.layer.shadowOpacity = 0
+        self.shadowView.layer.shadowColor = UIColor.clear.cgColor
 
       } completion: { (_) in
         self.isleftPanelOpen = false

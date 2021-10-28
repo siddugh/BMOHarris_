@@ -97,15 +97,15 @@ class CardView: UIView {
 
 extension CardView: FBCustomSwitchDelegate {
   func onSwitchActionCompletion() {
-   // Helper.upDateVirtualCardStatus(bLockedStatus: customSwitch.isLocked)
+    self.delegate?.onAuthenticationSuccess(bLocked: self.customSwitch.isLocked)
   }
   
   func switchAction() {
-    if customSwitch.isLocked {
+    if self.customSwitch.isLocked {
       authentication()
     } else {
       self.customSwitch.switchAction()
-      self.delegate?.onAuthenticationSuccess(bLocked: self.customSwitch.isLocked)
+      //self.delegate?.onAuthenticationSuccess(bLocked: self.customSwitch.isLocked)
     }
   }
 }
@@ -114,7 +114,6 @@ extension CardView: TouchIdDelegate {
   func onTouchIdSuccess() {
     DispatchQueue.main.async {
       self.customSwitch.switchAction()
-      self.delegate?.onAuthenticationSuccess(bLocked: self.customSwitch.isLocked)
     }
   }
   

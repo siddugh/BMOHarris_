@@ -18,10 +18,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
+    Helper.upDatePhysicalCardStatus(bLockedStatus: true)
+    Helper.upDateVirtualCardStatus(bLockedStatus: true)
+
     let window = UIWindow(windowScene: windowScene)
-    let homeController =    HomeViewController() ///HomeViewController()  //NewGoalViewController() //CachAndSavingAccountViewController()
+    let homeController =    HomeViewController() ///HomeViewController()  //NewGoalViewController()
     let navController = UINavigationController(rootViewController: homeController)
-    navController.setNavigationBarHidden(true, animated: false)
+    
+//    navController.interactivePopGestureRecognizer?.isEnabled = true
+//    //navController.interactivePopGestureRecognizer?.delegate = self
+//    navController.setNavigationBarHidden(true, animated: false)
+//    navController.setNavigationBarHidden(true, animated: false)
     
     let centerController = ContainerViewController()
     window.rootViewController = centerController //navController

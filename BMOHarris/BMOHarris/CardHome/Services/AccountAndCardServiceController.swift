@@ -120,7 +120,6 @@ class AccountAndCardServiceController: UIViewController {
       self.cardView.showShadow(bShodow: false)
     } completion: { _ in
     }
-    Helper.upDateVirtualCardStatus(bLockedStatus: true)
     
   }
   
@@ -135,9 +134,9 @@ class AccountAndCardServiceController: UIViewController {
       self.cardView.nameLabel.alpha  = 1
       self.cardView.moreButton.alpha = 1
       self.cardView.showShadow(bShodow: true)
+      
     } completion: { _ in
     }
-    Helper.upDateVirtualCardStatus(bLockedStatus: false)
   }
   
   func addAccountSummary() {
@@ -300,7 +299,7 @@ extension AccountAndCardServiceController: CardViewShowMoreDelegate {
 extension AccountAndCardServiceController: CardViewDelegate {
   func onAuthenticationSuccess(bLocked: Bool) {
     print("onAuthenticationSuccess...")
-    if bLocked {
+    if !bLocked {
       unLockCardView()
     } else {
      lockCardView()
