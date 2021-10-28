@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeView: UIView {
+class CardHomeView: UIView {
 
   var accountsContainer: AccountsContainer!
   var cardView: CardView!

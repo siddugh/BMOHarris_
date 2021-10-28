@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     Helper.upDatePhysicalCardStatus(bLockedStatus: true)
     Helper.upDateVirtualCardStatus(bLockedStatus: true)
     
-    let hVC = HomeViewController()
+    let hVC = CardHomeViewController()
     let navC = UINavigationController(rootViewController: hVC)
     navC.setNavigationBarHidden(true, animated: false)
     self.addChild(navC)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class CardHomeViewController: UIViewController {
 
   var collectionView: UICollectionView!
   var headerView: Header!
@@ -135,7 +135,7 @@ class HomeViewController: UIViewController {
     scrollView.clipsToBounds = true
     scrollView.contentSize = CGSize(width: self.view.bounds.width - 30, height: 2000)
     scrollView.backgroundColor = .yellow
-    let homeView = HomeView(frame: view.bounds)
+    let homeView = CardHomeView(frame: view.bounds)
     scrollView.addSubview(homeView)
   }
   
@@ -196,21 +196,21 @@ class HomeViewController: UIViewController {
 
 //MARK: Extensions
 
-extension HomeViewController: HeaderDelegate {
+extension CardHomeViewController: HeaderDelegate {
   func backACtion() {
     showMenu()
   }
 }
 
 // Should call from routing function
-extension HomeViewController: CardLockedMessageViewDelegate {
+extension CardHomeViewController: CardLockedMessageViewDelegate {
   func tappedOnMessageView() {
    print("tappedOnMessageView...")
     showPhysicalCard()
   }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CardHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 1
   }
@@ -227,7 +227,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   }
 }
 
-extension HomeViewController: CardViewDelegate {
+extension CardHomeViewController: CardViewDelegate {
   func onAuthenticationSuccess(bLocked: Bool) {
     print("onAuthenticationSuccess...")
     if bLocked {
@@ -249,14 +249,14 @@ extension HomeViewController: CardViewDelegate {
 }
 
 
-extension HomeViewController: CardViewShowMoreDelegate {
+extension CardHomeViewController: CardViewShowMoreDelegate {
   func showMore() {
     let cntroller = AccDetailViewController()
     navigationController?.present(cntroller, animated: true, completion: nil)
   }
 }
 
-extension HomeViewController: ServiceViewDelegate {
+extension CardHomeViewController: ServiceViewDelegate {
   func loadService(type: ServiceType) {
     print("selected service :\(type)")
       switch type {
@@ -284,7 +284,7 @@ extension HomeViewController: ServiceViewDelegate {
 }
 
 
-extension HomeViewController: UIAdaptivePresentationControllerDelegate {
+extension CardHomeViewController: UIAdaptivePresentationControllerDelegate {
   func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
           return true // <-prevents the modal sheet from being closed
       }
@@ -294,7 +294,7 @@ extension HomeViewController: UIAdaptivePresentationControllerDelegate {
   }
 }
 
-extension HomeViewController: TransactionViewDelegate {
+extension CardHomeViewController: TransactionViewDelegate {
   func viewAll() {
     let transactions = DataProvider().getTransactions()
    let controller = TransactionsViewController(transactionsViewModel: TransactionViewModel(transactionModel: transactions))
@@ -304,14 +304,14 @@ extension HomeViewController: TransactionViewDelegate {
   }
 }
 
-extension HomeViewController: SelectedItemDelegate {
+extension CardHomeViewController: SelectedItemDelegate {
   func selectedItem(item: TransactionModel) {
     let controller = TransactionDetailViewController()
     navigationController?.pushViewController(controller, animated: true)
   }
 }
 
-extension HomeViewController: ScheduledPaymentViewDelegate {
+extension CardHomeViewController: ScheduledPaymentViewDelegate {
   func showAllScheduledPayments() {
     print("Show all scheduled payments...")
     let controller = ScheduledPaymentViewController()
@@ -319,21 +319,21 @@ extension HomeViewController: ScheduledPaymentViewDelegate {
   }
 }
 
-extension HomeViewController: GoalsCollectionViewDelegate {
+extension CardHomeViewController: GoalsCollectionViewDelegate {
   func showDetailsOf(goal: GoalModel) {
     let controller = DepositGoalAmountViewController()
     self.navigationController?.pushViewController(controller, animated: true)
   }
 }
 
-extension HomeViewController: TransactionCollectionViewDelegate {
+extension CardHomeViewController: TransactionCollectionViewDelegate {
   func selectedTransaction(transaction: TransactionModel) {
     let controller = TransactionDetailViewController()
     navigationController?.pushViewController(controller, animated: true)
   }
 }
 
-extension HomeViewController: SpendAnalysisViewDelegate {
+extension CardHomeViewController: SpendAnalysisViewDelegate {
   func showAllTransactions() {
     let controller = SpendAnalysisViewController()
     navigationController?.present(controller, animated: true, completion: nil)
@@ -341,7 +341,7 @@ extension HomeViewController: SpendAnalysisViewDelegate {
 }
 
 
-extension HomeViewController {
+extension CardHomeViewController {
   func showAccountAndCard() {   
     let aacCardViewCotroller = AccountAndCardServiceController()
     navigationController?.pushViewController(aacCardViewCotroller, animated: true)

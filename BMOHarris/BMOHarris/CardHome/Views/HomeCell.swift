@@ -21,7 +21,7 @@ var couponsView: CouponsView!
 
 class HomeCell: UICollectionViewCell {
   
-  var homeView: HomeView!
+  var homeView: CardHomeView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -42,7 +42,7 @@ class HomeCell: UICollectionViewCell {
 
 
   private func setupUI() {
-    homeView = HomeView(frame: self.bounds)
+    homeView = CardHomeView(frame: self.bounds)
     self.addSubview(homeView)
     print("self.bounds: \(self.bounds)")
     homeView.frame = self.bounds

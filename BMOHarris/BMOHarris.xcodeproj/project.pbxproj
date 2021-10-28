@@ -71,8 +71,8 @@
 		122D3C98272A751F00109CEE /* AddServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C95272A751F00109CEE /* AddServicesView.swift */; };
 		122D3C9A272A751F00109CEE /* AddServicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3C97272A751F00109CEE /* AddServicesView.xib */; };
 		122D3C9C272A756000109CEE /* AddServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C9B272A755F00109CEE /* AddServiceView.swift */; };
-		125C037C271FECDA005807EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037B271FECDA005807EF /* HomeViewController.swift */; };
-		125C037F271FED64005807EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037E271FED64005807EF /* HomeView.swift */; };
+		125C037C271FECDA005807EF /* CardHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037B271FECDA005807EF /* CardHomeViewController.swift */; };
+		125C037F271FED64005807EF /* CardHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037E271FED64005807EF /* CardHomeView.swift */; };
 		125C0382271FEF45005807EF /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C0381271FEF45005807EF /* ViewFactory.swift */; };
 		125C0384271FFB39005807EF /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C0383271FFB39005807EF /* HomeCell.swift */; };
 		125C038627202760005807EF /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C038527202760005807EF /* TransactionView.swift */; };
@@ -234,8 +234,8 @@
 		122D3C95272A751F00109CEE /* AddServicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServicesView.swift; sourceTree = "<group>"; };
 		122D3C97272A751F00109CEE /* AddServicesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddServicesView.xib; sourceTree = "<group>"; };
 		122D3C9B272A755F00109CEE /* AddServiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceView.swift; sourceTree = "<group>"; };
-		125C037B271FECDA005807EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		125C037E271FED64005807EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		125C037B271FECDA005807EF /* CardHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeViewController.swift; sourceTree = "<group>"; };
+		125C037E271FED64005807EF /* CardHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeView.swift; sourceTree = "<group>"; };
 		125C0381271FEF45005807EF /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		125C0383271FFB39005807EF /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		125C038527202760005807EF /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
@@ -431,10 +431,17 @@
 			path = TransactionsDetail;
 			sourceTree = "<group>";
 		};
+		122D3C9D272AB73700109CEE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		125C037A271FEC11005807EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				125C037B271FECDA005807EF /* HomeViewController.swift */,
+				125C037B271FECDA005807EF /* CardHomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -442,7 +449,7 @@
 		125C037D271FED04005807EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				125C037E271FED64005807EF /* HomeView.swift */,
+				125C037E271FED64005807EF /* CardHomeView.swift */,
 				125C0383271FFB39005807EF /* HomeCell.swift */,
 			);
 			path = Views;
@@ -643,7 +650,8 @@
 				12C6169226FAF182003415B5 /* Fonts */,
 				12C6169126FAF114003415B5 /* Utility */,
 				12C6169026FAF10D003415B5 /* Helpers */,
-				12C6168E26FAF09B003415B5 /* Home */,
+				12C6168E26FAF09B003415B5 /* CardHome */,
+				122D3C9D272AB73700109CEE /* Home */,
 				12C6167A26EF621E003415B5 /* AppDelegate.swift */,
 				12C6167C26EF621E003415B5 /* SceneDelegate.swift */,
 				12C6167E26EF621E003415B5 /* ViewController.swift */,
@@ -655,7 +663,7 @@
 			path = BMOHarris;
 			sourceTree = "<group>";
 		};
-		12C6168E26FAF09B003415B5 /* Home */ = {
+		12C6168E26FAF09B003415B5 /* CardHome */ = {
 			isa = PBXGroup;
 			children = (
 				125C0380271FEF2B005807EF /* ViewFactory */,
@@ -672,7 +680,7 @@
 				12C616C326FAFD2A003415B5 /* Accounts */,
 				12C6168F26FAF0FC003415B5 /* Headers */,
 			);
-			path = Home;
+			path = CardHome;
 			sourceTree = "<group>";
 		};
 		12C6168F26FAF0FC003415B5 /* Headers */ = {
@@ -986,10 +994,10 @@
 				122D3C2627217EE200109CEE /* CouponsView.swift in Sources */,
 				12EF9AD626FB0550006E6407 /* AccountsContainer.swift in Sources */,
 				1268BA1A2701D306006F1CCC /* PaymentViewModel.swift in Sources */,
-				125C037F271FED64005807EF /* HomeView.swift in Sources */,
+				125C037F271FED64005807EF /* CardHomeView.swift in Sources */,
 				1268B9C226FDB6DE006F1CCC /* ReusableCell.swift in Sources */,
 				122D3C7227281E8E00109CEE /* DepositGoalAmountViewController.swift in Sources */,
-				125C037C271FECDA005807EF /* HomeViewController.swift in Sources */,
+				125C037C271FECDA005807EF /* CardHomeViewController.swift in Sources */,
 				12C616BE26FAF1A5003415B5 /* Helper.swift in Sources */,
 				1268BA102701C7C3006F1CCC /* GoalsViewModel.swift in Sources */,
 				122D3C2C272699C700109CEE /* AccDetailInfoView.swift in Sources */,
