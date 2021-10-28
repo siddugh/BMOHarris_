@@ -64,6 +64,10 @@
                         <constraint firstAttribute="width" constant="10" id="yER-dD-96g"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCu-GX-qPK" userLabel="GestureView">
+                    <rect key="frame" x="0.0" y="13.5" width="55" height="45"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
@@ -73,7 +77,11 @@
                 <constraint firstItem="jhr-gj-VWS" firstAttribute="centerY" secondItem="m1B-w4-JSK" secondAttribute="centerY" id="FfG-Bh-5aL"/>
                 <constraint firstItem="Vb8-os-9dJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Hbz-v4-zZY"/>
                 <constraint firstItem="mTv-4w-02i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Mf7-Zd-U0k"/>
+                <constraint firstItem="fCu-GX-qPK" firstAttribute="centerY" secondItem="mTv-4w-02i" secondAttribute="centerY" id="NWm-dH-ghG"/>
+                <constraint firstItem="fCu-GX-qPK" firstAttribute="height" secondItem="mTv-4w-02i" secondAttribute="height" constant="10" id="QN5-SF-VnK"/>
                 <constraint firstItem="jhr-gj-VWS" firstAttribute="width" secondItem="m1B-w4-JSK" secondAttribute="width" constant="14" id="Ud3-3P-NEL"/>
+                <constraint firstItem="fCu-GX-qPK" firstAttribute="centerX" secondItem="mTv-4w-02i" secondAttribute="centerX" id="Vks-ro-Zwt"/>
+                <constraint firstItem="fCu-GX-qPK" firstAttribute="width" secondItem="mTv-4w-02i" secondAttribute="width" constant="20" id="WMY-34-KIw"/>
                 <constraint firstItem="m1B-w4-JSK" firstAttribute="centerY" secondItem="mTv-4w-02i" secondAttribute="centerY" id="Ylk-Pt-Dp6"/>
                 <constraint firstItem="QQe-aO-NgB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kwx-XJ-UWJ"/>
                 <constraint firstItem="jhr-gj-VWS" firstAttribute="height" secondItem="m1B-w4-JSK" secondAttribute="height" constant="14" id="lu5-oJ-F86"/>
@@ -84,6 +92,7 @@
             <connections>
                 <outlet property="backButton" destination="Eqq-rm-2GL" id="UBE-gA-LEw"/>
                 <outlet property="backButtonView" destination="mTv-4w-02i" id="80g-qK-xss"/>
+                <outlet property="gestureView" destination="fCu-GX-qPK" id="gmN-OH-BPH"/>
                 <outlet property="imageBGView" destination="jhr-gj-VWS" id="oVz-cW-zlM"/>
                 <outlet property="imageView" destination="m1B-w4-JSK" id="Xaz-MM-cY2"/>
                 <outlet property="logoImageView" destination="Vb8-os-9dJ" id="4jQ-CC-Xxf"/>

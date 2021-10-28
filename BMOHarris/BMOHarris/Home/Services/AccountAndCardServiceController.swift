@@ -256,7 +256,6 @@ class AccountAndCardServiceController: UIViewController {
 
       self.addFeatureView.alpha = self.showingAddFestures ? 0 : 1
       self.view.layoutIfNeeded()
-      //self.addFeatureView.backgroundColor = .green
       self.showingAddFestures = !self.showingAddFestures
     }
   }

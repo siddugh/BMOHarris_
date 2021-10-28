@@ -13,6 +13,7 @@ protocol HeaderDelegate: AnyObject {
 
 class Header: UIView {
 
+  @IBOutlet weak var gestureView: UIView!
   @IBOutlet weak var backButtonView: UIView!
   @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var titleLabel: UILabel!
@@ -40,7 +41,7 @@ class Header: UIView {
   }
   
   func addBackActiongesture() {
-    backButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleBackAction)))
+    gestureView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleBackAction)))
   }
   
   @objc func handleBackAction() {
