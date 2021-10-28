@@ -16,6 +16,8 @@ class CardHomeViewController: UIViewController {
   
   var homeCell: HomeCell?
   var physicalCardController = PhysicalCardViewController()
+  
+  weak var mDelegate: MenuDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,6 +144,7 @@ class CardHomeViewController: UIViewController {
     
   private func showMenu() {
     print("showMenu")
+    mDelegate?.showMenu()
   }
   
   func showPhysicalCardMessg(bShow: Bool) {
@@ -347,6 +350,7 @@ extension CardHomeViewController {
     navigationController?.pushViewController(aacCardViewCotroller, animated: true)
   }
 }
+
 
 
 

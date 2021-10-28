@@ -71,6 +71,71 @@
 		122D3C98272A751F00109CEE /* AddServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C95272A751F00109CEE /* AddServicesView.swift */; };
 		122D3C9A272A751F00109CEE /* AddServicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3C97272A751F00109CEE /* AddServicesView.xib */; };
 		122D3C9C272A756000109CEE /* AddServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C9B272A755F00109CEE /* AddServiceView.swift */; };
+		122D3CE5272AB79200109CEE /* SuccessMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C9F272AB79100109CEE /* SuccessMsgViewController.swift */; };
+		122D3CE6272AB79200109CEE /* SuccessMessageVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CA0272AB79100109CEE /* SuccessMessageVIew.xib */; };
+		122D3CE7272AB79200109CEE /* DocVerificationMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CA1272AB79100109CEE /* DocVerificationMsgViewController.swift */; };
+		122D3CE8272AB79200109CEE /* UploadStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CA2272AB79100109CEE /* UploadStatusMessage.swift */; };
+		122D3CE9272AB79200109CEE /* UploadStatusMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CA3272AB79100109CEE /* UploadStatusMessage.xib */; };
+		122D3CEA272AB79200109CEE /* EmplyInfoStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CA4272AB79100109CEE /* EmplyInfoStatusViewController.swift */; };
+		122D3CEB272AB79200109CEE /* SuccessMessageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CA5272AB79100109CEE /* SuccessMessageVIew.swift */; };
+		122D3CEC272AB79200109CEE /* GotoMyAccountMSGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CA6272AB79100109CEE /* GotoMyAccountMSGViewController.swift */; };
+		122D3CED272AB79200109CEE /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CA7272AB79100109CEE /* MessageViewController.swift */; };
+		122D3CEE272AB79200109CEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CA9272AB79100109CEE /* HomeViewController.swift */; };
+		122D3CEF272AB79200109CEE /* StartMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CAB272AB79100109CEE /* StartMessageView.xib */; };
+		122D3CF0272AB79200109CEE /* GooglePlexBankInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CAC272AB79100109CEE /* GooglePlexBankInfo.swift */; };
+		122D3CF1272AB79200109CEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CAD272AB79100109CEE /* HomeView.swift */; };
+		122D3CF2272AB79200109CEE /* BankSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CAE272AB79100109CEE /* BankSelectionView.swift */; };
+		122D3CF3272AB79200109CEE /* StartMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CAF272AB79100109CEE /* StartMessageView.swift */; };
+		122D3CF4272AB79200109CEE /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CB0272AB79100109CEE /* HomeView.xib */; };
+		122D3CF5272AB79200109CEE /* StartMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CB1272AB79100109CEE /* StartMessageViewController.swift */; };
+		122D3CF6272AB79200109CEE /* BMOHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CB4272AB79100109CEE /* BMOHeaderView.swift */; };
+		122D3CF7272AB79200109CEE /* ProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CB6272AB79100109CEE /* ProfilePhotoViewController.swift */; };
+		122D3CF8272AB79200109CEE /* EmploymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CB7272AB79100109CEE /* EmploymentViewController.swift */; };
+		122D3CF9272AB79200109CEE /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CB8272AB79100109CEE /* TermsConditionsViewController.swift */; };
+		122D3CFA272AB79200109CEE /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CB9272AB79100109CEE /* PersonalViewController.swift */; };
+		122D3CFB272AB79200109CEE /* UploadProofIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CBA272AB79100109CEE /* UploadProofIdentityViewController.swift */; };
+		122D3CFC272AB79200109CEE /* ReUploadIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CBB272AB79100109CEE /* ReUploadIdentityViewController.swift */; };
+		122D3CFD272AB79200109CEE /* UploadDocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CBC272AB79100109CEE /* UploadDocViewController.swift */; };
+		122D3CFE272AB79200109CEE /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CBD272AB79100109CEE /* ContactInfoViewController.swift */; };
+		122D3CFF272AB79200109CEE /* IdentityProofView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CBF272AB79100109CEE /* IdentityProofView.swift */; };
+		122D3D00272AB79200109CEE /* ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CC0272AB79100109CEE /* ContactInfoView.swift */; };
+		122D3D01272AB79200109CEE /* EmploymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CC1272AB79100109CEE /* EmploymentCell.swift */; };
+		122D3D02272AB79200109CEE /* IdentityProofView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CC2272AB79100109CEE /* IdentityProofView.xib */; };
+		122D3D03272AB79200109CEE /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CC3272AB79100109CEE /* ContactInfo.swift */; };
+		122D3D04272AB79200109CEE /* UserEmploymentInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CC4272AB79100109CEE /* UserEmploymentInfo.xib */; };
+		122D3D05272AB79200109CEE /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CC5272AB79100109CEE /* ContactCell.swift */; };
+		122D3D06272AB79200109CEE /* PersonalInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CC6272AB79100109CEE /* PersonalInfoView.xib */; };
+		122D3D07272AB79200109CEE /* TermsandConditionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CC7272AB79100109CEE /* TermsandConditionCell.xib */; };
+		122D3D09272AB79200109CEE /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CC9272AB79100109CEE /* TitleHeaderView.xib */; };
+		122D3D0A272AB79200109CEE /* PersonalInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CCA272AB79100109CEE /* PersonalInfoCell.xib */; };
+		122D3D0B272AB79200109CEE /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CCB272AB79100109CEE /* ContactCell.xib */; };
+		122D3D0C272AB79200109CEE /* TermsandCondiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CCC272AB79100109CEE /* TermsandCondiView.swift */; };
+		122D3D0D272AB79200109CEE /* EmploymentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CCD272AB79100109CEE /* EmploymentInfoView.swift */; };
+		122D3D0E272AB79200109CEE /* TermsandConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CCE272AB79100109CEE /* TermsandConditionCell.swift */; };
+		122D3D0F272AB79200109CEE /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CCF272AB79100109CEE /* TitleHeaderView.swift */; };
+		122D3D10272AB79200109CEE /* UploadDocCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CD0272AB79100109CEE /* UploadDocCell.xib */; };
+		122D3D11272AB79200109CEE /* EmploymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CD1272AB79100109CEE /* EmploymentCell.xib */; };
+		122D3D12272AB79200109CEE /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CD2272AB79100109CEE /* PersonalInfoView.swift */; };
+		122D3D13272AB79200109CEE /* UploadDocCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CD3272AB79100109CEE /* UploadDocCell.swift */; };
+		122D3D14272AB79200109CEE /* TermsandCondiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CD4272AB79100109CEE /* TermsandCondiView.xib */; };
+		122D3D15272AB79200109CEE /* PersonalInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CD5272AB79100109CEE /* PersonalInfoCell.swift */; };
+		122D3D16272AB79200109CEE /* ContactInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CD6272AB79100109CEE /* ContactInfoView.xib */; };
+		122D3D17272AB79200109CEE /* UserEmploymentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CD7272AB79100109CEE /* UserEmploymentInfo.swift */; };
+		122D3D18272AB79200109CEE /* UploadPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CDA272AB79200109CEE /* UploadPhotoViewController.swift */; };
+		122D3D19272AB79200109CEE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CDB272AB79200109CEE /* ImagePicker.swift */; };
+		122D3D1A272AB79200109CEE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CDC272AB79200109CEE /* CameraViewController.swift */; };
+		122D3D1B272AB79200109CEE /* TakePhotoInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CDD272AB79200109CEE /* TakePhotoInfoController.swift */; };
+		122D3D1C272AB79200109CEE /* SubmitPhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CDF272AB79200109CEE /* SubmitPhoto.xib */; };
+		122D3D1D272AB79200109CEE /* SubmitPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CE0272AB79200109CEE /* SubmitPhoto.swift */; };
+		122D3D1E272AB79200109CEE /* TakePhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CE1272AB79200109CEE /* TakePhotoInfo.swift */; };
+		122D3D1F272AB79200109CEE /* TakePhotoInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CE2272AB79200109CEE /* TakePhotoInfo.xib */; };
+		122D3D20272AB79200109CEE /* PhotoMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3CE3272AB79200109CEE /* PhotoMessage.xib */; };
+		122D3D21272AB79200109CEE /* PhotoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3CE4272AB79200109CEE /* PhotoMessage.swift */; };
+		122D3D29272AB7E100109CEE /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3D23272AB7E100109CEE /* MenuDelegate.swift */; };
+		122D3D2A272AB7E100109CEE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3D24272AB7E100109CEE /* ContainerViewController.swift */; };
+		122D3D2B272AB7E100109CEE /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3D26272AB7E100109CEE /* MenuCell.swift */; };
+		122D3D2C272AB7E100109CEE /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3D27272AB7E100109CEE /* MenuCell.xib */; };
+		122D3D2D272AB7E100109CEE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3D28272AB7E100109CEE /* MenuViewController.swift */; };
 		125C037C271FECDA005807EF /* CardHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037B271FECDA005807EF /* CardHomeViewController.swift */; };
 		125C037F271FED64005807EF /* CardHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037E271FED64005807EF /* CardHomeView.swift */; };
 		125C0382271FEF45005807EF /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C0381271FEF45005807EF /* ViewFactory.swift */; };
@@ -234,6 +299,71 @@
 		122D3C95272A751F00109CEE /* AddServicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServicesView.swift; sourceTree = "<group>"; };
 		122D3C97272A751F00109CEE /* AddServicesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddServicesView.xib; sourceTree = "<group>"; };
 		122D3C9B272A755F00109CEE /* AddServiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceView.swift; sourceTree = "<group>"; };
+		122D3C9F272AB79100109CEE /* SuccessMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessMsgViewController.swift; sourceTree = "<group>"; };
+		122D3CA0272AB79100109CEE /* SuccessMessageVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccessMessageVIew.xib; sourceTree = "<group>"; };
+		122D3CA1272AB79100109CEE /* DocVerificationMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocVerificationMsgViewController.swift; sourceTree = "<group>"; };
+		122D3CA2272AB79100109CEE /* UploadStatusMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadStatusMessage.swift; sourceTree = "<group>"; };
+		122D3CA3272AB79100109CEE /* UploadStatusMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadStatusMessage.xib; sourceTree = "<group>"; };
+		122D3CA4272AB79100109CEE /* EmplyInfoStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplyInfoStatusViewController.swift; sourceTree = "<group>"; };
+		122D3CA5272AB79100109CEE /* SuccessMessageVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessMessageVIew.swift; sourceTree = "<group>"; };
+		122D3CA6272AB79100109CEE /* GotoMyAccountMSGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GotoMyAccountMSGViewController.swift; sourceTree = "<group>"; };
+		122D3CA7272AB79100109CEE /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		122D3CA9272AB79100109CEE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		122D3CAB272AB79100109CEE /* StartMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartMessageView.xib; sourceTree = "<group>"; };
+		122D3CAC272AB79100109CEE /* GooglePlexBankInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlexBankInfo.swift; sourceTree = "<group>"; };
+		122D3CAD272AB79100109CEE /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		122D3CAE272AB79100109CEE /* BankSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankSelectionView.swift; sourceTree = "<group>"; };
+		122D3CAF272AB79100109CEE /* StartMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMessageView.swift; sourceTree = "<group>"; };
+		122D3CB0272AB79100109CEE /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		122D3CB1272AB79100109CEE /* StartMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMessageViewController.swift; sourceTree = "<group>"; };
+		122D3CB4272AB79100109CEE /* BMOHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOHeaderView.swift; sourceTree = "<group>"; };
+		122D3CB6272AB79100109CEE /* ProfilePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoViewController.swift; sourceTree = "<group>"; };
+		122D3CB7272AB79100109CEE /* EmploymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmploymentViewController.swift; sourceTree = "<group>"; };
+		122D3CB8272AB79100109CEE /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
+		122D3CB9272AB79100109CEE /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		122D3CBA272AB79100109CEE /* UploadProofIdentityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadProofIdentityViewController.swift; sourceTree = "<group>"; };
+		122D3CBB272AB79100109CEE /* ReUploadIdentityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReUploadIdentityViewController.swift; sourceTree = "<group>"; };
+		122D3CBC272AB79100109CEE /* UploadDocViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadDocViewController.swift; sourceTree = "<group>"; };
+		122D3CBD272AB79100109CEE /* ContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
+		122D3CBF272AB79100109CEE /* IdentityProofView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityProofView.swift; sourceTree = "<group>"; };
+		122D3CC0272AB79100109CEE /* ContactInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoView.swift; sourceTree = "<group>"; };
+		122D3CC1272AB79100109CEE /* EmploymentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmploymentCell.swift; sourceTree = "<group>"; };
+		122D3CC2272AB79100109CEE /* IdentityProofView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdentityProofView.xib; sourceTree = "<group>"; };
+		122D3CC3272AB79100109CEE /* ContactInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		122D3CC4272AB79100109CEE /* UserEmploymentInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserEmploymentInfo.xib; sourceTree = "<group>"; };
+		122D3CC5272AB79100109CEE /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		122D3CC6272AB79100109CEE /* PersonalInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalInfoView.xib; sourceTree = "<group>"; };
+		122D3CC7272AB79100109CEE /* TermsandConditionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsandConditionCell.xib; sourceTree = "<group>"; };
+		122D3CC9272AB79100109CEE /* TitleHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleHeaderView.xib; sourceTree = "<group>"; };
+		122D3CCA272AB79100109CEE /* PersonalInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalInfoCell.xib; sourceTree = "<group>"; };
+		122D3CCB272AB79100109CEE /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		122D3CCC272AB79100109CEE /* TermsandCondiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsandCondiView.swift; sourceTree = "<group>"; };
+		122D3CCD272AB79100109CEE /* EmploymentInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmploymentInfoView.swift; sourceTree = "<group>"; };
+		122D3CCE272AB79100109CEE /* TermsandConditionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsandConditionCell.swift; sourceTree = "<group>"; };
+		122D3CCF272AB79100109CEE /* TitleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
+		122D3CD0272AB79100109CEE /* UploadDocCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadDocCell.xib; sourceTree = "<group>"; };
+		122D3CD1272AB79100109CEE /* EmploymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmploymentCell.xib; sourceTree = "<group>"; };
+		122D3CD2272AB79100109CEE /* PersonalInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
+		122D3CD3272AB79100109CEE /* UploadDocCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadDocCell.swift; sourceTree = "<group>"; };
+		122D3CD4272AB79100109CEE /* TermsandCondiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsandCondiView.xib; sourceTree = "<group>"; };
+		122D3CD5272AB79100109CEE /* PersonalInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCell.swift; sourceTree = "<group>"; };
+		122D3CD6272AB79100109CEE /* ContactInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactInfoView.xib; sourceTree = "<group>"; };
+		122D3CD7272AB79100109CEE /* UserEmploymentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEmploymentInfo.swift; sourceTree = "<group>"; };
+		122D3CDA272AB79200109CEE /* UploadPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadPhotoViewController.swift; sourceTree = "<group>"; };
+		122D3CDB272AB79200109CEE /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		122D3CDC272AB79200109CEE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		122D3CDD272AB79200109CEE /* TakePhotoInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoInfoController.swift; sourceTree = "<group>"; };
+		122D3CDF272AB79200109CEE /* SubmitPhoto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmitPhoto.xib; sourceTree = "<group>"; };
+		122D3CE0272AB79200109CEE /* SubmitPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPhoto.swift; sourceTree = "<group>"; };
+		122D3CE1272AB79200109CEE /* TakePhotoInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoInfo.swift; sourceTree = "<group>"; };
+		122D3CE2272AB79200109CEE /* TakePhotoInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakePhotoInfo.xib; sourceTree = "<group>"; };
+		122D3CE3272AB79200109CEE /* PhotoMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoMessage.xib; sourceTree = "<group>"; };
+		122D3CE4272AB79200109CEE /* PhotoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMessage.swift; sourceTree = "<group>"; };
+		122D3D23272AB7E100109CEE /* MenuDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
+		122D3D24272AB7E100109CEE /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		122D3D26272AB7E100109CEE /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		122D3D27272AB7E100109CEE /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		122D3D28272AB7E100109CEE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		125C037B271FECDA005807EF /* CardHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeViewController.swift; sourceTree = "<group>"; };
 		125C037E271FED64005807EF /* CardHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeView.swift; sourceTree = "<group>"; };
 		125C0381271FEF45005807EF /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
@@ -434,8 +564,168 @@
 		122D3C9D272AB73700109CEE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				122D3CA8272AB79100109CEE /* Home */,
+				122D3C9E272AB79100109CEE /* Message */,
+				122D3CD8272AB79200109CEE /* Photo */,
+				122D3CB5272AB79100109CEE /* UserInfo */,
+				122D3CB2272AB79100109CEE /* UserInfoController */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		122D3C9E272AB79100109CEE /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				122D3C9F272AB79100109CEE /* SuccessMsgViewController.swift */,
+				122D3CA0272AB79100109CEE /* SuccessMessageVIew.xib */,
+				122D3CA1272AB79100109CEE /* DocVerificationMsgViewController.swift */,
+				122D3CA2272AB79100109CEE /* UploadStatusMessage.swift */,
+				122D3CA3272AB79100109CEE /* UploadStatusMessage.xib */,
+				122D3CA4272AB79100109CEE /* EmplyInfoStatusViewController.swift */,
+				122D3CA5272AB79100109CEE /* SuccessMessageVIew.swift */,
+				122D3CA6272AB79100109CEE /* GotoMyAccountMSGViewController.swift */,
+				122D3CA7272AB79100109CEE /* MessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		122D3CA8272AB79100109CEE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CA9272AB79100109CEE /* HomeViewController.swift */,
+				122D3CAA272AB79100109CEE /* View */,
+				122D3CB1272AB79100109CEE /* StartMessageViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		122D3CAA272AB79100109CEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CAB272AB79100109CEE /* StartMessageView.xib */,
+				122D3CAC272AB79100109CEE /* GooglePlexBankInfo.swift */,
+				122D3CAD272AB79100109CEE /* HomeView.swift */,
+				122D3CAE272AB79100109CEE /* BankSelectionView.swift */,
+				122D3CAF272AB79100109CEE /* StartMessageView.swift */,
+				122D3CB0272AB79100109CEE /* HomeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		122D3CB2272AB79100109CEE /* UserInfoController */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CB3272AB79100109CEE /* Views */,
+			);
+			path = UserInfoController;
+			sourceTree = "<group>";
+		};
+		122D3CB3272AB79100109CEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CB4272AB79100109CEE /* BMOHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		122D3CB5272AB79100109CEE /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CB6272AB79100109CEE /* ProfilePhotoViewController.swift */,
+				122D3CB7272AB79100109CEE /* EmploymentViewController.swift */,
+				122D3CB8272AB79100109CEE /* TermsConditionsViewController.swift */,
+				122D3CB9272AB79100109CEE /* PersonalViewController.swift */,
+				122D3CBA272AB79100109CEE /* UploadProofIdentityViewController.swift */,
+				122D3CBB272AB79100109CEE /* ReUploadIdentityViewController.swift */,
+				122D3CBC272AB79100109CEE /* UploadDocViewController.swift */,
+				122D3CBD272AB79100109CEE /* ContactInfoViewController.swift */,
+				122D3CBE272AB79100109CEE /* View */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		122D3CBE272AB79100109CEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CBF272AB79100109CEE /* IdentityProofView.swift */,
+				122D3CC0272AB79100109CEE /* ContactInfoView.swift */,
+				122D3CC1272AB79100109CEE /* EmploymentCell.swift */,
+				122D3CC2272AB79100109CEE /* IdentityProofView.xib */,
+				122D3CC3272AB79100109CEE /* ContactInfo.swift */,
+				122D3CC4272AB79100109CEE /* UserEmploymentInfo.xib */,
+				122D3CC5272AB79100109CEE /* ContactCell.swift */,
+				122D3CC6272AB79100109CEE /* PersonalInfoView.xib */,
+				122D3CC7272AB79100109CEE /* TermsandConditionCell.xib */,
+				122D3CC9272AB79100109CEE /* TitleHeaderView.xib */,
+				122D3CCA272AB79100109CEE /* PersonalInfoCell.xib */,
+				122D3CCB272AB79100109CEE /* ContactCell.xib */,
+				122D3CCC272AB79100109CEE /* TermsandCondiView.swift */,
+				122D3CCD272AB79100109CEE /* EmploymentInfoView.swift */,
+				122D3CCE272AB79100109CEE /* TermsandConditionCell.swift */,
+				122D3CCF272AB79100109CEE /* TitleHeaderView.swift */,
+				122D3CD0272AB79100109CEE /* UploadDocCell.xib */,
+				122D3CD1272AB79100109CEE /* EmploymentCell.xib */,
+				122D3CD2272AB79100109CEE /* PersonalInfoView.swift */,
+				122D3CD3272AB79100109CEE /* UploadDocCell.swift */,
+				122D3CD4272AB79100109CEE /* TermsandCondiView.xib */,
+				122D3CD5272AB79100109CEE /* PersonalInfoCell.swift */,
+				122D3CD6272AB79100109CEE /* ContactInfoView.xib */,
+				122D3CD7272AB79100109CEE /* UserEmploymentInfo.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		122D3CD8272AB79200109CEE /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CD9272AB79200109CEE /* controller */,
+				122D3CDE272AB79200109CEE /* Views */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		122D3CD9272AB79200109CEE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CDA272AB79200109CEE /* UploadPhotoViewController.swift */,
+				122D3CDB272AB79200109CEE /* ImagePicker.swift */,
+				122D3CDC272AB79200109CEE /* CameraViewController.swift */,
+				122D3CDD272AB79200109CEE /* TakePhotoInfoController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		122D3CDE272AB79200109CEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				122D3CDF272AB79200109CEE /* SubmitPhoto.xib */,
+				122D3CE0272AB79200109CEE /* SubmitPhoto.swift */,
+				122D3CE1272AB79200109CEE /* TakePhotoInfo.swift */,
+				122D3CE2272AB79200109CEE /* TakePhotoInfo.xib */,
+				122D3CE3272AB79200109CEE /* PhotoMessage.xib */,
+				122D3CE4272AB79200109CEE /* PhotoMessage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		122D3D22272AB7E100109CEE /* MenuCOntroller */ = {
+			isa = PBXGroup;
+			children = (
+				122D3D23272AB7E100109CEE /* MenuDelegate.swift */,
+				122D3D24272AB7E100109CEE /* ContainerViewController.swift */,
+				122D3D25272AB7E100109CEE /* View */,
+				122D3D28272AB7E100109CEE /* MenuViewController.swift */,
+			);
+			path = MenuCOntroller;
+			sourceTree = "<group>";
+		};
+		122D3D25272AB7E100109CEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				122D3D26272AB7E100109CEE /* MenuCell.swift */,
+				122D3D27272AB7E100109CEE /* MenuCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		125C037A271FEC11005807EF /* Controllers */ = {
@@ -651,6 +941,7 @@
 				12C6169126FAF114003415B5 /* Utility */,
 				12C6169026FAF10D003415B5 /* Helpers */,
 				12C6168E26FAF09B003415B5 /* CardHome */,
+				122D3D22272AB7E100109CEE /* MenuCOntroller */,
 				122D3C9D272AB73700109CEE /* Home */,
 				12C6167A26EF621E003415B5 /* AppDelegate.swift */,
 				12C6167C26EF621E003415B5 /* SceneDelegate.swift */,
@@ -901,7 +1192,10 @@
 				12C616B526FAF182003415B5 /* Rubik-Black.ttf in Resources */,
 				12C616C226FAF2DF003415B5 /* Header.xib in Resources */,
 				120C4A4526FC7ED500ABC910 /* CardView.xib in Resources */,
+				122D3D0A272AB79200109CEE /* PersonalInfoCell.xib in Resources */,
 				12C616B926FAF182003415B5 /* Rubik-Regular.ttf in Resources */,
+				122D3CF4272AB79200109CEE /* HomeView.xib in Resources */,
+				122D3D14272AB79200109CEE /* TermsandCondiView.xib in Resources */,
 				122D3C7327281E8E00109CEE /* GoalAmountDeposited.xib in Resources */,
 				1268BA212701D52A006F1CCC /* SpendAnalysisCell.xib in Resources */,
 				122D3C5827281A7D00109CEE /* DepositAmountView.xib in Resources */,
@@ -909,22 +1203,31 @@
 				1268BA262701D6D2006F1CCC /* CouponCell.xib in Resources */,
 				12C616A826FAF182003415B5 /* pt-sans.italic.ttf in Resources */,
 				1203C70A270C544600EEF51E /* ReviewNewGoalView.xib in Resources */,
+				122D3D10272AB79200109CEE /* UploadDocCell.xib in Resources */,
 				12DB55382705B46E000167AA /* SavingAccountSummary.xib in Resources */,
 				1268B9D226FDD86F006F1CCC /* TransactionCell.xib in Resources */,
 				12C616A926FAF182003415B5 /* pt-sans.bold-italic.ttf in Resources */,
 				12C616AB26FAF182003415B5 /* pt-sans.regular.ttf in Resources */,
 				12DB5568270AE6E0000167AA /* NewGoalCell.xib in Resources */,
 				1268BA152701CD65006F1CCC /* PaymentCell.xib in Resources */,
+				122D3D07272AB79200109CEE /* TermsandConditionCell.xib in Resources */,
+				122D3D04272AB79200109CEE /* UserEmploymentInfo.xib in Resources */,
 				122D3C6827281D2100109CEE /* GoalSummaryView.xib in Resources */,
 				12EF9AD826FB0616006E6407 /* CheckingAccount.xib in Resources */,
 				12C616AD26FAF182003415B5 /* pt-sans.bold.ttf in Resources */,
 				12C616AC26FAF182003415B5 /* pt-sans.narrow.ttf in Resources */,
 				122D3C6627281D2100109CEE /* GoalSummaryCell.xib in Resources */,
+				122D3D20272AB79200109CEE /* PhotoMessage.xib in Resources */,
 				122D3C8B2729249B00109CEE /* TransactiosDetailVIew.xib in Resources */,
+				122D3D1F272AB79200109CEE /* TakePhotoInfo.xib in Resources */,
 				122D3C7A2728206500109CEE /* CompletedGoalView.xib in Resources */,
+				122D3D1C272AB79200109CEE /* SubmitPhoto.xib in Resources */,
+				122D3CE6272AB79200109CEE /* SuccessMessageVIew.xib in Resources */,
 				12C616AF26FAF182003415B5 /* pt-sans.narrow-bold.ttf in Resources */,
+				122D3D0B272AB79200109CEE /* ContactCell.xib in Resources */,
 				12C616B426FAF182003415B5 /* Rubik-Medium.ttf in Resources */,
 				12DB55342705B390000167AA /* CheckingAccountSummary.xib in Resources */,
+				122D3D2C272AB7E100109CEE /* MenuCell.xib in Resources */,
 				122D3C7C2728206500109CEE /* GoalCompletedCell.xib in Resources */,
 				1268BA092701B0F9006F1CCC /* GoalCell.xib in Resources */,
 				122D3C45272809FA00109CEE /* GoalsHeaderVIew.xib in Resources */,
@@ -935,24 +1238,31 @@
 				12C6168726EF6222003415B5 /* LaunchScreen.storyboard in Resources */,
 				122D3C4D27280E6D00109CEE /* ReviewNewGoalVIew.xib in Resources */,
 				122D3C9A272A751F00109CEE /* AddServicesView.xib in Resources */,
+				122D3D06272AB79200109CEE /* PersonalInfoView.xib in Resources */,
+				122D3D09272AB79200109CEE /* TitleHeaderView.xib in Resources */,
 				12C616B026FAF182003415B5 /* pt-sans.caption-bold.ttf in Resources */,
 				12C616B126FAF182003415B5 /* Rubik-MediumItalic.ttf in Resources */,
 				12DB552C27046F07000167AA /* CardLockedMessageView.xib in Resources */,
 				12C616AA26FAF182003415B5 /* pt-sans.caption.ttf in Resources */,
+				122D3CE9272AB79200109CEE /* UploadStatusMessage.xib in Resources */,
 				122D3C5E27281CD600109CEE /* DepositCell.xib in Resources */,
 				12C616B626FAF182003415B5 /* Rubik-Italic.ttf in Resources */,
 				12C616BA26FAF182003415B5 /* Rubik-BoldItalic.ttf in Resources */,
 				122D3C8C2729249B00109CEE /* TransactionDetailCell.xib in Resources */,
 				12DB5526270459C2000167AA /* PhysicalCardView.xib in Resources */,
+				122D3D02272AB79200109CEE /* IdentityProofView.xib in Resources */,
 				12C616B726FAF182003415B5 /* Rubik-LightItalic.ttf in Resources */,
 				12C616B226FAF182003415B5 /* Rubik-Bold.ttf in Resources */,
 				12C6168426EF6222003415B5 /* Assets.xcassets in Resources */,
+				122D3D16272AB79200109CEE /* ContactInfoView.xib in Resources */,
 				12DB553D2706D148000167AA /* NewGoalView.xib in Resources */,
 				12C6168226EF621E003415B5 /* Main.storyboard in Resources */,
 				122D3C7027281E8E00109CEE /* GoalAmountDepositCell.xib in Resources */,
 				122D3C3C2727EB5F00109CEE /* ScheduledSavingCell.xib in Resources */,
 				12EF9AD326FB035A006E6407 /* SavingAccount.xib in Resources */,
+				122D3D11272AB79200109CEE /* EmploymentCell.xib in Resources */,
 				1268B9FE27019F45006F1CCC /* TransactionDetailView.xib in Resources */,
+				122D3CEF272AB79200109CEE /* StartMessageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,18 +1284,26 @@
 				125C0384271FFB39005807EF /* HomeCell.swift in Sources */,
 				1268BA052701AE54006F1CCC /* OptionView.swift in Sources */,
 				12DB5524270459B2000167AA /* PhysicalCardView.swift in Sources */,
+				122D3CF0272AB79200109CEE /* GooglePlexBankInfo.swift in Sources */,
 				122D3C9227295B4C00109CEE /* SpendModel.swift in Sources */,
 				122D3C3E2727EE8A00109CEE /* ScheduledSavCollectionView.swift in Sources */,
 				1268BA2B2701DDCC006F1CCC /* CouponViewModel.swift in Sources */,
+				122D3D2B272AB7E100109CEE /* MenuCell.swift in Sources */,
+				122D3CEB272AB79200109CEE /* SuccessMessageVIew.swift in Sources */,
+				122D3CF9272AB79200109CEE /* TermsConditionsViewController.swift in Sources */,
 				122D3C5427281A5900109CEE /* DotView.swift in Sources */,
 				122D3C282726930D00109CEE /* CardDetails.swift in Sources */,
 				1203C708270C543E00EEF51E /* ReviewNewGoalView.swift in Sources */,
+				122D3CF6272AB79200109CEE /* BMOHeaderView.swift in Sources */,
 				1268B9C426FDB7B9006F1CCC /* ConfigurableCell.swift in Sources */,
+				122D3D2A272AB7E100109CEE /* ContainerViewController.swift in Sources */,
+				122D3CE5272AB79200109CEE /* SuccessMsgViewController.swift in Sources */,
 				122D3C6427281D2100109CEE /* GoalSummaryCell.swift in Sources */,
 				12C616BC26FAF193003415B5 /* UIColor+Hex.swift in Sources */,
 				12DB55362705B441000167AA /* SavingAccountSummary.swift in Sources */,
 				122D3C8E27294D9100109CEE /* ScheduledPaymentViewController.swift in Sources */,
 				1268B9BD26FDB665006F1CCC /* ServiceCell.swift in Sources */,
+				122D3D29272AB7E100109CEE /* MenuDelegate.swift in Sources */,
 				1268B9CB26FDC316006F1CCC /* ServiceView.swift in Sources */,
 				1268BA142701CD65006F1CCC /* PaymentCell.swift in Sources */,
 				122D3C3027269C4F00109CEE /* AccDetailViewController.swift in Sources */,
@@ -994,20 +1312,30 @@
 				122D3C2627217EE200109CEE /* CouponsView.swift in Sources */,
 				12EF9AD626FB0550006E6407 /* AccountsContainer.swift in Sources */,
 				1268BA1A2701D306006F1CCC /* PaymentViewModel.swift in Sources */,
+				122D3CF5272AB79200109CEE /* StartMessageViewController.swift in Sources */,
 				125C037F271FED64005807EF /* CardHomeView.swift in Sources */,
+				122D3D18272AB79200109CEE /* UploadPhotoViewController.swift in Sources */,
+				122D3CFB272AB79200109CEE /* UploadProofIdentityViewController.swift in Sources */,
 				1268B9C226FDB6DE006F1CCC /* ReusableCell.swift in Sources */,
 				122D3C7227281E8E00109CEE /* DepositGoalAmountViewController.swift in Sources */,
+				122D3CEC272AB79200109CEE /* GotoMyAccountMSGViewController.swift in Sources */,
 				125C037C271FECDA005807EF /* CardHomeViewController.swift in Sources */,
+				122D3CF3272AB79200109CEE /* StartMessageView.swift in Sources */,
 				12C616BE26FAF1A5003415B5 /* Helper.swift in Sources */,
+				122D3CF8272AB79200109CEE /* EmploymentViewController.swift in Sources */,
+				122D3CEE272AB79200109CEE /* HomeViewController.swift in Sources */,
 				1268BA102701C7C3006F1CCC /* GoalsViewModel.swift in Sources */,
 				122D3C2C272699C700109CEE /* AccDetailInfoView.swift in Sources */,
+				122D3D15272AB79200109CEE /* PersonalInfoCell.swift in Sources */,
 				12A8C1AE270C232A00E4252D /* NewGoalListView.swift in Sources */,
 				1268B9D726FDD990006F1CCC /* TransactionViewModel.swift in Sources */,
 				122D3C1F2721503F00109CEE /* SpendAnalysisView.swift in Sources */,
+				122D3CE8272AB79200109CEE /* UploadStatusMessage.swift in Sources */,
 				1268BA2D2701E077006F1CCC /* CouponCollectionView.swift in Sources */,
 				1268BA252701D6D2006F1CCC /* CouponCell.swift in Sources */,
 				122D3C4827280C8100109CEE /* BulletView.swift in Sources */,
 				1268BA0D2701C71F006F1CCC /* GoalModel.swift in Sources */,
+				122D3D17272AB79200109CEE /* UserEmploymentInfo.swift in Sources */,
 				1268B9FC27019F36006F1CCC /* TransactionDetailView.swift in Sources */,
 				122D3C7B2728206500109CEE /* GoalCompletedViewController.swift in Sources */,
 				122D3C412727FFAB00109CEE /* SavingGoalsViewController.swift in Sources */,
@@ -1015,6 +1343,7 @@
 				122D3C5D27281CD600109CEE /* DepositCell.swift in Sources */,
 				122D3C792728206500109CEE /* GoalCompletedCell.swift in Sources */,
 				122D3C7F272827F200109CEE /* Authentication.swift in Sources */,
+				122D3D2D272AB7E100109CEE /* MenuViewController.swift in Sources */,
 				122D3C2E27269B6300109CEE /* AccDetailCell.swift in Sources */,
 				12DB5567270AE6E0000167AA /* NewGoalCell.swift in Sources */,
 				122D3C44272809FA00109CEE /* GoalsHeaderVIew.swift in Sources */,
@@ -1023,51 +1352,78 @@
 				122D3C9427295EBC00109CEE /* SpendAnalysisViewController.swift in Sources */,
 				122D3C882729249B00109CEE /* TransactionDetailViewController.swift in Sources */,
 				1268BA0B2701C695006F1CCC /* GoalsCollectionView.swift in Sources */,
+				122D3D13272AB79200109CEE /* UploadDocCell.swift in Sources */,
+				122D3D05272AB79200109CEE /* ContactCell.swift in Sources */,
 				1268B9FA27019726006F1CCC /* TransactionCollectionView.swift in Sources */,
 				1268BA082701B0F9006F1CCC /* GoalCell.swift in Sources */,
+				122D3D00272AB79200109CEE /* ContactInfoView.swift in Sources */,
 				122D3C382727E5F800109CEE /* ScheduledSavingsView.swift in Sources */,
 				122D3C8A2729249B00109CEE /* TransactionDetailCell.swift in Sources */,
 				122D3C5A27281B4A00109CEE /* MakeDepositViewController.swift in Sources */,
 				1268BA202701D52A006F1CCC /* SpendAnalysisCell.swift in Sources */,
+				122D3D0F272AB79200109CEE /* TitleHeaderView.swift in Sources */,
+				122D3CFD272AB79200109CEE /* UploadDocViewController.swift in Sources */,
+				122D3CFE272AB79200109CEE /* ContactInfoViewController.swift in Sources */,
 				12DB5528270462F4000167AA /* PhysicalCardViewController.swift in Sources */,
 				12DB554427070D31000167AA /* ScaleViewContainer.swift in Sources */,
 				120C4A4326FC7D7A00ABC910 /* CardView.swift in Sources */,
 				12DB556C270AFA3C000167AA /* NewGoalViewController.swift in Sources */,
+				122D3D0D272AB79200109CEE /* EmploymentInfoView.swift in Sources */,
 				12DB55412707080D000167AA /* ScaleScrollView.swift in Sources */,
+				122D3D12272AB79200109CEE /* PersonalInfoView.swift in Sources */,
 				122D3C9C272A756000109CEE /* AddServiceView.swift in Sources */,
 				1268B9B926FDAFCE006F1CCC /* TouchId.swift in Sources */,
 				122D3C242721696D00109CEE /* CategoryView.swift in Sources */,
 				122D3C892729249B00109CEE /* TransactiosDetailVIew.swift in Sources */,
 				1268B9D526FDD957006F1CCC /* TransactionModel.swift in Sources */,
+				122D3D21272AB79200109CEE /* PhotoMessage.swift in Sources */,
 				122D3C362727D90500109CEE /* TransactionsViewController.swift in Sources */,
+				122D3D0C272AB79200109CEE /* TermsandCondiView.swift in Sources */,
+				122D3CEA272AB79200109CEE /* EmplyInfoStatusViewController.swift in Sources */,
 				12DB552E27057BF3000167AA /* AccountSummary.swift in Sources */,
+				122D3CFF272AB79200109CEE /* IdentityProofView.swift in Sources */,
 				122D3C6F27281E8E00109CEE /* GoalAmountDepositCell.swift in Sources */,
 				12DB552127043DE4000167AA /* SpendAnalysis.swift in Sources */,
+				122D3CF7272AB79200109CEE /* ProfilePhotoViewController.swift in Sources */,
 				12EF9AD126FB0337006E6407 /* SavingAccount.swift in Sources */,
 				12C616C726FAFD8D003415B5 /* CheckingAccount.swift in Sources */,
 				122D3C3B2727EB5F00109CEE /* ScheduledSavingCell.swift in Sources */,
 				1268BA1C2701D331006F1CCC /* PaymentCollectionView.swift in Sources */,
 				122D3C6527281D2100109CEE /* DepositGoalModel.swift in Sources */,
+				122D3D1E272AB79200109CEE /* TakePhotoInfo.swift in Sources */,
+				122D3CED272AB79200109CEE /* MessageViewController.swift in Sources */,
 				12DB552A27046EC4000167AA /* CardLockedMessageView.swift in Sources */,
 				122D3C5027280F1600109CEE /* ReviewNewgoalViewController.swift in Sources */,
 				1268B9D126FDD86F006F1CCC /* TransactionCell.swift in Sources */,
+				122D3D19272AB79200109CEE /* ImagePicker.swift in Sources */,
+				122D3D1D272AB79200109CEE /* SubmitPhoto.swift in Sources */,
 				122D3C5727281A7D00109CEE /* DepositAmountView.swift in Sources */,
 				120C4A4A26FC90E800ABC910 /* FBCustomSwitch.swift in Sources */,
+				122D3CFC272AB79200109CEE /* ReUploadIdentityViewController.swift in Sources */,
 				122D3C222721528D00109CEE /* SpendViewModel.swift in Sources */,
 				12C6167B26EF621E003415B5 /* AppDelegate.swift in Sources */,
 				12C616C026FAF234003415B5 /* Header.swift in Sources */,
+				122D3D01272AB79200109CEE /* EmploymentCell.swift in Sources */,
+				122D3D1A272AB79200109CEE /* CameraViewController.swift in Sources */,
 				1268BA182701CD7D006F1CCC /* PaymentModel.swift in Sources */,
 				122D3C5227280FE100109CEE /* ReviewNewGoalCell.swift in Sources */,
 				125C038A272144C6005807EF /* ScheduledPaymentView.swift in Sources */,
 				12DB55322705B2B1000167AA /* CheckingAccountSummary.swift in Sources */,
+				122D3D1B272AB79200109CEE /* TakePhotoInfoController.swift in Sources */,
 				122D3C4E27280E6D00109CEE /* ReviewNewGoalVIew.swift in Sources */,
+				122D3D0E272AB79200109CEE /* TermsandConditionCell.swift in Sources */,
+				122D3CFA272AB79200109CEE /* PersonalViewController.swift in Sources */,
 				125C0382271FEF45005807EF /* ViewFactory.swift in Sources */,
 				1268B9C826FDB8E4006F1CCC /* ServiceViewModel.swift in Sources */,
 				12DB553F2706E885000167AA /* ScaleView.swift in Sources */,
+				122D3CE7272AB79200109CEE /* DocVerificationMsgViewController.swift in Sources */,
 				1268B9CD26FDC719006F1CCC /* ServiceViewController.swift in Sources */,
 				122D3C7127281E8E00109CEE /* GoalAmountDeposited.swift in Sources */,
 				122D3C7D2728206500109CEE /* CompletedGoalView.swift in Sources */,
+				122D3CF1272AB79200109CEE /* HomeView.swift in Sources */,
 				12C6167D26EF621E003415B5 /* SceneDelegate.swift in Sources */,
+				122D3D03272AB79200109CEE /* ContactInfo.swift in Sources */,
+				122D3CF2272AB79200109CEE /* BankSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

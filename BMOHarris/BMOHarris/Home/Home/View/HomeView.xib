@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeView" customModule="BMO_Harris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="519"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx3-Si-JmN">
+                    <rect key="frame" x="50" y="60" width="276" height="37"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Choose your bank partner to create a Plex Saving/Checking account">
+                            <attributes>
+                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <font key="NSFont" size="12" name="Rubik-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <color key="highlightedColor" systemColor="labelColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Yve-zO-syx" userLabel="HorizontalStack View">
+                    <rect key="frame" x="5" y="122" width="366" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqc-sE-o4T">
+                            <rect key="frame" x="0.0" y="0.0" width="122" height="100"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkingsavingaccount" translatesAutoresizingMaskIntoConstraints="NO" id="6qV-Uo-Kq7">
+                                    <rect key="frame" x="46" y="8" width="30" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="4bY-dU-ghW"/>
+                                        <constraint firstAttribute="width" constant="30" id="JrL-sh-zgS"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-oc-de8">
+                                    <rect key="frame" x="22" y="45" width="78" height="47.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="checking &amp; Savings account in Google Play">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="10" name="Rubik-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="0.5" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="6qV-Uo-Kq7" firstAttribute="centerX" secondItem="Wqc-sE-o4T" secondAttribute="centerX" id="BJ6-PZ-k0x"/>
+                                <constraint firstAttribute="trailing" secondItem="qdb-oc-de8" secondAttribute="trailing" constant="22" id="LLU-9k-9Sa"/>
+                                <constraint firstAttribute="height" constant="100" id="UrS-9y-cok"/>
+                                <constraint firstItem="6qV-Uo-Kq7" firstAttribute="top" secondItem="Wqc-sE-o4T" secondAttribute="top" constant="8" id="YtQ-yX-r0E"/>
+                                <constraint firstItem="qdb-oc-de8" firstAttribute="leading" secondItem="Wqc-sE-o4T" secondAttribute="leading" constant="22" id="aiD-lI-hyh"/>
+                                <constraint firstItem="qdb-oc-de8" firstAttribute="top" secondItem="6qV-Uo-Kq7" secondAttribute="bottom" constant="7" id="wdQ-ib-d2p"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xo-na-f2O">
+                            <rect key="frame" x="122" y="0.0" width="122" height="100"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overdraft" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-XX-gR0">
+                                    <rect key="frame" x="46" y="8" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="TBg-5v-DRu"/>
+                                        <constraint firstAttribute="height" constant="30" id="wi5-Pf-dbT"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eer-zt-47k">
+                                    <rect key="frame" x="22" y="45" width="78" height="47.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="No Fees for overdraft or monthly service">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="10" name="Rubik-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="0.5" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="37c-wd-vrU"/>
+                                <constraint firstItem="eer-zt-47k" firstAttribute="leading" secondItem="6Xo-na-f2O" secondAttribute="leading" constant="22" id="7f4-Ww-yOl"/>
+                                <constraint firstAttribute="trailing" secondItem="eer-zt-47k" secondAttribute="trailing" constant="22" id="Stg-Tm-C1A"/>
+                                <constraint firstItem="eer-zt-47k" firstAttribute="top" secondItem="jQ6-XX-gR0" secondAttribute="bottom" constant="7" id="XlK-or-I2d"/>
+                                <constraint firstItem="jQ6-XX-gR0" firstAttribute="top" secondItem="6Xo-na-f2O" secondAttribute="top" constant="8" id="mjc-Ls-P3X"/>
+                                <constraint firstItem="jQ6-XX-gR0" firstAttribute="centerX" secondItem="6Xo-na-f2O" secondAttribute="centerX" id="uf3-rW-2v2"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p88-h1-4Gi">
+                            <rect key="frame" x="244" y="0.0" width="122" height="100"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="federallyinsuredbanking" translatesAutoresizingMaskIntoConstraints="NO" id="Ccf-zu-qWB">
+                                    <rect key="frame" x="46" y="8" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="G2b-Zk-yaW"/>
+                                        <constraint firstAttribute="height" constant="30" id="fdl-3X-mtp"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTO-au-pfR">
+                                    <rect key="frame" x="22" y="45" width="78" height="47.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Federally insured banking by BMO. Citi &amp; BBVA">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="10" name="Rubik-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="0.5" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="1Le-UT-LuQ"/>
+                                <constraint firstItem="NTO-au-pfR" firstAttribute="leading" secondItem="p88-h1-4Gi" secondAttribute="leading" constant="22" id="AoV-Bu-DUn"/>
+                                <constraint firstItem="NTO-au-pfR" firstAttribute="top" secondItem="Ccf-zu-qWB" secondAttribute="bottom" constant="7" id="ZSJ-Xa-712"/>
+                                <constraint firstItem="Ccf-zu-qWB" firstAttribute="top" secondItem="p88-h1-4Gi" secondAttribute="top" constant="8" id="eal-0w-wzx"/>
+                                <constraint firstItem="Ccf-zu-qWB" firstAttribute="centerX" secondItem="p88-h1-4Gi" secondAttribute="centerX" id="u7W-0V-bsq"/>
+                                <constraint firstAttribute="trailing" secondItem="NTO-au-pfR" secondAttribute="trailing" constant="22" id="yGu-DZ-MJ1"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2DQ-sv-rXt" userLabel="BankOptionsStack View">
+                    <rect key="frame" x="30" y="242" width="316" height="180"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WY9-4q-qjq" customClass="BankSelectionView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="316" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYl-6K-hQG" userLabel="checkmarkView">
+                                    <rect key="frame" x="6" y="20" width="20" height="20"/>
+                                    <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="lr4-3t-FtN"/>
+                                        <constraint firstAttribute="height" constant="20" id="t3w-Fy-yuI"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bmclogo" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-fx-Kny">
+                                    <rect key="frame" x="66" y="15" width="50" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="0g8-c5-XdN"/>
+                                        <constraint firstAttribute="height" constant="30" id="cqH-Q3-JAA"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMO Harris Bank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqS-Ds-XMq">
+                                    <rect key="frame" x="137" y="21.5" width="108.5" height="17"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dr7-ss-SRz" userLabel="bottomLineLabel">
+                                    <rect key="frame" x="0.0" y="57" width="316" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1.2" id="pvj-te-cRX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Dr7-ss-SRz" secondAttribute="bottom" constant="2" id="GR8-HB-qwh"/>
+                                <constraint firstAttribute="height" constant="60" id="HMK-3L-MeH"/>
+                                <constraint firstItem="Dr7-ss-SRz" firstAttribute="leading" secondItem="WY9-4q-qjq" secondAttribute="leading" id="LKp-ve-QDj"/>
+                                <constraint firstItem="hbe-fx-Kny" firstAttribute="centerY" secondItem="gYl-6K-hQG" secondAttribute="centerY" id="Ldo-Cs-tPW"/>
+                                <constraint firstItem="wqS-Ds-XMq" firstAttribute="leading" secondItem="hbe-fx-Kny" secondAttribute="trailing" constant="21" id="QGk-YQ-KfC"/>
+                                <constraint firstAttribute="trailing" secondItem="Dr7-ss-SRz" secondAttribute="trailing" id="WOZ-zW-G39"/>
+                                <constraint firstItem="gYl-6K-hQG" firstAttribute="centerY" secondItem="WY9-4q-qjq" secondAttribute="centerY" id="Y5S-HH-iHD"/>
+                                <constraint firstItem="hbe-fx-Kny" firstAttribute="leading" secondItem="gYl-6K-hQG" secondAttribute="trailing" constant="40" id="feh-P9-BvL"/>
+                                <constraint firstItem="gYl-6K-hQG" firstAttribute="leading" secondItem="WY9-4q-qjq" secondAttribute="leading" constant="6" id="gT8-EJ-q13"/>
+                                <constraint firstItem="wqS-Ds-XMq" firstAttribute="centerY" secondItem="hbe-fx-Kny" secondAttribute="centerY" id="igE-5F-wLT"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="bankLogoImageView" destination="hbe-fx-Kny" id="AXX-2b-fu9"/>
+                                <outlet property="banknameLabel" destination="wqS-Ds-XMq" id="xwx-oz-wvq"/>
+                                <outlet property="checkMarkView" destination="gYl-6K-hQG" id="IuW-b1-WSc"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ii0-AY-vb1" customClass="BankSelectionView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="316" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Um1-g5-sBg" userLabel="checkmarkView">
+                                    <rect key="frame" x="6" y="20" width="20" height="20"/>
+                                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="9nX-EO-ULb"/>
+                                        <constraint firstAttribute="width" constant="20" id="ojy-1f-oPA"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="citibanklogk" translatesAutoresizingMaskIntoConstraints="NO" id="32k-th-6LW">
+                                    <rect key="frame" x="66" y="15" width="50" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="DRz-eM-axg"/>
+                                        <constraint firstAttribute="width" constant="50" id="cDg-I2-nYI"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citi Bank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIT-GZ-xL4">
+                                    <rect key="frame" x="137" y="21.5" width="58" height="17"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1im-gb-CVx" userLabel="bottomLineLabel">
+                                    <rect key="frame" x="0.0" y="57" width="316" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1.2" id="7yr-cS-7SP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Um1-g5-sBg" firstAttribute="leading" secondItem="ii0-AY-vb1" secondAttribute="leading" constant="6" id="D7A-sP-1Qo"/>
+                                <constraint firstItem="Um1-g5-sBg" firstAttribute="centerY" secondItem="ii0-AY-vb1" secondAttribute="centerY" id="DGS-6w-x8l"/>
+                                <constraint firstItem="nIT-GZ-xL4" firstAttribute="centerY" secondItem="32k-th-6LW" secondAttribute="centerY" id="KE6-8x-iUQ"/>
+                                <constraint firstAttribute="trailing" secondItem="1im-gb-CVx" secondAttribute="trailing" id="MrH-Dd-yUT"/>
+                                <constraint firstItem="1im-gb-CVx" firstAttribute="leading" secondItem="ii0-AY-vb1" secondAttribute="leading" id="c89-da-pNj"/>
+                                <constraint firstItem="32k-th-6LW" firstAttribute="leading" secondItem="Um1-g5-sBg" secondAttribute="trailing" constant="40" id="dGT-0D-9BL"/>
+                                <constraint firstItem="32k-th-6LW" firstAttribute="centerY" secondItem="Um1-g5-sBg" secondAttribute="centerY" id="e2q-k0-l9c"/>
+                                <constraint firstItem="nIT-GZ-xL4" firstAttribute="leading" secondItem="32k-th-6LW" secondAttribute="trailing" constant="21" id="etk-x6-xQQ"/>
+                                <constraint firstAttribute="height" constant="60" id="lW3-N2-RWB"/>
+                                <constraint firstAttribute="bottom" secondItem="1im-gb-CVx" secondAttribute="bottom" constant="2" id="uBF-AA-Bg1"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="bankLogoImageView" destination="32k-th-6LW" id="xQs-Q2-1op"/>
+                                <outlet property="banknameLabel" destination="nIT-GZ-xL4" id="r5b-sc-PkF"/>
+                                <outlet property="checkMarkView" destination="Um1-g5-sBg" id="APR-0j-4cG"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2IR-P0-pxa" customClass="BankSelectionView" customModule="BMO_Harris" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="120" width="316" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDe-Ug-reX" userLabel="checkmarkView">
+                                    <rect key="frame" x="6" y="20" width="20" height="20"/>
+                                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="G7q-Jx-bCA"/>
+                                        <constraint firstAttribute="width" constant="20" id="cYV-nI-lGn"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbvabanklogo" translatesAutoresizingMaskIntoConstraints="NO" id="KPL-11-KjX">
+                                    <rect key="frame" x="66" y="15" width="50" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Ykx-E7-jb9"/>
+                                        <constraint firstAttribute="width" constant="50" id="nBp-5P-yNs"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBVA Bank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuf-RQ-VjV">
+                                    <rect key="frame" x="137" y="21.5" width="72.5" height="17"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJp-jN-2aF" userLabel="bottomLineLabel">
+                                    <rect key="frame" x="0.0" y="57" width="316" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1.2" id="hBA-iM-1hR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="BJp-jN-2aF" secondAttribute="trailing" id="0Ve-nU-tLX"/>
+                                <constraint firstItem="BJp-jN-2aF" firstAttribute="leading" secondItem="2IR-P0-pxa" secondAttribute="leading" id="0eM-IG-JmQ"/>
+                                <constraint firstItem="Yuf-RQ-VjV" firstAttribute="leading" secondItem="KPL-11-KjX" secondAttribute="trailing" constant="21" id="1pV-yN-bAw"/>
+                                <constraint firstItem="YDe-Ug-reX" firstAttribute="centerY" secondItem="2IR-P0-pxa" secondAttribute="centerY" id="4MM-fb-b4f"/>
+                                <constraint firstItem="YDe-Ug-reX" firstAttribute="leading" secondItem="2IR-P0-pxa" secondAttribute="leading" constant="6" id="4gT-YH-EIk"/>
+                                <constraint firstAttribute="height" constant="60" id="I1I-oS-hYl"/>
+                                <constraint firstAttribute="bottom" secondItem="BJp-jN-2aF" secondAttribute="bottom" constant="2" id="Mgn-NF-GtM"/>
+                                <constraint firstItem="KPL-11-KjX" firstAttribute="leading" secondItem="YDe-Ug-reX" secondAttribute="trailing" constant="40" id="Pw0-Ev-HlZ"/>
+                                <constraint firstItem="KPL-11-KjX" firstAttribute="centerY" secondItem="YDe-Ug-reX" secondAttribute="centerY" id="X4j-5C-0Ov"/>
+                                <constraint firstItem="Yuf-RQ-VjV" firstAttribute="centerY" secondItem="KPL-11-KjX" secondAttribute="centerY" id="mCJ-Fc-WwM"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="bankLogoImageView" destination="KPL-11-KjX" id="Bvs-kx-40r"/>
+                                <outlet property="banknameLabel" destination="Yuf-RQ-VjV" id="abM-pQ-NsD"/>
+                                <outlet property="checkMarkView" destination="YDe-Ug-reX" id="Dst-wz-JVp"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENM-5I-GTV">
+                    <rect key="frame" x="30" y="447" width="316" height="46"/>
+                    <color key="backgroundColor" red="0.058823529411764705" green="0.37254901960784315" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="eC2-UC-wpo"/>
+                    </constraints>
+                    <state key="normal" title="Get Started">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="D3n-q6-CmF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="wDl-wi-6aJ"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zx3-Si-JmN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="2Up-bc-Xgh"/>
+                <constraint firstAttribute="trailing" secondItem="ENM-5I-GTV" secondAttribute="trailing" constant="30" id="4Ie-ta-hZO"/>
+                <constraint firstItem="2DQ-sv-rXt" firstAttribute="top" secondItem="Yve-zO-syx" secondAttribute="bottom" constant="20" id="7gx-S4-0xH"/>
+                <constraint firstItem="2DQ-sv-rXt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="9Y6-hv-u7Y"/>
+                <constraint firstItem="Yve-zO-syx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="Gi7-eB-rrI"/>
+                <constraint firstAttribute="trailing" secondItem="2DQ-sv-rXt" secondAttribute="trailing" constant="30" id="GuT-05-2AK"/>
+                <constraint firstItem="zx3-Si-JmN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="JN8-6N-vFa"/>
+                <constraint firstAttribute="trailing" secondItem="Yve-zO-syx" secondAttribute="trailing" constant="5" id="X2V-RF-grm"/>
+                <constraint firstItem="ENM-5I-GTV" firstAttribute="top" secondItem="2DQ-sv-rXt" secondAttribute="bottom" constant="25" id="iFS-dD-HhD"/>
+                <constraint firstItem="Yve-zO-syx" firstAttribute="top" secondItem="zx3-Si-JmN" secondAttribute="bottom" constant="25" id="lCd-Oq-YYU"/>
+                <constraint firstItem="ENM-5I-GTV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="nLZ-xb-emE"/>
+                <constraint firstAttribute="trailing" secondItem="zx3-Si-JmN" secondAttribute="trailing" constant="50" id="xsz-lM-QJ2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bankBBVAView" destination="2IR-P0-pxa" id="5zh-1J-df9"/>
+                <outlet property="bankBMOView" destination="WY9-4q-qjq" id="jZr-fx-trs"/>
+                <outlet property="bankCITIView" destination="ii0-AY-vb1" id="wpO-de-dYL"/>
+                <outlet property="startButton" destination="ENM-5I-GTV" id="DQs-YX-whu"/>
+            </connections>
+            <point key="canvasLocation" x="-349" y="-55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bbvabanklogo" width="88" height="50"/>
+        <image name="bmclogo" width="93" height="36"/>
+        <image name="checkingsavingaccount" width="34" height="38"/>
+        <image name="citibanklogk" width="47" height="30"/>
+        <image name="federallyinsuredbanking" width="28" height="28"/>
+        <image name="overdraft" width="28" height="30"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

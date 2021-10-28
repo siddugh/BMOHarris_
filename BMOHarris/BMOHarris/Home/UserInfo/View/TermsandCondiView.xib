@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TermsandCondiView" customModule="BMO_Harris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6w-Kk-BDo">
+                    <rect key="frame" x="25" y="25" width="309" height="239"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electronic notice and consent agreement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-Od-aKo">
+                            <rect key="frame" x="8" y="10" width="268.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="textColor" red="0.094117647058823528" green="0.47843137254901957" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9T-bD-CxX">
+                            <rect key="frame" x="8" y="49" width="88" height="17"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Pivacy Notice">
+                                    <attributes>
+                                        <color key="NSColor" red="0.094117647060000004" green="0.47843137250000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="14" name="Rubik-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMO Harris &amp; Google handbook including" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDY-mu-mpG">
+                            <rect key="frame" x="8" y="88" width="265" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.47843137250000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deposit account agreement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gQ-0b-B01">
+                            <rect key="frame" x="8" y="110" width="179.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.47843137250000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart advantage account deposit account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11t-rY-gsg">
+                            <rect key="frame" x="8" y="149" width="277.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.47843137250000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="disclosure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4t-9e-UdY">
+                            <rect key="frame" x="8" y="171" width="66.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.47843137250000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W-9 Information" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-tN-0Hc">
+                            <rect key="frame" x="8" y="210" width="105.5" height="17"/>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="textColor" red="0.094117647060000004" green="0.47843137250000001" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="w4t-9e-UdY" firstAttribute="leading" secondItem="11t-rY-gsg" secondAttribute="leading" id="0aY-T9-P8f"/>
+                        <constraint firstItem="11t-rY-gsg" firstAttribute="leading" secondItem="7gQ-0b-B01" secondAttribute="leading" id="6ay-lK-uD9"/>
+                        <constraint firstItem="8cy-tN-0Hc" firstAttribute="top" secondItem="w4t-9e-UdY" secondAttribute="bottom" constant="22" id="7kK-bw-1KA"/>
+                        <constraint firstItem="vg3-Od-aKo" firstAttribute="leading" secondItem="W6w-Kk-BDo" secondAttribute="leading" constant="8" id="EcI-fU-0LD"/>
+                        <constraint firstItem="B9T-bD-CxX" firstAttribute="top" secondItem="vg3-Od-aKo" secondAttribute="bottom" constant="22" id="EwS-5V-1Wz"/>
+                        <constraint firstItem="7gQ-0b-B01" firstAttribute="top" secondItem="BDY-mu-mpG" secondAttribute="bottom" constant="5" id="Fjg-n5-b1m"/>
+                        <constraint firstItem="vg3-Od-aKo" firstAttribute="top" secondItem="W6w-Kk-BDo" secondAttribute="top" constant="10" id="GBJ-1w-YEW"/>
+                        <constraint firstItem="w4t-9e-UdY" firstAttribute="top" secondItem="11t-rY-gsg" secondAttribute="bottom" constant="5" id="Oqd-xT-RaC"/>
+                        <constraint firstAttribute="height" constant="239" id="RPY-xu-4u0"/>
+                        <constraint firstItem="BDY-mu-mpG" firstAttribute="top" secondItem="B9T-bD-CxX" secondAttribute="bottom" constant="22" id="W7H-xR-oHf"/>
+                        <constraint firstItem="7gQ-0b-B01" firstAttribute="leading" secondItem="BDY-mu-mpG" secondAttribute="leading" id="Wc6-Cn-uTe"/>
+                        <constraint firstItem="8cy-tN-0Hc" firstAttribute="leading" secondItem="w4t-9e-UdY" secondAttribute="leading" id="bxK-zP-0HN"/>
+                        <constraint firstItem="BDY-mu-mpG" firstAttribute="leading" secondItem="B9T-bD-CxX" secondAttribute="leading" id="eA6-JZ-S25"/>
+                        <constraint firstItem="11t-rY-gsg" firstAttribute="top" secondItem="7gQ-0b-B01" secondAttribute="bottom" constant="22" id="xiU-tS-Ciz"/>
+                        <constraint firstItem="B9T-bD-CxX" firstAttribute="leading" secondItem="vg3-Od-aKo" secondAttribute="leading" id="zoU-xe-1Kx"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAC-x2-ZTG" userLabel="divierLine">
+                    <rect key="frame" x="25" y="284" width="379" height="1"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="0.99294238880368102" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="7qs-MT-22I"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQF-kw-Ukc">
+                    <rect key="frame" x="33" y="300" width="28" height="28"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-ui" translatesAutoresizingMaskIntoConstraints="NO" id="4I1-vG-1CE">
+                            <rect key="frame" x="9" y="9" width="10" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="L0b-mX-7JI"/>
+                                <constraint firstAttribute="width" constant="10" id="uhx-Ff-fC1"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.27450980392156865" green="0.74117647058823533" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="XrN-zN-oRh"/>
+                        <constraint firstItem="4I1-vG-1CE" firstAttribute="centerY" secondItem="PQF-kw-Ukc" secondAttribute="centerY" id="hDx-y3-i7K"/>
+                        <constraint firstItem="4I1-vG-1CE" firstAttribute="centerX" secondItem="PQF-kw-Ukc" secondAttribute="centerX" id="ko9-Dt-hpz"/>
+                        <constraint firstAttribute="width" constant="28" id="q9b-pp-Vjw"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have read and agree to the terms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-96-9hE">
+                    <rect key="frame" x="70" y="300" width="222" height="17"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and conditions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-Wg-Ihf">
+                    <rect key="frame" x="70" y="316" width="97" height="17"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Crx-C9-fXk" userLabel="NextButton">
+                    <rect key="frame" x="25" y="376" width="379" height="46"/>
+                    <color key="backgroundColor" red="0.058823529411764705" green="0.37254901960784315" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="nsI-GY-o2R"/>
+                    </constraints>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="2Cx-Nh-NVG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iem-Yx-4YT" userLabel="BackButton">
+                    <rect key="frame" x="25" y="440" width="379" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Dhr-CW-oHI"/>
+                    </constraints>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="backButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="kTM-Fp-7KC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="PQF-kw-Ukc" firstAttribute="top" secondItem="yAC-x2-ZTG" secondAttribute="bottom" constant="15" id="0NS-AP-eud"/>
+                <constraint firstItem="PQF-kw-Ukc" firstAttribute="leading" secondItem="yAC-x2-ZTG" secondAttribute="leading" constant="8" id="7Me-jN-PRZ"/>
+                <constraint firstItem="Crx-C9-fXk" firstAttribute="leading" secondItem="yAC-x2-ZTG" secondAttribute="leading" id="Bcq-70-eUD"/>
+                <constraint firstAttribute="trailing" secondItem="yAC-x2-ZTG" secondAttribute="trailing" constant="25" id="Cj1-eE-dFo"/>
+                <constraint firstItem="iem-Yx-4YT" firstAttribute="trailing" secondItem="Crx-C9-fXk" secondAttribute="trailing" id="GiQ-QL-raX"/>
+                <constraint firstItem="yAC-x2-ZTG" firstAttribute="leading" secondItem="W6w-Kk-BDo" secondAttribute="leading" id="PdQ-fl-87b"/>
+                <constraint firstAttribute="trailing" secondItem="W6w-Kk-BDo" secondAttribute="trailing" constant="95" id="PrS-ad-yxD"/>
+                <constraint firstItem="Crx-C9-fXk" firstAttribute="trailing" secondItem="yAC-x2-ZTG" secondAttribute="trailing" id="Rrj-hL-qAU"/>
+                <constraint firstAttribute="top" secondItem="W6w-Kk-BDo" secondAttribute="top" constant="-25" id="SXh-K9-kFP"/>
+                <constraint firstItem="yAC-x2-ZTG" firstAttribute="top" secondItem="W6w-Kk-BDo" secondAttribute="bottom" constant="20" id="XSR-4Z-qLp"/>
+                <constraint firstItem="bTX-96-9hE" firstAttribute="leading" secondItem="PQF-kw-Ukc" secondAttribute="trailing" constant="9" id="YmS-k2-FRu"/>
+                <constraint firstItem="bTX-96-9hE" firstAttribute="top" secondItem="PQF-kw-Ukc" secondAttribute="top" id="ban-Vi-w0U"/>
+                <constraint firstItem="XDN-Wg-Ihf" firstAttribute="top" secondItem="bTX-96-9hE" secondAttribute="bottom" constant="-1" id="gk0-17-0wN"/>
+                <constraint firstItem="Crx-C9-fXk" firstAttribute="top" secondItem="XDN-Wg-Ihf" secondAttribute="bottom" constant="43" id="h4X-8O-7UQ"/>
+                <constraint firstItem="iem-Yx-4YT" firstAttribute="leading" secondItem="Crx-C9-fXk" secondAttribute="leading" id="pag-Dx-MAD"/>
+                <constraint firstItem="iem-Yx-4YT" firstAttribute="top" secondItem="Crx-C9-fXk" secondAttribute="bottom" constant="18" id="qs0-Cx-R7T"/>
+                <constraint firstItem="XDN-Wg-Ihf" firstAttribute="leading" secondItem="bTX-96-9hE" secondAttribute="leading" id="r5J-hX-FtM"/>
+                <constraint firstItem="W6w-Kk-BDo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="vo0-iA-o4g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backButton" destination="iem-Yx-4YT" id="zcc-6T-EAp"/>
+                <outlet property="checkBoxView" destination="PQF-kw-Ukc" id="LDq-ad-dtX"/>
+                <outlet property="nextButton" destination="Crx-C9-fXk" id="QDC-kE-wYp"/>
+            </connections>
+            <point key="canvasLocation" x="29.710144927536234" y="-26.785714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="check-ui" width="12" height="10"/>
+    </resources>
+</document>
