@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SelectedCategory: AnyObject {
+  func selectedCatogry(cattagory: SpendCategoryType)
+}
+
 enum SpendCategoryType {
   case kClothing
   case kDiining
@@ -29,12 +33,22 @@ class SpendCategoryView: UIView {
   var amountLabel: UILabel!
   var percentageLabel: UILabel!
   var categoryFrame: CGRect = .zero
+  var type: SpendCategoryType = SpendCategoryType.kClothing
+  
+  weak var delegate: SelectedCategory?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
     self.categoryFrame = frame
     setUpView()
     self.layer.cornerRadius  = 4
+    addGesture(toView: self)
+  }
+  
+  convenience init(frame: CGRect, category: SpendCategoryType) {
+    self.init(frame: frame)
+    self.type = category
+    
   }
     
   required init?(coder: NSCoder) {
@@ -64,12 +78,26 @@ class SpendCategoryView: UIView {
    percentageLabel.text = percentage
     self.backgroundColor = color
   }
+  
+  private func addGesture(toView: UIView) {
+    toView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture)))
+  }
+  
+  @objc private func handleTapGesture() {
+    delegate?.selectedCatogry(cattagory: self.type)
+  }
+
 }
 
 
 class SpendAnalysis: UIView {
 
   var categories: [Cateogory] = [Cateogory]()
+  var type: SpendCategoryType = SpendCategoryType.kClothing
+  weak var delegate: SelectedCategory?
+  
+  var spendCategoryView: [SpendCategoryView] = [SpendCategoryView]()
+  var categoryViews: [CategoryView] = [CategoryView]()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -78,6 +106,8 @@ class SpendAnalysis: UIView {
   convenience init(frame: CGRect, catagories: [Cateogory]) {
     self.init(frame: frame)
     self.categories = catagories
+    show()
+    //addGesture(toView: self)
   }
   
   required init?(coder: NSCoder) {
@@ -118,6 +148,7 @@ class SpendAnalysis: UIView {
                       Cateogory(category: "Food & Drink", color: "E5966A", type: .kFoodDrink, percentage: 12, amount: "$104")]
     
     var xPos: Int = 0
+    var catXPos: CGFloat = 0
     for i in  0..<cagagories.count {
       let catagory = cagagories[i]
       var catViewWidth = (totalSpaceToDraw * Int(catagory.percentage)) / 100
@@ -127,12 +158,9 @@ class SpendAnalysis: UIView {
       if catViewWidth > 100 {
         catViewWidth = 100
       }
-
-      
-      print("Category : \(catagory.category) ,  width: \(catViewWidth)")
       let frm = CGRect(x: xPos, y: 0, width: catViewWidth, height: 57)
-      
-      let catView = SpendCategoryView(frame: frm)
+      let catView = SpendCategoryView(frame: frm,category: catagory.type)
+      catView.delegate = self
       var percentage = "%"
       
        let percent = Int(catagory.percentage)
@@ -143,14 +171,64 @@ class SpendAnalysis: UIView {
       self.addSubview(catView)
       print("catView Frame: \(catView.frame)")
       
-      let catFrame = CGRect(x: frm.origin.x, y: frm.origin.y + 58, width: frm.size.width, height: 20)
-      let categoryView = CategoryView(frame: .zero)
-      stackView.addArrangedSubview(categoryView)
+      let catFrame = CGRect(x: catXPos, y: frm.origin.y + 70, width: 50, height: 20)
+      let categoryView = CategoryView(frame: catFrame, type: catagory.type)
+      //stackView.addArrangedSubview(categoryView)
+      self.addSubview(categoryView)
       categoryView.setCategory(color: UIColor(hexString: catagory.color), txt: catagory.category)
-      
+      categoryView.delegate = self
       xPos += catViewWidth + 15
+      catXPos += 60
+      
+      spendCategoryView.append(catView)
+      categoryViews.append(categoryView)
+    }
+  }
+  
+  func showCategory(category: SpendCategoryType) {
+    
+    spendCategoryView.forEach { categoryView in
+      if categoryView.type != category {
+        UIView.animate(withDuration: 0.5) {
+          categoryView.alpha = 0.5
+        }
+      } else {
+        UIView.animate(withDuration: 0.5) {
+          categoryView.alpha = 1
+        }
+      }
+    }
+    categoryViews.forEach { categoryView in
+      if categoryView.type != category {
+        UIView.animate(withDuration: 0.5) {
+          categoryView.alpha = 0.5
+        }
+      } else {
+        UIView.animate(withDuration: 0.5) {
+          categoryView.alpha = 1
+        }
+      }
     }
 
   }
   
+  func showAll() {
+    spendCategoryView.forEach { categoryView in
+      UIView.animate(withDuration: 0.4) {
+        categoryView.alpha = 1
+      }
+    }
+    categoryViews.forEach { categoryView in
+      UIView.animate(withDuration: 0.4) {
+        categoryView.alpha = 1
+      }
+    }
+  }
+}
+
+extension SpendAnalysis: SelectedCategory {
+  func selectedCatogry(cattagory: SpendCategoryType) {
+    print("Selected Category.... \(cattagory)")
+    showCategory(category: cattagory)
+  }
 }

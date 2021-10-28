@@ -98,7 +98,7 @@ class SpendAnalysisView: UIView {
     thisMonthLabel.textAlignment = .right
     thisMonthLabel.translatesAutoresizingMaskIntoConstraints = false
     thisMonthLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -2).isActive = true
-    thisMonthLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 15).isActive = true
+    thisMonthLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
     
     
     
@@ -107,8 +107,8 @@ class SpendAnalysisView: UIView {
     customSwitch.translatesAutoresizingMaskIntoConstraints = false
     customSwitch.trailingAnchor.constraint(equalTo: thisMonthLabel.leadingAnchor, constant: -5).isActive = true
     customSwitch.centerYAnchor.constraint(equalTo: thisMonthLabel.centerYAnchor, constant: 0).isActive = true
-    customSwitch.widthAnchor.constraint(equalToConstant: 55).isActive = true
-    customSwitch.heightAnchor.constraint(equalToConstant: 22).isActive = true
+    customSwitch.widthAnchor.constraint(equalToConstant: 45).isActive = true
+    customSwitch.heightAnchor.constraint(equalToConstant: 20).isActive = true
     
     customSwitch.containerColor = UIColor(hexString: "EDEDED")
     customSwitch.nobLockedColor = UIColor(hexString: "53C984")
@@ -138,9 +138,8 @@ class SpendAnalysisView: UIView {
     spView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
     spView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
     spView.topAnchor.constraint(equalTo: self.topAnchor, constant: 60).isActive = true
-    //spView.heightAnchor.constraint(equalToConstant: 57).isActive = true
     spView.heightAnchor.constraint(equalToConstant: 90).isActive = true
-    spView.show()
+    spView.delegate = self
     addColletionView()
   }
   
@@ -248,5 +247,11 @@ extension SpendAnalysisView: FBCustomSwitchDelegate {
       }
     }
   }
-  
+}
+
+
+extension SpendAnalysisView: SelectedCategory {
+  func selectedCatogry(cattagory: SpendCategoryType) {
+    print("Selected Category: \(cattagory)")
+  }
 }

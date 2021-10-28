@@ -96,7 +96,26 @@ class HomeViewController: UIViewController {
     collectionView.backgroundColor = .white
     collectionView.delegate = self
     collectionView.dataSource = self
+    addGapGesture()
   }
+  
+  func addGapGesture() {
+    let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
+    gesture.cancelsTouchesInView = false
+    collectionView.addGestureRecognizer(gesture)
+  }
+  
+  @objc func handleTapGesture() {
+    print("addGapGesture........")
+    self.perform(#selector(enableSpenAnalysisView), with: nil, afterDelay: 0.1)
+  }
+  
+  @objc func enableSpenAnalysisView() {
+    homeCell?.homeView.spendAnalysisView.spView.showAll()
+  }
+
+  
+
   
   private func addHomeView() {
     

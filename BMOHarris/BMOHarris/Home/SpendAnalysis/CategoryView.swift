@@ -13,13 +13,19 @@ class CategoryView: UIView {
   var colourView: UIView = UIView()
   var catagoryLabel: UILabel = UILabel()
   
-  var catType: SpendCategoryType = .kClothing
+  var type: SpendCategoryType = .kClothing
+  var delegate: SelectedCategory?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
     setUPView()
+    addGesture(toView: self)
   }
-    
+  
+  convenience init(frame: CGRect, type: SpendCategoryType) {
+    self.init(frame: frame)
+    self.type = type
+  }
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
@@ -40,11 +46,21 @@ class CategoryView: UIView {
     catagoryLabel.centerYAnchor.constraint(equalTo: colourView.centerYAnchor, constant: 0).isActive = true
     //catagoryLabel.frame = CGRect(x: 20, y: 1, width: 80, height:15)
     catagoryLabel.font = UIFont(name: "Rubik Regular", size: 10)
+    
   }
      
   func setCategory(color: UIColor, txt: String) {
     colourView.backgroundColor = color
     catagoryLabel.text = txt
   }
+  
+  private func addGesture(toView: UIView) {
+    toView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture)))
+  }
+  
+  @objc private func handleTapGesture() {
+    delegate?.selectedCatogry(cattagory: self.type)
+  }
+
 }
 
