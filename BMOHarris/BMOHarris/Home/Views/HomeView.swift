@@ -149,26 +149,32 @@ class HomeView: UIView {
   
   func lockCardView() {
     cardViewHeightConstraint.constant = 60
+    self.cardView.customSwitch.isLocked = true
+    Helper.upDateVirtualCardStatus(bLockedStatus: cardView.customSwitch.isLocked)
     UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseInOut) {
       self.layoutIfNeeded()
       self.cardView.nameBgView.alpha = 0
       self.cardView.nameLabel.alpha  = 0
       self.cardView.moreButton.alpha = 0
       self.cardView.showShadow(bShodow: false)
+      self.cardView.customSwitch.updateSwitch()
     } completion: { _ in
     }
   }
   
   func unLockCardView() {
     cardViewHeightConstraint.constant = 190
+    self.cardView.customSwitch.isLocked = false
+    Helper.upDateVirtualCardStatus(bLockedStatus: cardView.customSwitch.isLocked)
+    
     UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseInOut) {
       self.layoutIfNeeded()
       self.cardView.nameBgView.alpha = 1
       self.cardView.nameLabel.alpha  = 1
       self.cardView.moreButton.alpha = 1
       self.cardView.showShadow(bShodow: true)
+      self.cardView.customSwitch.updateSwitch()
     } completion: { _ in
     }
-
   }
 }

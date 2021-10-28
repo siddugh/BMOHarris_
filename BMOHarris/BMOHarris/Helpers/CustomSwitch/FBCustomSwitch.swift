@@ -99,10 +99,6 @@ protocol FBCustomSwitchDelegate: AnyObject {
     setContainerBackgroundColor(bgColor: containerColor)
   }
   
-//  required init?(coder: NSCoder) {
-//    super.init(coder: coder)
-//  }
-  
   @objc func initilizeNobView() {
     containerView.addSubview(nobView)
     nobView.translatesAutoresizingMaskIntoConstraints = false
@@ -115,9 +111,6 @@ protocol FBCustomSwitchDelegate: AnyObject {
     
     nobView.initilize()
     initilizeNobWithImages()
-    //initilizeNobWithColour()
-    
-    
     addTapGesture()
     
     self.perform(#selector(initilizeNobb), with: nil, afterDelay: 0.1)
@@ -206,8 +199,18 @@ protocol FBCustomSwitchDelegate: AnyObject {
   }
   
   @objc private func handleTapGesture() {
-    //switchAction()
     delegate?.switchAction()
+  }
+  
+  func updateSwitch() {
+    let leadingConstant = isLocked ? 0 : self.bounds.width / 2
+    self.nobViewLeadingConstraint.constant = leadingConstant
+    if isLocked {
+      nobView.addNobImage(image: nobLockedImage)
+    } else {
+      nobView.addNobImage(image: nobUnLockedImage)
+    }
+    self.isLocked ? self.setNobLockedColor(nobColor: self.nobLockedColor) : self.setNobUnLockedColor(nobColor: self.nobUnLockedColor) 
   }
   
   private func setBackGroundColor(bgColor: UIColor?, bgView: UIView) {

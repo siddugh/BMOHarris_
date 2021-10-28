@@ -87,15 +87,31 @@ class AccountAndCardServiceController: UIViewController {
     cardView.customSwitch.isLocked = true
     cardView.delegate = self
     cardView.showMoreDelegate = self
-    cardViewHeightConstraint.constant = 60
-    self.cardView.nameBgView.alpha = 0
-    self.cardView.nameLabel.alpha  = 0
-    self.cardView.moreButton.alpha = 0
-    self.cardView.showShadow(bShodow: false)    
+    
+    if Helper.getVirtualCardStatus() {
+      cardViewHeightConstraint.constant = 60
+      self.cardView.nameBgView.alpha = 0
+      self.cardView.nameLabel.alpha  = 0
+      self.cardView.moreButton.alpha = 0
+      self.cardView.showShadow(bShodow: false)
+      self.cardView.customSwitch.isLocked = true
+      self.cardView.customSwitch.updateSwitch()
+
+    } else {
+      cardViewHeightConstraint.constant = 190
+      self.cardView.nameBgView.alpha = 1
+      self.cardView.nameLabel.alpha  = 1
+      self.cardView.moreButton.alpha = 1
+      self.cardView.showShadow(bShodow: true)
+      self.cardView.customSwitch.isLocked = false
+      self.cardView.customSwitch.updateSwitch()
+    }
   }
   
   func lockCardView() {
     cardViewHeightConstraint.constant = 60
+    self.cardView.customSwitch.isLocked = true
+    Helper.upDateVirtualCardStatus(bLockedStatus: true)
     UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseInOut) {
       self.view.layoutIfNeeded()
       self.cardView.nameBgView.alpha = 0
@@ -104,10 +120,15 @@ class AccountAndCardServiceController: UIViewController {
       self.cardView.showShadow(bShodow: false)
     } completion: { _ in
     }
+    Helper.upDateVirtualCardStatus(bLockedStatus: true)
+    
   }
   
   func unLockCardView() {
     cardViewHeightConstraint.constant = 190
+    self.cardView.customSwitch.isLocked = false
+    Helper.upDateVirtualCardStatus(bLockedStatus: false)
+
     UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseInOut) {
       self.view.layoutIfNeeded()
       self.cardView.nameBgView.alpha = 1
@@ -116,6 +137,7 @@ class AccountAndCardServiceController: UIViewController {
       self.cardView.showShadow(bShodow: true)
     } completion: { _ in
     }
+    Helper.upDateVirtualCardStatus(bLockedStatus: false)
   }
   
   func addAccountSummary() {
@@ -258,9 +280,7 @@ class AccountAndCardServiceController: UIViewController {
       self.view.layoutIfNeeded()
       self.showingAddFestures = !self.showingAddFestures
     }
-  }
-
-  
+  }  
 }
 
 
@@ -285,7 +305,6 @@ extension AccountAndCardServiceController: CardViewDelegate {
     } else {
      lockCardView()
     }
-
   }
   
   func onAuthenticationFailed() {

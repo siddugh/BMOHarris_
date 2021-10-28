@@ -22,17 +22,25 @@ class HomeViewController: UIViewController {
       setupUI()
       self.perform(#selector(updatePhysicalMessage), with: nil, afterDelay: 0.0)
       self.perform(#selector(setDelayedDelegate), with: nil, afterDelay: 0.3)
-      
     }
   
   override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)    
+    super.viewWillAppear(animated)
+    print("View will appear............")
+    self.perform(#selector(updateCard), with: nil, afterDelay: 0.1)
   }
     
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     print("viewDidAppear..")
-    //updatePhysicalMessage()
+  }
+  
+  @objc func updateCard() {
+    if Helper.getVirtualCardStatus() {
+      homeCell?.homeView.lockCardView()
+    } else {
+      homeCell?.homeView.unLockCardView()
+    }
   }
   
   @objc private func updatePhysicalMessage() {
@@ -206,8 +214,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 1
   }
-  
-  
+    
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath) as! HomeCell
@@ -216,7 +223,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
     return CGSize(width: collectionView.bounds.width, height: 2000)
   }
 }
@@ -229,6 +235,8 @@ extension HomeViewController: CardViewDelegate {
     } else {
       homeCell?.homeView.lockCardView()
     }
+    homeCell?.homeView.cardView.customSwitch.isLocked = Helper.getVirtualCardStatus()
+    //homeCell?.homeView.cardView.switchAction()
   }
   
   func onAuthenticationFailed() {
@@ -251,7 +259,6 @@ extension HomeViewController: CardViewShowMoreDelegate {
 extension HomeViewController: ServiceViewDelegate {
   func loadService(type: ServiceType) {
     print("selected service :\(type)")
-        
       switch type {
       case .kAddMoney:
         print("kAddMoney")
@@ -273,7 +280,6 @@ extension HomeViewController: ServiceViewDelegate {
         print("kSavingGoals")
         showSavingGoals()
       }
-    
   }
 }
 

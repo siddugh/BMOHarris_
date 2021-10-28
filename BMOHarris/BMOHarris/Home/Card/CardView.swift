@@ -97,7 +97,7 @@ class CardView: UIView {
 
 extension CardView: FBCustomSwitchDelegate {
   func onSwitchActionCompletion() {
-    
+   // Helper.upDateVirtualCardStatus(bLockedStatus: customSwitch.isLocked)
   }
   
   func switchAction() {

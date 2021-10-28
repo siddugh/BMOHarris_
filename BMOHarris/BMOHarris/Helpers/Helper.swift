@@ -60,6 +60,7 @@ class  Helper {
   }
   
   class func getVirtualCardStatus() -> Bool {
+    let vCard = UserDefaults.standard.bool(forKey: VIRTUAL_CARDLOCKED)
     return UserDefaults.standard.bool(forKey: VIRTUAL_CARDLOCKED)
   }
   

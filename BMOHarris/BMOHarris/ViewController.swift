@@ -35,6 +35,7 @@ class ViewController: UIViewController {
   
   func addHomeViewController() {
     Helper.upDatePhysicalCardStatus(bLockedStatus: true)
+    Helper.upDateVirtualCardStatus(bLockedStatus: true)
     
     let hVC = HomeViewController()
     let navC = UINavigationController(rootViewController: hVC)
