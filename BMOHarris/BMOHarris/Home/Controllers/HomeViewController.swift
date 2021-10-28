@@ -113,9 +113,6 @@ class HomeViewController: UIViewController {
   @objc func enableSpenAnalysisView() {
     homeCell?.homeView.spendAnalysisView.spView.showAll()
   }
-
-  
-
   
   private func addHomeView() {
     
@@ -129,12 +126,8 @@ class HomeViewController: UIViewController {
     scrollView.clipsToBounds = true
     scrollView.contentSize = CGSize(width: self.view.bounds.width - 30, height: 2000)
     scrollView.backgroundColor = .yellow
-    
-    
     let homeView = HomeView(frame: view.bounds)
-    
     scrollView.addSubview(homeView)
-    //homeView.frame = scrollView.bounds
   }
   
     
@@ -161,16 +154,6 @@ class HomeViewController: UIViewController {
 
     self.present(physicalCardController, animated: true, completion: nil)
   }
-  
-//  override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-//    print("......")
-//
-//    if let _ = viewControllerToPresent as? PhysicalCardViewController {
-//            //viewControllerToPresent.modalPresentationStyle = .fullScreen
-//        }
-//    super.present(viewControllerToPresent, animated: flag, completion: completion)
-//  }
-  
   
   func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
     print("presentationControllerWillDismiss.......")
