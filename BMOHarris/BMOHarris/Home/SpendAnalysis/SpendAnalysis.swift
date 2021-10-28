@@ -90,6 +90,10 @@ class SpendCategoryView: UIView {
 }
 
 
+protocol SpendAnalysisDelegate: AnyObject {
+  func showTransactionListOf(category: SpendCategoryType)
+}
+
 class SpendAnalysis: UIView {
 
   var categories: [Cateogory] = [Cateogory]()
@@ -98,6 +102,8 @@ class SpendAnalysis: UIView {
   
   var spendCategoryView: [SpendCategoryView] = [SpendCategoryView]()
   var categoryViews: [CategoryView] = [CategoryView]()
+  
+  weak var transDelegate: SpendAnalysisDelegate?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -230,5 +236,6 @@ extension SpendAnalysis: SelectedCategory {
   func selectedCatogry(cattagory: SpendCategoryType) {
     print("Selected Category.... \(cattagory)")
     showCategory(category: cattagory)
+    transDelegate?.showTransactionListOf(category: cattagory)
   }
 }

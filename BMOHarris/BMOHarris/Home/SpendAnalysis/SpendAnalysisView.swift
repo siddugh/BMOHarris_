@@ -20,6 +20,12 @@ class SpendAnalysisView: UIView {
   var lastMonthLabel: UILabel = UILabel()
   var thisMonthLabel: UILabel = UILabel()
   
+  let clothingtransactions = DataProvider().getTransactions()
+  let diningtransactions = DataProvider().getDiningTransactions()
+  let utilitytransactions = DataProvider().getUtilityTransactions()
+  let grocerytransactions = DataProvider().getGroceryTransactions()
+  let foodtransactions = DataProvider().getFoodTransactions()
+  
   weak var delegate: SpendAnalysisViewDelegate?
   
   let viewAllButton = UIButton()
@@ -125,7 +131,6 @@ class SpendAnalysisView: UIView {
     lastMonthLabel.trailingAnchor.constraint(equalTo: customSwitch.leadingAnchor, constant: -4).isActive = true
     lastMonthLabel.centerYAnchor.constraint(equalTo: thisMonthLabel.centerYAnchor, constant: 0).isActive = true
 
-
   }
   
   
@@ -140,6 +145,7 @@ class SpendAnalysisView: UIView {
     spView.topAnchor.constraint(equalTo: self.topAnchor, constant: 60).isActive = true
     spView.heightAnchor.constraint(equalToConstant: 90).isActive = true
     spView.delegate = self
+    spView.transDelegate = self
     addColletionView()
   }
   
@@ -153,24 +159,37 @@ class SpendAnalysisView: UIView {
     layout.minimumLineSpacing = 0
     layout.minimumInteritemSpacing = 0
     layout.scrollDirection = .vertical
-    
-    let transactions = DataProvider().getTransactions()
+        
     transactionCollectionView = TransactionCollectionView(frame: .zero, collectionViewLayout: layout)
-    transactionCollectionView.updateTransactions(transactions: transactions)
+    transactionCollectionView.updateTransactions(transactions: clothingtransactions)
     self.addSubview(transactionCollectionView)
-
     transactionCollectionView.translatesAutoresizingMaskIntoConstraints = false
     transactionCollectionView.backgroundColor = .white
     transactionCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     transactionCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     transactionCollectionView.topAnchor.constraint(equalTo: spView.bottomAnchor, constant: 10).isActive = true
     transactionCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true    
-
+    loadTransactionOf(category: .kClothing)
     enableScrolling(bEnable: false)
   }
   
   func enableScrolling(bEnable: Bool) {
     transactionCollectionView.isScrollEnabled = bEnable
+  }
+  
+  func loadTransactionOf(category: SpendCategoryType) {
+    switch category {
+    case .kClothing:
+      transactionCollectionView.updateTransactions(transactions: clothingtransactions)
+    case .kDiining:
+      transactionCollectionView.updateTransactions(transactions: diningtransactions)
+    case .kUtility:
+      transactionCollectionView.updateTransactions(transactions: utilitytransactions)
+    case .kGrocery:
+      transactionCollectionView.updateTransactions(transactions: grocerytransactions)
+    case .kFoodDrink:
+      transactionCollectionView.updateTransactions(transactions: foodtransactions)
+    }
   }
   
   func showViewALlButton() {
@@ -253,5 +272,12 @@ extension SpendAnalysisView: FBCustomSwitchDelegate {
 extension SpendAnalysisView: SelectedCategory {
   func selectedCatogry(cattagory: SpendCategoryType) {
     print("Selected Category: \(cattagory)")
+  }
+}
+
+extension SpendAnalysisView: SpendAnalysisDelegate {
+  func showTransactionListOf(category: SpendCategoryType) {
+    print("Inside SpendAnalysisView : Selected Category.... \(category)")
+    loadTransactionOf(category: category)
   }
 }

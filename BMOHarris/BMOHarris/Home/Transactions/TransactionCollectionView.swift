@@ -33,7 +33,12 @@ class TransactionCollectionView: UICollectionView {
   
 
   func updateTransactions(transactions: [TransactionModel]) {
-    self.transactions = transactions
+    if self.transactions == nil {
+      self.transactions = [TransactionModel]()
+    }
+    
+    self.transactions?.removeAll()
+    self.transactions?.append(contentsOf: transactions)
     reloadData()
   }
   

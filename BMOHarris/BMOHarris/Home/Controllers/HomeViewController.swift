@@ -108,6 +108,7 @@ class HomeViewController: UIViewController {
   @objc func handleTapGesture() {
     print("addGapGesture........")
     self.perform(#selector(enableSpenAnalysisView), with: nil, afterDelay: 0.1)
+    homeCell?.homeView.spendAnalysisView.loadTransactionOf(category: .kClothing)
   }
   
   @objc func enableSpenAnalysisView() {
