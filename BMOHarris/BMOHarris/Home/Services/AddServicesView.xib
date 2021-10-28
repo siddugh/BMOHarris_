@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddServicesView" customModule="BMO_Harris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="134" height="142"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csr-R3-5zV" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="134" height="142"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XiQ-Dh-jP7">
+                            <rect key="frame" x="0.0" y="10" width="134" height="62"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ik-WT-km6" customClass="AddServiceView" customModule="BMO_Harris" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="134" height="25"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWY-h9-UM2">
+                                            <rect key="frame" x="10" y="-2.5" width="124" height="30"/>
+                                            <color key="backgroundColor" red="0.792156862745098" green="0.91764705882352937" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addmoney" translatesAutoresizingMaskIntoConstraints="NO" id="ffZ-JB-wAK">
+                                            <rect key="frame" x="25" y="5" width="15" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="PAl-dw-8ID"/>
+                                                <constraint firstAttribute="height" constant="15" id="izf-x1-9j1"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Money  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVT-wk-DZA">
+                                            <rect key="frame" x="50" y="5.5" width="69" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                            <color key="textColor" red="0.13333333333333333" green="0.57647058823529407" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="sWY-h9-UM2" firstAttribute="trailing" secondItem="oVT-wk-DZA" secondAttribute="trailing" constant="15" id="3m3-DP-s6l"/>
+                                        <constraint firstItem="ffZ-JB-wAK" firstAttribute="centerY" secondItem="4Ik-WT-km6" secondAttribute="centerY" id="5f5-Tw-s8U"/>
+                                        <constraint firstItem="oVT-wk-DZA" firstAttribute="centerY" secondItem="ffZ-JB-wAK" secondAttribute="centerY" id="5xC-MA-gKf"/>
+                                        <constraint firstItem="ffZ-JB-wAK" firstAttribute="leading" secondItem="4Ik-WT-km6" secondAttribute="leading" constant="25" id="7OY-z2-DoI"/>
+                                        <constraint firstItem="sWY-h9-UM2" firstAttribute="centerY" secondItem="ffZ-JB-wAK" secondAttribute="centerY" id="AWH-g5-dUY"/>
+                                        <constraint firstItem="oVT-wk-DZA" firstAttribute="leading" secondItem="ffZ-JB-wAK" secondAttribute="trailing" constant="10" id="eFT-vx-3IE"/>
+                                        <constraint firstItem="sWY-h9-UM2" firstAttribute="height" secondItem="ffZ-JB-wAK" secondAttribute="height" constant="15" id="exk-EL-MeR"/>
+                                        <constraint firstItem="sWY-h9-UM2" firstAttribute="leading" secondItem="ffZ-JB-wAK" secondAttribute="leading" constant="-15" id="f7p-SO-Gsa"/>
+                                        <constraint firstAttribute="height" constant="25" id="vOS-YW-AcS"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="bgView" destination="sWY-h9-UM2" id="8ad-Ig-GoL"/>
+                                        <outlet property="imageView" destination="ffZ-JB-wAK" id="z1g-1H-AEm"/>
+                                        <outlet property="title" destination="oVT-wk-DZA" id="Yu9-B4-x9H"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Vk-NZ-FMs" customClass="AddServiceView" customModule="BMO_Harris" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="37" width="134" height="25"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5w-EM-mfH">
+                                            <rect key="frame" x="10" y="-2.5" width="126" height="30"/>
+                                            <color key="backgroundColor" red="0.82745098039215681" green="0.88235294117647056" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movemoney" translatesAutoresizingMaskIntoConstraints="NO" id="EWC-s2-sZN">
+                                            <rect key="frame" x="25" y="5" width="15" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="3lQ-Yb-FZm"/>
+                                                <constraint firstAttribute="height" constant="15" id="aNY-tO-oYW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move Money" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9b-9V-RfZ">
+                                            <rect key="frame" x="50" y="5.5" width="71" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                            <color key="textColor" red="0.25098039215686274" green="0.40784313725490196" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="r5w-EM-mfH" firstAttribute="height" secondItem="EWC-s2-sZN" secondAttribute="height" constant="15" id="9BA-fo-aUh"/>
+                                        <constraint firstItem="r5w-EM-mfH" firstAttribute="trailing" secondItem="Q9b-9V-RfZ" secondAttribute="trailing" constant="15" id="AXu-Zs-QHr"/>
+                                        <constraint firstItem="r5w-EM-mfH" firstAttribute="leading" secondItem="EWC-s2-sZN" secondAttribute="leading" constant="-15" id="BIg-9b-Dhk"/>
+                                        <constraint firstItem="EWC-s2-sZN" firstAttribute="leading" secondItem="3Vk-NZ-FMs" secondAttribute="leading" constant="25" id="XGL-aM-mhL"/>
+                                        <constraint firstItem="Q9b-9V-RfZ" firstAttribute="centerY" secondItem="EWC-s2-sZN" secondAttribute="centerY" id="cDS-nK-nj4"/>
+                                        <constraint firstItem="EWC-s2-sZN" firstAttribute="centerY" secondItem="3Vk-NZ-FMs" secondAttribute="centerY" id="daI-no-UVe"/>
+                                        <constraint firstItem="Q9b-9V-RfZ" firstAttribute="leading" secondItem="EWC-s2-sZN" secondAttribute="trailing" constant="10" id="kyh-FY-DJN"/>
+                                        <constraint firstItem="r5w-EM-mfH" firstAttribute="centerY" secondItem="EWC-s2-sZN" secondAttribute="centerY" id="nyi-dY-E7x"/>
+                                        <constraint firstAttribute="height" constant="25" id="umk-1t-LsC"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="bgView" destination="r5w-EM-mfH" id="JDH-fj-RyB"/>
+                                        <outlet property="imageView" destination="EWC-s2-sZN" id="iaY-9e-z0f"/>
+                                        <outlet property="title" destination="Q9b-9V-RfZ" id="QSc-pj-1dE"/>
+                                    </connections>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcy-HQ-eDL" customClass="AddServiceView" customModule="BMO_Harris" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="62" width="134" height="25"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwe-yp-YEw">
+                                            <rect key="frame" x="10" y="-2.5" width="129.5" height="30"/>
+                                            <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goals" translatesAutoresizingMaskIntoConstraints="NO" id="s13-DS-9bm">
+                                            <rect key="frame" x="25" y="5" width="15" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="15" id="Jxq-ve-tqn"/>
+                                                <constraint firstAttribute="height" constant="15" id="tBQ-vC-ug6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saving Goals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N12-ow-Qzv">
+                                            <rect key="frame" x="50" y="5.5" width="74.5" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                            <color key="textColor" red="0.30196078431372547" green="0.19215686274509802" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="73Q-If-dsm"/>
+                                        <constraint firstItem="N12-ow-Qzv" firstAttribute="leading" secondItem="s13-DS-9bm" secondAttribute="trailing" constant="10" id="7RJ-zW-mSr"/>
+                                        <constraint firstItem="s13-DS-9bm" firstAttribute="centerY" secondItem="Tcy-HQ-eDL" secondAttribute="centerY" id="X24-Ag-hb0"/>
+                                        <constraint firstItem="jwe-yp-YEw" firstAttribute="centerY" secondItem="s13-DS-9bm" secondAttribute="centerY" id="ayq-Hc-fCE"/>
+                                        <constraint firstItem="jwe-yp-YEw" firstAttribute="height" secondItem="s13-DS-9bm" secondAttribute="height" constant="15" id="h9X-A3-azi"/>
+                                        <constraint firstItem="N12-ow-Qzv" firstAttribute="centerY" secondItem="s13-DS-9bm" secondAttribute="centerY" id="lUr-WX-YBv"/>
+                                        <constraint firstItem="jwe-yp-YEw" firstAttribute="leading" secondItem="s13-DS-9bm" secondAttribute="leading" constant="-15" id="naq-mg-pGg"/>
+                                        <constraint firstItem="s13-DS-9bm" firstAttribute="leading" secondItem="Tcy-HQ-eDL" secondAttribute="leading" constant="25" id="qhY-NA-1zH"/>
+                                        <constraint firstItem="jwe-yp-YEw" firstAttribute="trailing" secondItem="N12-ow-Qzv" secondAttribute="trailing" constant="15" id="vxy-s2-Tqa"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="bgView" destination="jwe-yp-YEw" id="dE7-0W-Usr"/>
+                                        <outlet property="imageView" destination="s13-DS-9bm" id="eH3-SD-cSh"/>
+                                        <outlet property="title" destination="N12-ow-Qzv" id="Wbu-Vd-l8C"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="XiQ-Dh-jP7" firstAttribute="leading" secondItem="csr-R3-5zV" secondAttribute="leading" id="FP7-Ul-9fP"/>
+                        <constraint firstItem="XiQ-Dh-jP7" firstAttribute="top" secondItem="csr-R3-5zV" secondAttribute="top" constant="10" id="P3M-vC-gkE"/>
+                        <constraint firstAttribute="trailing" secondItem="XiQ-Dh-jP7" secondAttribute="trailing" id="ftx-EY-M8W"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="csr-R3-5zV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8Wc-qx-wsz"/>
+                <constraint firstAttribute="trailing" secondItem="csr-R3-5zV" secondAttribute="trailing" id="L2h-bv-7CR"/>
+                <constraint firstItem="csr-R3-5zV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XcC-4Q-N3X"/>
+                <constraint firstAttribute="bottom" secondItem="csr-R3-5zV" secondAttribute="bottom" id="fxf-XY-L2r"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addService" destination="4Ik-WT-km6" id="QJ2-uo-OZZ"/>
+                <outlet property="movemoneyService" destination="3Vk-NZ-FMs" id="tED-fR-qCL"/>
+                <outlet property="savinggoalService" destination="Tcy-HQ-eDL" id="1HO-qI-wcY"/>
+            </connections>
+            <point key="canvasLocation" x="-239.13043478260872" y="-212.27678571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addmoney" width="19" height="17"/>
+        <image name="goals" width="18" height="19"/>
+        <image name="movemoney" width="27" height="18"/>
+    </resources>
+</document>

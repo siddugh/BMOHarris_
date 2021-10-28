@@ -68,6 +68,9 @@
 		122D3C8E27294D9100109CEE /* ScheduledPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C8D27294D9100109CEE /* ScheduledPaymentViewController.swift */; };
 		122D3C9227295B4C00109CEE /* SpendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C9127295B4C00109CEE /* SpendModel.swift */; };
 		122D3C9427295EBC00109CEE /* SpendAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C9327295EBC00109CEE /* SpendAnalysisViewController.swift */; };
+		122D3C98272A751F00109CEE /* AddServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C95272A751F00109CEE /* AddServicesView.swift */; };
+		122D3C9A272A751F00109CEE /* AddServicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3C97272A751F00109CEE /* AddServicesView.xib */; };
+		122D3C9C272A756000109CEE /* AddServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3C9B272A755F00109CEE /* AddServiceView.swift */; };
 		125C037C271FECDA005807EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037B271FECDA005807EF /* HomeViewController.swift */; };
 		125C037F271FED64005807EF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037E271FED64005807EF /* HomeView.swift */; };
 		125C0382271FEF45005807EF /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C0381271FEF45005807EF /* ViewFactory.swift */; };
@@ -228,6 +231,9 @@
 		122D3C8D27294D9100109CEE /* ScheduledPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledPaymentViewController.swift; sourceTree = "<group>"; };
 		122D3C9127295B4C00109CEE /* SpendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendModel.swift; sourceTree = "<group>"; };
 		122D3C9327295EBC00109CEE /* SpendAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendAnalysisViewController.swift; sourceTree = "<group>"; };
+		122D3C95272A751F00109CEE /* AddServicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServicesView.swift; sourceTree = "<group>"; };
+		122D3C97272A751F00109CEE /* AddServicesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddServicesView.xib; sourceTree = "<group>"; };
+		122D3C9B272A755F00109CEE /* AddServiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceView.swift; sourceTree = "<group>"; };
 		125C037B271FECDA005807EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		125C037E271FED64005807EF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		125C0381271FEF45005807EF /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
@@ -462,6 +468,9 @@
 		1268B9BA26FDB639006F1CCC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				122D3C9B272A755F00109CEE /* AddServiceView.swift */,
+				122D3C95272A751F00109CEE /* AddServicesView.swift */,
+				122D3C97272A751F00109CEE /* AddServicesView.xib */,
 				1268B9C926FDBCDE006F1CCC /* Controller */,
 				1268B9BF26FDB67D006F1CCC /* Model */,
 				1268B9BB26FDB665006F1CCC /* ServiceCell.swift */,
@@ -917,6 +926,7 @@
 				12C616B826FAF182003415B5 /* Rubik-BlackItalic.ttf in Resources */,
 				12C6168726EF6222003415B5 /* LaunchScreen.storyboard in Resources */,
 				122D3C4D27280E6D00109CEE /* ReviewNewGoalVIew.xib in Resources */,
+				122D3C9A272A751F00109CEE /* AddServicesView.xib in Resources */,
 				12C616B026FAF182003415B5 /* pt-sans.caption-bold.ttf in Resources */,
 				12C616B126FAF182003415B5 /* Rubik-MediumItalic.ttf in Resources */,
 				12DB552C27046F07000167AA /* CardLockedMessageView.xib in Resources */,
@@ -993,6 +1003,7 @@
 				1268B9FC27019F36006F1CCC /* TransactionDetailView.swift in Sources */,
 				122D3C7B2728206500109CEE /* GoalCompletedViewController.swift in Sources */,
 				122D3C412727FFAB00109CEE /* SavingGoalsViewController.swift in Sources */,
+				122D3C98272A751F00109CEE /* AddServicesView.swift in Sources */,
 				122D3C5D27281CD600109CEE /* DepositCell.swift in Sources */,
 				122D3C792728206500109CEE /* GoalCompletedCell.swift in Sources */,
 				122D3C7F272827F200109CEE /* Authentication.swift in Sources */,
@@ -1015,6 +1026,7 @@
 				120C4A4326FC7D7A00ABC910 /* CardView.swift in Sources */,
 				12DB556C270AFA3C000167AA /* NewGoalViewController.swift in Sources */,
 				12DB55412707080D000167AA /* ScaleScrollView.swift in Sources */,
+				122D3C9C272A756000109CEE /* AddServiceView.swift in Sources */,
 				1268B9B926FDAFCE006F1CCC /* TouchId.swift in Sources */,
 				122D3C242721696D00109CEE /* CategoryView.swift in Sources */,
 				122D3C892729249B00109CEE /* TransactiosDetailVIew.swift in Sources */,

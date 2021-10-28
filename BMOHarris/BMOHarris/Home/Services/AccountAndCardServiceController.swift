@@ -12,10 +12,20 @@ class AccountAndCardServiceController: UIViewController {
     var headerView: Header!
     var cardView: CardView!
     var accsummary: AccountsSummaryView!
+    var showingAddFestures = false
+    var addFeatureView = UIView()
+    var addFeatureViewHeightConstraint: NSLayoutConstraint!
+    var serviceView: AddServicesView?
+    var cardViewHeightConstraint: NSLayoutConstraint!
+  
+    var accountType: AccountType = AccountType.kCHECKING
+  
     let checkingAccScrollView = UIScrollView()
     let savingAccScrollView = UIScrollView()
+    let addButton = UIButton()
   
-    var cardViewHeightConstraint: NSLayoutConstraint!
+
+    
   
   var accSelectionView: AccountsContainer!
     override func viewDidLoad() {
@@ -31,6 +41,7 @@ class AccountAndCardServiceController: UIViewController {
     addAccountSummary()
     addSavingAccSummary()
     showCheckingAccount()
+    addAddButton()
 
   }
   
@@ -179,6 +190,78 @@ class AccountAndCardServiceController: UIViewController {
     } completion: { _ in
     }
   }
+  
+  func addAddButton() {
+    
+    view.addSubview(addButton)
+    addFeatureView.backgroundColor = .clear
+    addButton.frame = CGRect(x: view.bounds.width - 80, y: view.bounds.height - 115, width: 60, height: 60)
+    addButton.addTarget(self, action: #selector(addFeatures), for: .touchUpInside)
+    addButton.setImage(UIImage(named: "addbutton"), for: .normal)
+    addButton.backgroundColor = .clear
+    
+    view.addSubview(addFeatureView)
+    addFeatureView.translatesAutoresizingMaskIntoConstraints = false
+    addFeatureView.leadingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -80).isActive = true
+    addFeatureView.trailingAnchor.constraint(equalTo: addButton.trailingAnchor, constant: 0).isActive = true
+    addFeatureView.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: 0).isActive = true
+    addFeatureViewHeightConstraint = addFeatureView.heightAnchor.constraint(equalToConstant: 0)
+    addFeatureViewHeightConstraint.isActive = true
+    
+    
+    serviceView = (Bundle.main.loadNibNamed("AddServicesView", owner: self, options: nil)!.first as! AddServicesView)
+    serviceView?.initlize()
+    addFeatureView.addSubview(serviceView!)
+    serviceView?.frame = addFeatureView.bounds
+    serviceView?.clipsToBounds = true
+    addFeatureView.alpha = 0
+  }
+  
+  func addStackView() {
+    let stackView = UIStackView()
+    stackView.axis = .vertical
+    view.addSubview(stackView)
+    stackView.alignment = .fill
+    stackView.distribution = .fill //.fillEqually
+    let v = UIView()
+    v.backgroundColor = .green
+    
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.leadingAnchor.constraint(equalTo: self.addButton.leadingAnchor, constant: 0).isActive = true
+    stackView.trailingAnchor.constraint(equalTo: self.addButton.trailingAnchor, constant: 0).isActive = true
+    stackView.bottomAnchor.constraint(equalTo: self.addButton.bottomAnchor, constant: 0).isActive = true
+    
+    stackView.backgroundColor = .systemPink
+    
+    stackView.addArrangedSubview(v)
+    stackView.addArrangedSubview(v)
+    stackView.addArrangedSubview(v)
+    stackView.addArrangedSubview(v)
+    
+  }
+  
+  @objc func addFeatures () {
+    print("addFeatures")
+
+
+    UIView.animate(withDuration: 0.5) {
+      self.addButton.transform = self.showingAddFestures ? CGAffineTransform.identity : CGAffineTransform(rotationAngle: CGFloat.pi / 4)
+      
+      if self.accountType == .kCHECKING {
+        self.addFeatureViewHeightConstraint.constant = self.showingAddFestures ? 0 : 100
+      }
+      if self.accountType == .kSAVING {
+        self.addFeatureViewHeightConstraint.constant = self.showingAddFestures ? 0 : 45
+      }
+
+      self.addFeatureView.alpha = self.showingAddFestures ? 0 : 1
+      self.view.layoutIfNeeded()
+      //self.addFeatureView.backgroundColor = .green
+      self.showingAddFestures = !self.showingAddFestures
+    }
+  }
+
+  
 }
 
 
@@ -230,8 +313,41 @@ extension AccountAndCardServiceController: AccountsContainerDelegate {
   func selectedAccount(type: AccountType) {
     switch type {
     case .kCHECKING:
+      self.accountType = .kCHECKING
+      if self.accountType == .kCHECKING {
+        self.serviceView?.addService.isHidden = false
+        self.serviceView?.movemoneyService.isHidden = false
+        self.serviceView?.savinggoalService.isHidden = true
+      }
+
+      UIView.animate(withDuration: 0.5) {
+        //self.tableView.alpha = 1
+        //self.savingTableView.alpha = 0
+        self.addFeatureViewHeightConstraint.constant = 0
+        self.view.layoutIfNeeded()
+        self.addButton.transform =  CGAffineTransform.identity
+      }
+      showingAddFestures = false
       showCheckingAccount()
+      
     case .kSAVING:
+      self.accountType = .kSAVING
+      if self.accountType == .kSAVING {
+        self.serviceView?.addService.isHidden = true
+        self.serviceView?.movemoneyService.isHidden = true
+        self.serviceView?.savinggoalService.isHidden = false
+      }
+
+      UIView.animate(withDuration: 0.5) {
+        //self.tableView.alpha = 0
+        //self.savingTableView.alpha = 1
+        self.addFeatureViewHeightConstraint.constant = 0
+        self.addButton.transform =  CGAffineTransform.identity
+        self.view.layoutIfNeeded()
+      }
+      showingAddFestures = false
+
+      
       showSavingAccount()
     case .kBOTH:
       print("Show both")
