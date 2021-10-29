@@ -136,6 +136,9 @@
 		122D3D2B272AB7E100109CEE /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3D26272AB7E100109CEE /* MenuCell.swift */; };
 		122D3D2C272AB7E100109CEE /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 122D3D27272AB7E100109CEE /* MenuCell.xib */; };
 		122D3D2D272AB7E100109CEE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122D3D28272AB7E100109CEE /* MenuViewController.swift */; };
+		12351135272BDD9000D2B030 /* ScaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12351133272BDD9000D2B030 /* ScaleCell.swift */; };
+		12351136272BDD9000D2B030 /* ScaleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12351134272BDD9000D2B030 /* ScaleCell.xib */; };
+		12351138272BDF5700D2B030 /* ScaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12351137272BDF5700D2B030 /* ScaleModel.swift */; };
 		125C037C271FECDA005807EF /* CardHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037B271FECDA005807EF /* CardHomeViewController.swift */; };
 		125C037F271FED64005807EF /* CardHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C037E271FED64005807EF /* CardHomeView.swift */; };
 		125C0382271FEF45005807EF /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C0381271FEF45005807EF /* ViewFactory.swift */; };
@@ -364,6 +367,9 @@
 		122D3D26272AB7E100109CEE /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		122D3D27272AB7E100109CEE /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		122D3D28272AB7E100109CEE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		12351133272BDD9000D2B030 /* ScaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCell.swift; sourceTree = "<group>"; };
+		12351134272BDD9000D2B030 /* ScaleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScaleCell.xib; sourceTree = "<group>"; };
+		12351137272BDF5700D2B030 /* ScaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleModel.swift; sourceTree = "<group>"; };
 		125C037B271FECDA005807EF /* CardHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeViewController.swift; sourceTree = "<group>"; };
 		125C037E271FED64005807EF /* CardHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHomeView.swift; sourceTree = "<group>"; };
 		125C0381271FEF45005807EF /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
@@ -773,7 +779,6 @@
 				1268B9BB26FDB665006F1CCC /* ServiceCell.swift */,
 				1268B9BC26FDB665006F1CCC /* ServiceCell.xib */,
 				1268B9CA26FDC316006F1CCC /* ServiceView.swift */,
-				122D3C312726B6C700109CEE /* AccountAndCardServiceController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -800,6 +805,7 @@
 			isa = PBXGroup;
 			children = (
 				1268B9CC26FDC719006F1CCC /* ServiceViewController.swift */,
+				122D3C312726B6C700109CEE /* AccountAndCardServiceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1120,6 +1126,9 @@
 				12DB55402707080D000167AA /* ScaleScrollView.swift */,
 				12DB553E2706E885000167AA /* ScaleView.swift */,
 				12DB554327070D31000167AA /* ScaleViewContainer.swift */,
+				12351133272BDD9000D2B030 /* ScaleCell.swift */,
+				12351134272BDD9000D2B030 /* ScaleCell.xib */,
+				12351137272BDF5700D2B030 /* ScaleModel.swift */,
 			);
 			path = ScaleView;
 			sourceTree = "<group>";
@@ -1253,6 +1262,7 @@
 				122D3D02272AB79200109CEE /* IdentityProofView.xib in Resources */,
 				12C616B726FAF182003415B5 /* Rubik-LightItalic.ttf in Resources */,
 				12C616B226FAF182003415B5 /* Rubik-Bold.ttf in Resources */,
+				12351136272BDD9000D2B030 /* ScaleCell.xib in Resources */,
 				12C6168426EF6222003415B5 /* Assets.xcassets in Resources */,
 				122D3D16272AB79200109CEE /* ContactInfoView.xib in Resources */,
 				12DB553D2706D148000167AA /* NewGoalView.xib in Resources */,
@@ -1305,6 +1315,7 @@
 				1268B9BD26FDB665006F1CCC /* ServiceCell.swift in Sources */,
 				122D3D29272AB7E100109CEE /* MenuDelegate.swift in Sources */,
 				1268B9CB26FDC316006F1CCC /* ServiceView.swift in Sources */,
+				12351138272BDF5700D2B030 /* ScaleModel.swift in Sources */,
 				1268BA142701CD65006F1CCC /* PaymentCell.swift in Sources */,
 				122D3C3027269C4F00109CEE /* AccDetailViewController.swift in Sources */,
 				1268BA292701DDBA006F1CCC /* CouponModel.swift in Sources */,
@@ -1323,6 +1334,7 @@
 				122D3CF3272AB79200109CEE /* StartMessageView.swift in Sources */,
 				12C616BE26FAF1A5003415B5 /* Helper.swift in Sources */,
 				122D3CF8272AB79200109CEE /* EmploymentViewController.swift in Sources */,
+				12351135272BDD9000D2B030 /* ScaleCell.swift in Sources */,
 				122D3CEE272AB79200109CEE /* HomeViewController.swift in Sources */,
 				1268BA102701C7C3006F1CCC /* GoalsViewModel.swift in Sources */,
 				122D3C2C272699C700109CEE /* AccDetailInfoView.swift in Sources */,

@@ -133,6 +133,7 @@ class CardHomeView: UIView {
     spendAnalysisView.topAnchor.constraint(equalTo: scheduledPaymentView.bottomAnchor, constant: 15).isActive = true
     spendAnalysisView.heightAnchor.constraint(equalToConstant: 310).isActive = true
     spendAnalysisView.showViewALlButton()
+    spendAnalysisView.addDurationlabels()
   }
   
   private func addCouponsView() {

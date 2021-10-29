@@ -86,6 +86,10 @@ class SpendAnalysisView: UIView {
     layout.minimumInteritemSpacing = 0
     layout.scrollDirection = .vertical
     
+  }
+  
+  
+  func addDurationlabels() {
     setMonthslabels()
     updateLabels(thisMonth: true)
   }
@@ -140,7 +144,7 @@ class SpendAnalysisView: UIView {
     spView = SpendAnalysis(frame: CGRect(x: 15, y: 60, width: self.bounds.width - 30, height: 45), catagories: [])
     self.addSubview(spView)
     spView.translatesAutoresizingMaskIntoConstraints = false
-    spView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+    spView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
     spView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
     spView.topAnchor.constraint(equalTo: self.topAnchor, constant: 60).isActive = true
     spView.heightAnchor.constraint(equalToConstant: 90).isActive = true

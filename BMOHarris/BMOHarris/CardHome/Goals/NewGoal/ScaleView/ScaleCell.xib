@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ScaleCell" customModule="BMOHarris" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="93"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="93"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9N-4H-O3O" userLabel="COntainerView">
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="136"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4C-hm-H86" userLabel="BarView1">
+                                <rect key="frame" x="167.5" y="0.0" width="2" height="136"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="kiA-y1-LbU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iK-Cp-tSG" userLabel="BarView2">
+                                <rect key="frame" x="167.5" y="13.5" width="2" height="34"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="4u2-2R-dRn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T4C-hm-H86" firstAttribute="centerX" secondItem="D9N-4H-O3O" secondAttribute="centerX" id="8Kl-A4-xRp"/>
+                            <constraint firstAttribute="bottom" secondItem="T4C-hm-H86" secondAttribute="bottom" id="LVP-nm-EBC"/>
+                            <constraint firstItem="9iK-Cp-tSG" firstAttribute="centerX" secondItem="D9N-4H-O3O" secondAttribute="centerX" id="M0p-4w-lAe"/>
+                            <constraint firstItem="T4C-hm-H86" firstAttribute="top" secondItem="D9N-4H-O3O" secondAttribute="top" id="Oaw-x8-z7s"/>
+                            <constraint firstItem="9iK-Cp-tSG" firstAttribute="centerY" secondItem="D9N-4H-O3O" secondAttribute="centerY" multiplier="0.45" id="R9I-LC-pxk"/>
+                            <constraint firstItem="9iK-Cp-tSG" firstAttribute="height" secondItem="D9N-4H-O3O" secondAttribute="height" multiplier="0.25" id="jSD-dM-p1C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="D9N-4H-O3O" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="54U-Vd-B6e"/>
+                <constraint firstAttribute="trailing" secondItem="D9N-4H-O3O" secondAttribute="trailing" id="eiv-CY-vJP"/>
+                <constraint firstAttribute="bottom" secondItem="D9N-4H-O3O" secondAttribute="bottom" constant="-43" id="rs8-Qn-3Ns"/>
+                <constraint firstItem="D9N-4H-O3O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zvs-3T-q6C"/>
+            </constraints>
+            <size key="customSize" width="337" height="93"/>
+            <connections>
+                <outlet property="containerView" destination="D9N-4H-O3O" id="4kf-Pm-JQJ"/>
+                <outlet property="vBar1" destination="T4C-hm-H86" id="pGk-W3-soy"/>
+                <outlet property="vBar2" destination="9iK-Cp-tSG" id="U6v-7b-qqQ"/>
+            </connections>
+            <point key="canvasLocation" x="236.95652173913047" y="47.879464285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>

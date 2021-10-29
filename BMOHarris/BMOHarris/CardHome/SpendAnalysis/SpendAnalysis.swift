@@ -128,17 +128,17 @@ class SpendAnalysis: UIView {
   
   @objc private func setupView() {
     
-    let stackView = UIStackView()
-    self.addSubview(stackView)
-    stackView.alignment = .leading
-    stackView.distribution = .equalSpacing
-    //stackView.spacing = 5
-    
-    stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
-    stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60).isActive = true
-    stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 70).isActive = true
-
+//    let stackView = UIStackView()
+//    self.addSubview(stackView)
+//    stackView.alignment = .leading
+//    stackView.distribution = .equalSpacing
+//    //stackView.spacing = 5
+//
+//    stackView.translatesAutoresizingMaskIntoConstraints = false
+//    stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+//    stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60).isActive = true
+//    stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 70).isActive = true
+//    stackView.backgroundColor = .green
     
     let totalNumberOfCategories = 5
     let padding = 10

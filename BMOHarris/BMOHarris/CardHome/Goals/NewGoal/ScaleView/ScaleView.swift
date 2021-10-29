@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ScaleViewFelegate:class {
+protocol ScaleViewFelegate:AnyObject {
   func scrollingValue(scrolVal:Double)
 }
 
@@ -40,12 +40,12 @@ class ScaleView: UIView {
     for i in 0..<30 {
       
       if i % 5 == 0 {
-        let startPoint = getStatPoint()
+        let startPoint = getStatPoint(height: 30, yPos: 0)
         startPoint.frame.origin.x = xPos
         startPoint.frame.origin.y = 5
         self.addSubview(startPoint)
       } else {
-        let midPOint = getMidPoint()
+        let midPOint = getStatPoint(height: 30, yPos: 10)
         midPOint.frame.origin.x = xPos
         midPOint.frame.origin.y = 15
         self.addSubview(midPOint)
@@ -56,12 +56,12 @@ class ScaleView: UIView {
     }
   }
   
-  func getStatPoint() -> UILabel {
+  func getStatPoint(height: Int, yPos: Int) -> UILabel {
     
     let startLabel = UILabel()
     startLabel.backgroundColor = pointColor
     startLabel.layer.cornerRadius = 5
-    startLabel.frame = CGRect(x: 0, y: 0, width: 2, height: 30)
+    startLabel.frame = CGRect(x: 0, y: yPos, width: 2, height: height)
     
     return startLabel
   }

@@ -22,7 +22,7 @@ class NewGoalView: UIView {
   @IBOutlet weak var reviewButton: UIButton!
   
   @IBOutlet weak var goalView: UIView!
-  
+  @IBOutlet weak var scaleView: ScaleViewContainer!
   weak var delegate: NewGoalViewDelegate?
   
   override func awakeFromNib() {
@@ -37,7 +37,7 @@ class NewGoalView: UIView {
     savingAmtBgView.layer.cornerRadius = 15
     monthLabelBgView.layer.cornerRadius = 15
     reviewButton.layer.cornerRadius = 24
-    
+    scaleView.delegate = self
     addNewGoalViewController()
   }
   
@@ -61,5 +61,11 @@ class NewGoalView: UIView {
     
     delegate?.reviewNewGoal()
   }
-      
+}
+
+extension NewGoalView: ScaleViewContainerDelegate {
+  func scaleValue(value: Int) {
+    
+    self.savingAmountLabel.text = "$"+String(value)
+  }
 }

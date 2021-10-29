@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ScaleViewContainerDelegate: AnyObject {
+  func scaleValue(value:Int)
+}
+
 class ScaleViewContainer: UIView {
 
   @IBOutlet weak var scaleScrollView: ScaleScrollView!
@@ -18,37 +22,38 @@ class ScaleViewContainer: UIView {
   var currentOffeset:CGFloat = 0.0
   var delta:Double = 0
   var amount:Int = 92
-
+  var currentIndexPath: IndexPath?
+  var scaleValues: [ScaleModel] = [ScaleModel]()
+  var delegate: ScaleViewContainerDelegate?
   
   override func awakeFromNib() {
     super.awakeFromNib()
+    getScaleValues()
     initilize()
   }
   
   private func initilize() {
-    scaleScrollView.delegate = self
-    //scaleScrollView.isPagingEnabled = true
-    scaleScrollView.isScrollEnabled = false
     self.perform(#selector(addIndicatorView), with: nil, afterDelay: 0.0)
+    self.perform(#selector(update), with: nil, afterDelay: 0.4)
+    
   }
   
+  func getScaleValues() {
+    var initialVal:Int = 50
+    for _ in 0..<50 {
+      scaleValues.append(ScaleModel(value: initialVal))
+      initialVal += 10
+    }
+  }
   
   @objc func addIndicatorView() {
     
     addSCaleView()
-    scaleScrollView.contentSize = CGSize(width: self.bounds.width + 500, height: self.bounds.height)
-    currentOffeset = scaleScrollView.contentOffset.x
-    let letfpadding = 0 //self.bounds.width / 2 - 40
-    let rightpadding = 0 //self.bounds.width - 40
-    //scaleScrollView.contentInset = UIEdgeInsets(top: 0, left: CGFloat(letfpadding), bottom: 0, right: CGFloat(rightpadding))
-    
     let indicatorLabel = UIView()
-    indicatorLabel.frame = CGRect(x: self.bounds.width / 2 - 2, y: 0, width: 8, height: 42)
+    indicatorLabel.frame = CGRect(x: self.bounds.width / 2 - 2, y: 0, width: 8, height: 35)
     indicatorLabel.layer.cornerRadius = 4
     indicatorLabel.backgroundColor = UIColor(hexString: "187ADC")
     self.addSubview(indicatorLabel)
-    
-    
    }
   
   
@@ -62,7 +67,9 @@ class ScaleViewContainer: UIView {
     
     scaleCollectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
     self.addSubview(scaleCollectionView)
-    scaleCollectionView.frame = self.bounds
+    let viewFrame = self.bounds
+    scaleCollectionView.frame = CGRect(x: viewFrame.origin.x, y: viewFrame.origin.y + 4, width: viewFrame.size.width, height: viewFrame.size.height)
+    scaleCollectionView.showsHorizontalScrollIndicator = false
     scaleCollectionView.delegate = self
     scaleCollectionView.dataSource = self
     scaleCollectionView.backgroundColor  = .white
@@ -71,24 +78,29 @@ class ScaleViewContainer: UIView {
     let letfpadding = self.bounds.width / 2
     let rightpadding = self.bounds.width / 2
     scaleCollectionView.contentInset =  UIEdgeInsets(top: 0, left: CGFloat(letfpadding), bottom: 0, right: CGFloat(rightpadding))
-    scaleCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CELL")
+    scaleCollectionView.register(ScaleCell.nib, forCellWithReuseIdentifier: ScaleCell.reuseIdentifier)
   }
+  
+  @objc func update() {
+    scaleCollectionView.scrollToItem(at: IndexPath(item: 3, section: 0), at: .right, animated: true)
+  }
+  
 }
 
 extension ScaleViewContainer: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 30
+    return scaleValues.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath)
-    cell.backgroundColor = .gray
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScaleCell.reuseIdentifier, for: indexPath) as! ScaleCell
+    cell.configure(scaleValues[indexPath.item], indexPath: indexPath)
     return cell
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 2, height: 30)
+    return CGSize(width: 2, height: collectionView.bounds.height)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -99,11 +111,18 @@ extension ScaleViewContainer: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension ScaleViewContainer: UIScrollViewDelegate {
   
-//  func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//    if currentOffeset > scrollView.contentOffset.x{
-//      print("moving right....")
-//    } else {
-//      print("moving left....")
-//    }
-//  }
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+    var tableCenter = self.scaleCollectionView.center
+    tableCenter = self.scaleCollectionView.convert(tableCenter, from: self.scaleCollectionView.superview!)
+    if let centerIndex = scaleCollectionView.indexPathForItem(at: tableCenter) {
+      print("Selected scale Val : \(scaleValues[centerIndex.item])")
+      delegate?.scaleValue(value: scaleValues[centerIndex.item].value)
+      self.currentIndexPath = centerIndex
+      let impacktFeedBack = UIImpactFeedbackGenerator(style: .light)
+      impacktFeedBack.prepare()
+      impacktFeedBack.impactOccurred(intensity: 5)
+      
+    }
+  }
 }
