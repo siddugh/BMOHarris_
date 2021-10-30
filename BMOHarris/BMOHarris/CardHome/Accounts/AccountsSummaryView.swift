@@ -9,6 +9,8 @@ import UIKit
 
 protocol AccountsSummaryViewDelegate: AnyObject {
   func showAllTransactions()
+  func showGoalDetails()
+  func showTransactionsDetails()
 }
 
 class AccountsSummaryView: UIView {
@@ -20,6 +22,7 @@ class AccountsSummaryView: UIView {
   var savAccummary:AccountSummary!
   var savAccHeightConstraint: NSLayoutConstraint!
   var accAccHeightConstraint: NSLayoutConstraint!
+  var goalCollectionView: GoalsCollectionView!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -165,6 +168,7 @@ class AccountsSummaryView: UIView {
     
     transactionView.showViewALlButton()
     transactionView.delegate = self
+    transactionView.selectedItem = self
   }
   
   
@@ -190,7 +194,7 @@ class AccountsSummaryView: UIView {
     layout.minimumInteritemSpacing = 0
     layout.itemSize = CGSize(width: 1000, height: 1000)
     layout.scrollDirection = .horizontal
-    let goalCollectionView = GoalsCollectionView(frame: CGRect(x: 0, y: 65 , width: self.bounds.width, height: 150), collectionViewLayout: layout)
+    goalCollectionView = GoalsCollectionView(frame: CGRect(x: 0, y: 65 , width: self.bounds.width, height: 150), collectionViewLayout: layout)
     self.addSubview(goalCollectionView)
     
     goalCollectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -200,6 +204,7 @@ class AccountsSummaryView: UIView {
     goalCollectionView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     
     goalCollectionView.backgroundColor = .white
+    goalCollectionView.goalsDelegate = self
     
     let goals = DataProvider().getGoals()
     goalCollectionView.loadGoals(goals: goals)
@@ -258,4 +263,18 @@ extension String{
 
         return ceil(boundingBox.width)
     }
+}
+
+
+extension AccountsSummaryView: GoalsCollectionViewDelegate {
+  func showDetailsOf(goal: GoalModel) {
+    delegate?.showGoalDetails()
+  }
+}
+
+
+extension AccountsSummaryView: SelectedItemDelegate {
+  func selectedItem(item: TransactionModel) {
+    delegate?.showTransactionsDetails()
+  }
 }

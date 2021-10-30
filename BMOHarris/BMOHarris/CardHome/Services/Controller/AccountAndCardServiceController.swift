@@ -178,7 +178,6 @@ class AccountAndCardServiceController: UIViewController {
     savingAccScrollView.showsVerticalScrollIndicator = false
     savingAccScrollView.contentSize = CGSize(width: cardView.bounds.width, height: 600)
     self.perform(#selector(showSavingAccDetails), with: nil, afterDelay: 0.0)
-
   }
 
   @objc func showSavingAccDetails() {
@@ -317,6 +316,16 @@ extension AccountAndCardServiceController: CardViewDelegate {
 
 
 extension AccountAndCardServiceController: AccountsSummaryViewDelegate {
+  func showTransactionsDetails() {
+    let controller = TransactionDetailViewController()
+    navigationController?.pushViewController(controller, animated: true)
+  }
+  
+  func showGoalDetails() {
+    let controller = DepositGoalAmountViewController()
+    self.navigationController?.pushViewController(controller, animated: true)
+  }
+  
   func showAllTransactions() {
     print("showAllTransactions...")
     let transactions = DataProvider().getTransactions()
@@ -371,5 +380,6 @@ extension AccountAndCardServiceController: AccountsContainerDelegate {
     }
   }
 }
+
 
 
