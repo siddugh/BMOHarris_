@@ -12,11 +12,14 @@ protocol AccountsSummaryViewDelegate: AnyObject {
 }
 
 class AccountsSummaryView: UIView {
-
  
   let searchView = UIView()
   var transactionView:  TransactionView!
   weak var delegate: AccountsSummaryViewDelegate?
+  
+  var savAccummary:AccountSummary!
+  var savAccHeightConstraint: NSLayoutConstraint!
+  var accAccHeightConstraint: NSLayoutConstraint!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -32,8 +35,11 @@ class AccountsSummaryView: UIView {
       self.perform(#selector(addSavingAccountSummary), with: nil, afterDelay: 0.1)
     case .kBOTH:
       print("both")
-    }    
+    }
+    
+    self.clipsToBounds = true
   }
+  
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
@@ -163,13 +169,20 @@ class AccountsSummaryView: UIView {
   
   
   @objc private func addSavingAccountSummary() {
-    let accsummary =  AccountSummary(frame: CGRect(x: 1, y: 1, width: self.bounds.width - 2, height: 55), type: .kSaving)
-    self.addSubview(accsummary)
-    accsummary.backgroundColor = .white
-    accsummary.layer.cornerRadius = 15
-    accsummary.layer.shadowOffset = .zero
-    accsummary.layer.shadowOpacity = 0.3
-    accsummary.layer.shadowRadius  = 1.0
+    savAccummary =  AccountSummary(frame: CGRect(x: 1, y: 1, width: self.bounds.width - 2, height: 100), type: .kSaving)
+    self.addSubview(savAccummary)
+    savAccummary.backgroundColor = .white
+    savAccummary.layer.cornerRadius = 15
+    savAccummary.layer.shadowOffset = .zero
+    savAccummary.layer.shadowOpacity = 0.3
+    savAccummary.layer.shadowRadius  = 1.0
+    
+    savAccummary.translatesAutoresizingMaskIntoConstraints = false
+    savAccummary.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 1).isActive = true
+    savAccummary.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -1).isActive = true
+    savAccummary.topAnchor.constraint(equalTo: self.topAnchor, constant: -1).isActive = true
+    savAccHeightConstraint =  savAccummary.heightAnchor.constraint(equalToConstant: 100)
+    savAccHeightConstraint.isActive = true
     
     
     let layout = UICollectionViewFlowLayout()
@@ -183,7 +196,7 @@ class AccountsSummaryView: UIView {
     goalCollectionView.translatesAutoresizingMaskIntoConstraints = false
     goalCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     goalCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-    goalCollectionView.topAnchor.constraint(equalTo: accsummary.bottomAnchor, constant: 10).isActive = true
+    goalCollectionView.topAnchor.constraint(equalTo: savAccummary.bottomAnchor, constant: 10).isActive = true
     goalCollectionView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     
     goalCollectionView.backgroundColor = .white
@@ -201,7 +214,25 @@ class AccountsSummaryView: UIView {
     scheduledSavView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     scheduledSavView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     scheduledSavView.topAnchor.constraint(equalTo: goalCollectionView.bottomAnchor, constant: 10).isActive = true
-    scheduledSavView.heightAnchor.constraint(equalToConstant: 200).isActive = true        
+    scheduledSavView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+    
+    addTapGesture()
+  }
+  
+  private func addTapGesture() {
+    savAccummary.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture)))
+  }
+
+  @objc func handleTapGesture() {
+    savAccummary.showSummary()
+    
+    self.savAccHeightConstraint.constant = !self.savAccummary.isShowingSummary ? 340 : 100
+    
+    UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut) {
+      self.layoutIfNeeded()
+    } completion: { _ in
+    }
+
   }
     
   

@@ -60,4 +60,9 @@ class ViewFactory {
 
     return headerView
   }
+  
+  func getSavingAccSummary() -> SavingAccountSummary {
+   return  UINib(nibName: "SavingAccountSummary", bundle: nil).instantiate(withOwner: nil, options: nil).first as! SavingAccountSummary
+  }
+
 }

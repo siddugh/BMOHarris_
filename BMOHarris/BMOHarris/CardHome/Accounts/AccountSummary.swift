@@ -56,6 +56,8 @@ class AccountSummary: UIView {
   let dividerLineLabel = UILabel()
   
   let leadingSpace:CGFloat = 15
+  var checkingAccSumHeight: NSLayoutConstraint!
+  var savAccSumHeight: NSLayoutConstraint!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -76,17 +78,18 @@ class AccountSummary: UIView {
   }
   
   private func initilize() {
-    addTapGesture()
-    addHeaderView()
+    //addTapGesture()
   }
   
   private func addSummary(type: AccountSummaryType) {
     
     switch type {
     case .kChecking:
+      addHeaderView()
       addCheckingSummary()
       break
     case .kSaving:
+      addSavingHeaderView()
       addSavingAccountSummary()
     }
   }
@@ -129,21 +132,84 @@ class AccountSummary: UIView {
     dividerLineLabel.heightAnchor.constraint(equalToConstant: 1).isActive = true
     dividerLineLabel.backgroundColor = UIColor(hexString: "D8D8D8")
     dividerLineLabel.alpha = 0
-    
   }
+  
+  func addSavingHeaderView() {
+    let checkingAcctSummary = UILabel()
+    checkingAcctSummary.text = "Account Summary"
+    self.addSubview(checkingAcctSummary)
+    checkingAcctSummary.translatesAutoresizingMaskIntoConstraints = false
+    checkingAcctSummary.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingSpace).isActive = true
+    checkingAcctSummary.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+    checkingAcctSummary.font = UIFont(name: "Rubik Medium", size: 14)
+    checkingAcctSummary.textColor = .black
+    
+    
+    self.addSubview(activeLabel)
+    activeLabel.text = "Active"
+    activeLabel.textColor = UIColor(hexString: "49951A")
+    activeLabel.translatesAutoresizingMaskIntoConstraints = false
+    activeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -35).isActive = true
+    activeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+    activeLabel.font = UIFont(name: "Rubik Light", size: 14)
+    
+    arroImageView.image = UIImage(named: "downarrow-1")
+    self.addSubview(arroImageView)
+    arroImageView.translatesAutoresizingMaskIntoConstraints = false
+    arroImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
+    arroImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 25).isActive = true
+    arroImageView.widthAnchor.constraint(equalToConstant: 8).isActive = true
+    arroImageView.heightAnchor.constraint(equalToConstant: 8).isActive = true
+    arroImageView.backgroundColor = .white
+    arroImageView.contentMode = .scaleAspectFit
+    
+    
+    addSavingAccountSummary()
+    
+    self.addSubview(dividerLineLabel)
+    dividerLineLabel.translatesAutoresizingMaskIntoConstraints = false
+    dividerLineLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingSpace).isActive = true
+    dividerLineLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -leadingSpace).isActive = true
+    dividerLineLabel.topAnchor.constraint(equalTo: savingAccSummary!.bottomAnchor, constant: 0).isActive = true
+    dividerLineLabel.heightAnchor.constraint(equalToConstant: 1).isActive = true
+    dividerLineLabel.backgroundColor = UIColor(hexString: "D8D8D8")
+    dividerLineLabel.alpha = 1
+    
+    let rounduplabel = UILabel()
+    rounduplabel.text = "Round-up"
+    self.addSubview(rounduplabel)
+    rounduplabel.translatesAutoresizingMaskIntoConstraints = false
+    rounduplabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingSpace).isActive = true
+    rounduplabel.topAnchor.constraint(equalTo: dividerLineLabel.bottomAnchor, constant: 10).isActive = true
+    rounduplabel.font = UIFont(name: "Rubik Medium", size: 14)
+    rounduplabel.textColor = .black
+
+  }
+
+  
   
   private func addCheckingSummary() {
     checkingAccSummary = UINib(nibName: "CheckingAccountSummary", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CheckingAccountSummary
     self.addSubview(checkingAccSummary!)
     checkingAccSummary?.frame = CGRect(x: 10, y: 55, width: self.bounds.width - 20, height: 0)
     checkingAccSummary?.layer.cornerRadius = 15
+    
+    addTapGesture()
   }
-  
+    
   private func addSavingAccountSummary() {
     savingAccSummary = UINib(nibName: "SavingAccountSummary", bundle: nil).instantiate(withOwner: nil, options: nil).first as? SavingAccountSummary
     self.addSubview(savingAccSummary!)
+    savingAccSummary?.clipsToBounds = true
     savingAccSummary?.frame = CGRect(x: 10, y: 55, width: self.bounds.width - 20, height: 0)
     savingAccSummary?.layer.cornerRadius = 15
+    
+    savingAccSummary?.translatesAutoresizingMaskIntoConstraints = false
+    savingAccSummary?.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+    savingAccSummary?.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
+    savingAccSummary?.topAnchor.constraint(equalTo: self.topAnchor, constant: 55).isActive = true
+    savAccSumHeight = savingAccSummary?.heightAnchor.constraint(equalToConstant: 0)
+    savAccSumHeight.isActive = true
   }
 
   
@@ -153,20 +219,10 @@ class AccountSummary: UIView {
   
   @objc private func handleTapGesture() {
     print("handleTapGesture...")
-    if !isShowingSummary {
-      switch type {
-      case .kChecking:
-        addCheckingSummary()
-        print("")
-      case .kSaving:
-        addSavingAccountSummary()
-      }
-    }
     showSummary()
-    isShowingSummary = !isShowingSummary
   }
   
-  private func showSummary() {
+  func showSummary() {
     let frame = self.frame
     var summaryFrame: CGRect = .zero
     let checkingAccSumHeight: CGFloat = 150
@@ -185,17 +241,25 @@ class AccountSummary: UIView {
       summaryFrame = savingAccSummary!.frame
       height = !isShowingSummary ? 250 : 0
       animateFrame = !isShowingSummary ? CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height:frame.size.height +  savAccSumHeight) : originalFrame
-
     }
-    
-    let divicerLineAlpha  = !isShowingSummary ? 1 : 0
+    var divicerLineAlpha = 1
+    if self.type == .kChecking {
+      divicerLineAlpha  = !isShowingSummary ? 1 : 0
+    }    
     
     summaryFrame = CGRect(x: summaryFrame.origin.x, y: summaryFrame.origin.y, width: summaryFrame.size.width, height: CGFloat(height))
+    
+    if self.savAccSumHeight != nil {
+      self.savAccSumHeight.constant = CGFloat(height)
+    }
+    
     UIView.animate(withDuration: 0.5) {
       self.frame = animateFrame
+      self.layoutIfNeeded()
       self.dividerLineLabel.alpha = CGFloat(divicerLineAlpha)
     } completion: { _ in
-      self.removeSummary()
+      self.isShowingSummary = !self.isShowingSummary
+      //self.removeSummary()
     }
   }
   
