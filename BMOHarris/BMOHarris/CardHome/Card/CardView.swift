@@ -38,6 +38,7 @@ class CardView: UIView {
     
     initilize()
     self.clipsToBounds = true
+    updateCardNumber()
   }
   
   func initilize() {
@@ -93,10 +94,24 @@ class CardView: UIView {
       
     }
   }
+  
+  
+  func updateCardNumber() {
+    let cardNumtxt = self.customSwitch.isLocked ?  "0000  0000  0000  0129" : "1900  0065  2818  4129"
+    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut) {
+      self.cardNumLabel.alpha = 0
+    } completion: { _ in
+      UIView.animate(withDuration: 0.6) {
+        self.cardNumLabel.text = cardNumtxt
+        self.cardNumLabel.alpha = 1
+      }
+    }
+  }
 }
 
 extension CardView: FBCustomSwitchDelegate {
   func onSwitchActionCompletion() {
+    updateCardNumber()
     self.delegate?.onAuthenticationSuccess(bLocked: self.customSwitch.isLocked)
   }
   

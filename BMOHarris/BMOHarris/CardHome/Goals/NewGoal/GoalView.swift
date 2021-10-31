@@ -7,11 +7,15 @@
 
 import UIKit
 
+protocol GoalViewDelegate: AnyObject {
+  func showAllGoals()
+}
+
 class GoalView: UIView {
 
   var goalViewModel: GoalsViewModel?
   var goalsCollectionView: GoalsCollectionView!
-  
+  weak var delegate: GoalViewDelegate?
   let viewAllButton = UIButton()
   
   override init(frame: CGRect) {
@@ -30,7 +34,6 @@ class GoalView: UIView {
     if let goals = goalViewModel.goals {
       goalsCollectionView.loadGoals(goals: goals)
     }
-    
   }
 
   private func addGoalView() {
@@ -118,6 +121,7 @@ class GoalView: UIView {
   
   @objc func viewAllAction() {
     print("viewAllAction....")
+    delegate?.showAllGoals()
   }
   
 }

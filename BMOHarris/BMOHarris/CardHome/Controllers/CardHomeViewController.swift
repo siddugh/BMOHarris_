@@ -192,6 +192,7 @@ class CardHomeViewController: UIViewController {
     homeCell?.homeView.transactionView.selectedItem = self
     homeCell?.homeView.scheduledPaymentView.delegate = self
     homeCell?.homeView.goalView.goalsCollectionView.goalsDelegate = self
+    homeCell?.homeView.goalView.delegate = self
     homeCell?.homeView.spendAnalysisView.transactionCollectionView.transDelegate = self
     homeCell?.homeView.spendAnalysisView.delegate = self
 
@@ -229,7 +230,7 @@ extension CardHomeViewController: UICollectionViewDelegate, UICollectionViewData
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: collectionView.bounds.width, height: 2000)
+    return CGSize(width: collectionView.bounds.width, height: 1600)
   }
 }
 
@@ -241,8 +242,6 @@ extension CardHomeViewController: CardViewDelegate {
     } else {
       homeCell?.homeView.lockCardView()
     }
-    //homeCell?.homeView.cardView.customSwitch.isLocked = Helper.getVirtualCardStatus()
-    //homeCell?.homeView.cardView.switchAction()
   }
   
   func onAuthenticationFailed() {
@@ -359,6 +358,13 @@ extension CardHomeViewController: UIGestureRecognizerDelegate {
   func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
       
     return navigationController!.viewControllers.count > 1
+  }
+}
+
+extension CardHomeViewController: GoalViewDelegate {
+  func showAllGoals() {
+    let controller = SavingGoalsViewController()
+    navigationController?.pushViewController(controller, animated: true)
   }
 }
 

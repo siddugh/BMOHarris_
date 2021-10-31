@@ -31,11 +31,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-YB-mxC" customClass="FBCustomSwitch" customModule="BMOHarris" customModuleProvider="target">
-                            <rect key="frame" x="359" y="14.5" width="80" height="30"/>
+                            <rect key="frame" x="364" y="15.5" width="75" height="28"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="bsY-Wi-0ye"/>
-                                <constraint firstAttribute="width" constant="80" id="yrn-VL-YI0"/>
+                                <constraint firstAttribute="height" constant="28" id="bsY-Wi-0ye"/>
+                                <constraint firstAttribute="width" constant="75" id="yrn-VL-YI0"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="image" keyPath="nobLockedImage" value="lockwhite"/>

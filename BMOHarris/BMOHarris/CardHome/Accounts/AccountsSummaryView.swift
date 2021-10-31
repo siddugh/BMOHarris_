@@ -38,9 +38,7 @@ class AccountsSummaryView: UIView {
       self.perform(#selector(addSavingAccountSummary), with: nil, afterDelay: 0.1)
     case .kBOTH:
       print("both")
-    }
-    
-    self.clipsToBounds = true
+    }    
   }
   
   
@@ -87,7 +85,6 @@ class AccountsSummaryView: UIView {
     
     
     let stackViewContainer  = UIView()
-    stackViewContainer.clipsToBounds = true
     self.addSubview(stackViewContainer)
     stackViewContainer.translatesAutoresizingMaskIntoConstraints = false
     stackViewContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
@@ -196,25 +193,25 @@ class AccountsSummaryView: UIView {
     layout.scrollDirection = .horizontal
     goalCollectionView = GoalsCollectionView(frame: CGRect(x: 0, y: 65 , width: self.bounds.width, height: 150), collectionViewLayout: layout)
     self.addSubview(goalCollectionView)
-    
+
     goalCollectionView.translatesAutoresizingMaskIntoConstraints = false
     goalCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     goalCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     goalCollectionView.topAnchor.constraint(equalTo: savAccummary.bottomAnchor, constant: 10).isActive = true
     goalCollectionView.heightAnchor.constraint(equalToConstant: 150).isActive = true
-    
+
     goalCollectionView.backgroundColor = .white
     goalCollectionView.goalsDelegate = self
-    
+
     let goals = DataProvider().getGoals()
     goalCollectionView.loadGoals(goals: goals)
-    
+
     let scheduledSavView = ScheduledSavingsView(goalsViewModel: GoalsViewModel(goals: goals))
-    self.addSubview(scheduledSavView)    
+    self.addSubview(scheduledSavView)
     scheduledSavView.frame = CGRect(x: 0, y: 225, width: self.bounds.width, height: 200)
     scheduledSavView.enableScrolling(bEnable: false)
     scheduledSavView.showViewALlButton()
-    
+
     scheduledSavView.translatesAutoresizingMaskIntoConstraints = false
     scheduledSavView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
     scheduledSavView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
@@ -230,9 +227,7 @@ class AccountsSummaryView: UIView {
 
   @objc func handleTapGesture() {
     savAccummary.showSummary()
-    
-    self.savAccHeightConstraint.constant = !self.savAccummary.isShowingSummary ? 340 : 100
-    
+    self.savAccHeightConstraint.constant = !self.savAccummary.isShowingSummary ? 440 : 100
     UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut) {
       self.layoutIfNeeded()
     } completion: { _ in

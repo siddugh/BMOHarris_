@@ -90,7 +90,7 @@ class AccountSummary: UIView {
       break
     case .kSaving:
       addSavingHeaderView()
-      addSavingAccountSummary()
+      //addSavingAccountSummary()
     }
   }
   
@@ -178,6 +178,7 @@ class AccountSummary: UIView {
     let rounduplabel = UILabel()
     rounduplabel.text = "Round-up"
     self.addSubview(rounduplabel)
+    
     rounduplabel.translatesAutoresizingMaskIntoConstraints = false
     rounduplabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingSpace).isActive = true
     rounduplabel.topAnchor.constraint(equalTo: dividerLineLabel.bottomAnchor, constant: 10).isActive = true
@@ -200,15 +201,14 @@ class AccountSummary: UIView {
   private func addSavingAccountSummary() {
     savingAccSummary = UINib(nibName: "SavingAccountSummary", bundle: nil).instantiate(withOwner: nil, options: nil).first as? SavingAccountSummary
     self.addSubview(savingAccSummary!)
-    savingAccSummary?.clipsToBounds = true
-    savingAccSummary?.frame = CGRect(x: 10, y: 55, width: self.bounds.width - 20, height: 0)
-    savingAccSummary?.layer.cornerRadius = 15
-    
+    savingAccSummary?.frame =  .zero // CGRect(x: 10, y: 55, width: self.bounds.width - 20, height: 0)
+    //savingAccSummary?.layer.cornerRadius = 15
+
     savingAccSummary?.translatesAutoresizingMaskIntoConstraints = false
     savingAccSummary?.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
     savingAccSummary?.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-    savingAccSummary?.topAnchor.constraint(equalTo: self.topAnchor, constant: 55).isActive = true
-    savAccSumHeight = savingAccSummary?.heightAnchor.constraint(equalToConstant: 0)
+    savingAccSummary?.topAnchor.constraint(equalTo: activeLabel.bottomAnchor, constant: 15).isActive = true
+    self.savAccSumHeight = savingAccSummary?.heightAnchor.constraint(equalToConstant: 0)
     savAccSumHeight.isActive = true
   }
 
@@ -222,7 +222,7 @@ class AccountSummary: UIView {
     showSummary()
   }
   
-  func showSummary() {
+@objc func showSummary() {
     let frame = self.frame
     var summaryFrame: CGRect = .zero
     let checkingAccSumHeight: CGFloat = 150
@@ -239,7 +239,7 @@ class AccountSummary: UIView {
     }
     if savingAccSummary != nil {
       summaryFrame = savingAccSummary!.frame
-      height = !isShowingSummary ? 250 : 0
+      height = !isShowingSummary ? 340 : 0
       animateFrame = !isShowingSummary ? CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height:frame.size.height +  savAccSumHeight) : originalFrame
     }
     var divicerLineAlpha = 1
@@ -249,12 +249,14 @@ class AccountSummary: UIView {
     
     summaryFrame = CGRect(x: summaryFrame.origin.x, y: summaryFrame.origin.y, width: summaryFrame.size.width, height: CGFloat(height))
     
-    if self.savAccSumHeight != nil {
+  if self.type == .kSaving {
       self.savAccSumHeight.constant = CGFloat(height)
     }
     
     UIView.animate(withDuration: 0.5) {
-      self.frame = animateFrame
+      if self.type == .kChecking {
+        self.frame = animateFrame
+      }
       self.layoutIfNeeded()
       self.dividerLineLabel.alpha = CGFloat(divicerLineAlpha)
     } completion: { _ in
