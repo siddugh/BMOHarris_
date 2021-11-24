@@ -19,9 +19,12 @@ class AccountsSummaryView: UIView {
   var transactionView:  TransactionView!
   weak var delegate: AccountsSummaryViewDelegate?
   
+  var checkingAccummary:AccountSummary!
+  var checkingAccHeightConstraint: NSLayoutConstraint!
+  
+  
   var savAccummary:AccountSummary!
   var savAccHeightConstraint: NSLayoutConstraint!
-  var accAccHeightConstraint: NSLayoutConstraint!
   var goalCollectionView: GoalsCollectionView!
   
   override init(frame: CGRect) {
@@ -48,21 +51,32 @@ class AccountsSummaryView: UIView {
     
   // Need Rework
   @objc private func addCheckingAccountSummary() {
-    let accsummary =  AccountSummary(frame: CGRect(x: 1, y: 1, width: self.bounds.width - 2, height: 55), type: .kChecking)
-    self.addSubview(accsummary)
-    accsummary.backgroundColor = .white
-    accsummary.layer.cornerRadius = 15
-    accsummary.layer.shadowOffset = .zero
-    accsummary.layer.shadowOpacity = 0.3
-    accsummary.layer.shadowRadius  = 1.0
+    checkingAccummary =  AccountSummary(frame: CGRect(x: 1, y: 1, width: self.bounds.width - 2, height: 55), type: .kChecking)
+    self.addSubview(checkingAccummary)
+    checkingAccummary.backgroundColor = .white
+    checkingAccummary.layer.cornerRadius = 15
+    checkingAccummary.layer.shadowOffset = .zero
+    checkingAccummary.layer.shadowOpacity = 0.3
+    checkingAccummary.layer.shadowRadius  = 1.0
+    //checkingAccummary.clipsToBounds = true
+    
+    checkingAccummary.translatesAutoresizingMaskIntoConstraints = false
+    checkingAccummary.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 1).isActive = true
+    checkingAccummary.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -2).isActive = true
+    checkingAccummary.topAnchor.constraint(equalTo: self.topAnchor, constant: -1).isActive = true
+    checkingAccHeightConstraint =  checkingAccummary.heightAnchor.constraint(equalToConstant: 55)
+    checkingAccHeightConstraint.isActive = true
+    
+    
+    
+    
         
     self.addSubview(searchView)
     searchView.frame = CGRect(x: 0, y: 70, width: self.bounds.width, height: 50)
-    
     searchView.translatesAutoresizingMaskIntoConstraints = false
     searchView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 1).isActive = true
     searchView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -1).isActive = true
-    searchView.topAnchor.constraint(equalTo: accsummary.bottomAnchor, constant: 15).isActive = true
+    searchView.topAnchor.constraint(equalTo: checkingAccummary.bottomAnchor, constant: 15).isActive = true
     searchView.heightAnchor.constraint(equalToConstant: 50).isActive  = true
         
     searchView.backgroundColor = .white
@@ -91,28 +105,47 @@ class AccountsSummaryView: UIView {
     stackViewContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
     stackViewContainer.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 15).isActive = true
     stackViewContainer.heightAnchor.constraint(equalToConstant: 25).isActive = true
-    stackViewContainer.backgroundColor = .yellow
+    stackViewContainer.backgroundColor = .white
 
     
-    let stackView = UIStackView()
-    stackViewContainer.addSubview(stackView)
-            
-    stackView.alignment = .center
-    stackView.distribution = .fillEqually
+//    let stackView = UIStackView()
+//    stackViewContainer.addSubview(stackView)
+//
+//    stackView.alignment = .center
+//    stackView.distribution = .fillEqually
+//
+//    stackView.spacing = 10
+//    stackView.axis = .horizontal
+//
+//
+//    stackView.translatesAutoresizingMaskIntoConstraints = false
+//    stackView.leadingAnchor.constraint(equalTo: stackViewContainer.leadingAnchor, constant: 0).isActive = true
+//    stackView.trailingAnchor.constraint(equalTo: stackViewContainer.trailingAnchor, constant: 5).isActive = true
+//    stackView.topAnchor.constraint(equalTo: stackViewContainer.topAnchor, constant: 0).isActive = true
+//    stackView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//    stackView.backgroundColor = .white
     
-    stackView.spacing = 10
-    stackView.axis = .horizontal
     
-      
-    stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.leadingAnchor.constraint(equalTo: stackViewContainer.leadingAnchor, constant: 0).isActive = true
-    stackView.trailingAnchor.constraint(equalTo: stackViewContainer.trailingAnchor, constant: 5).isActive = true
-    stackView.topAnchor.constraint(equalTo: stackViewContainer.topAnchor, constant: 0).isActive = true
-    stackView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-    stackView.backgroundColor = .white
+    let hStackView = UIStackView()
+    hStackView.alignment = .leading
+    hStackView.distribution = .fillEqually
+    hStackView.axis = .horizontal
+    self.addSubview(hStackView)
+    
+    hStackView.translatesAutoresizingMaskIntoConstraints = false
+    hStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+    hStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+    hStackView.topAnchor.constraint(equalTo: searchView.bottomAnchor, constant: 25).isActive = true
+    //hStackView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+    hStackView.backgroundColor = .yellow
+
+    
+    
+    
     
     
     let categories = ["Income", "Spending", "Shoping", "Food", "Health"]
+    
     var xPos = 0
     for  i in 0..<categories.count {
       
@@ -124,8 +157,10 @@ class AccountsSummaryView: UIView {
       v.layer.cornerRadius = 5
       v.backgroundColor = UIColor(hexString: "A8A8A8",alpha: 0.3)
       
-      let label = UILabel()
       
+      print("v.frame : \(v.frame)")
+      
+      let label = UILabel()
       label.font = font
       label.sizeToFit()
       
@@ -140,16 +175,32 @@ class AccountsSummaryView: UIView {
       label.centerYAnchor.constraint(equalTo: v.centerYAnchor, constant: 0).isActive = true
       label.centerXAnchor.constraint(equalTo: v.centerXAnchor, constant: 0).isActive = true
       
+      label.backgroundColor = .clear
       print("labelwidth: \(width)")
       
-      //stackView.addArrangedSubview(v)
-      //stackArray.append(v)
       stackViewContainer.addSubview(v)
+      //hStackView.addArrangedSubview(v)
       
       xPos += 68
     }
+    
+    addCheckingTapGesture()
+    
     addTransactionView()
             
+  }
+  
+  private func addCheckingTapGesture() {
+    checkingAccummary.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCheckAccTapGesture)))
+  }
+
+  @objc func handleCheckAccTapGesture() {
+    checkingAccummary.showSummary()
+    self.checkingAccHeightConstraint.constant = !self.checkingAccummary.isShowingSummary ? 208 : 55
+    UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut) {
+      self.layoutIfNeeded()
+    } completion: { _ in
+    }
   }
   
   private func addTransactionView() {

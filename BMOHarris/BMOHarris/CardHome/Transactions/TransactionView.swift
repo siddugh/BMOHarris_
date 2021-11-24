@@ -37,12 +37,16 @@ class TransactionView: UIView {
     self.init()
     self.transactionsViewModel = transactionsViewModel
     addTransactionView()
+    //self.perform(#selector(addTransactionView), with: nil, afterDelay: 0.0)
+    
     self.backgroundColor = .white
     
-    loadData(transactions: transactionsViewModel.transactions)
+    //loadData(transactions: transactionsViewModel.transactions)
+    self.layoutIfNeeded()
   }
   
-  private func addTransactionView() {
+  
+  @objc private func addTransactionView() {
     
     let labelBGView = UIView()
     self.addSubview(labelBGView)
@@ -94,6 +98,10 @@ class TransactionView: UIView {
     transactionCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30).isActive = true
     transactionCollectionView.transDelegate = self
     //self.transactionsViewModel
+    
+    if let transactions = transactionsViewModel?.transactions {
+      loadData(transactions: transactions)
+    }
   }
   
   func showViewALlButton() {
@@ -123,11 +131,15 @@ class TransactionView: UIView {
     viewAllButton.layer.cornerRadius = 11
     
     viewAllButton.addTarget(self, action: #selector(viewAllAction), for: .touchUpInside)
+    
+    self.layoutIfNeeded()
 
   }
   
   func loadData(transactions: [TransactionModel]) {
-    transactionCollectionView.updateTransactions(transactions: transactions)
+    if transactionCollectionView != nil {
+      transactionCollectionView.updateTransactions(transactions: transactions)
+    }
   }
   
   @objc func viewAllAction() {
@@ -135,7 +147,9 @@ class TransactionView: UIView {
   }
     
   func enableScrolling(bEnable: Bool) {
-    transactionCollectionView.isScrollEnabled = bEnable
+    if transactionCollectionView != nil {
+      transactionCollectionView.isScrollEnabled = bEnable
+    }
   }
   
 }

@@ -192,10 +192,17 @@ class AccountSummary: UIView {
   private func addCheckingSummary() {
     checkingAccSummary = UINib(nibName: "CheckingAccountSummary", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CheckingAccountSummary
     self.addSubview(checkingAccSummary!)
-    checkingAccSummary?.frame = CGRect(x: 10, y: 55, width: self.bounds.width - 20, height: 0)
+    //checkingAccSummary?.frame = CGRect(x: 10, y: 55, width: self.bounds.width - 20, height: 0)
+    checkingAccSummary?.translatesAutoresizingMaskIntoConstraints = false
+    checkingAccSummary?.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
+    checkingAccSummary?.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
+    checkingAccSummary?.topAnchor.constraint(equalTo: self.topAnchor, constant: 55).isActive = true
+    checkingAccSumHeight = checkingAccSummary?.heightAnchor.constraint(equalToConstant: 0)
+    checkingAccSumHeight.isActive = true
+    
     checkingAccSummary?.layer.cornerRadius = 15
     
-    addTapGesture()
+    //addTapGesture()
   }
     
   private func addSavingAccountSummary() {
@@ -252,11 +259,14 @@ class AccountSummary: UIView {
   if self.type == .kSaving {
       self.savAccSumHeight.constant = CGFloat(height)
     }
-    
+  if self.type == .kChecking {
+      self.checkingAccSumHeight.constant = CGFloat(height)
+    }
+
     UIView.animate(withDuration: 0.5) {
-      if self.type == .kChecking {
-        self.frame = animateFrame
-      }
+//      if self.type == .kChecking {
+//        self.frame = animateFrame
+//      }
       self.layoutIfNeeded()
       self.dividerLineLabel.alpha = CGFloat(divicerLineAlpha)
     } completion: { _ in

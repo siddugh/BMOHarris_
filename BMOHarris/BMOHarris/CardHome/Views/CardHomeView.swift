@@ -30,7 +30,9 @@ class CardHomeView: UIView {
     addPaymentView()
     addSpendAnalysisView()
     addCouponsView()
+    self.layoutIfNeeded()
   }
+    
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)

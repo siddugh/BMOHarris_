@@ -27,6 +27,8 @@ class CardHomeViewController: UIViewController {
       setupUI()
       self.perform(#selector(updatePhysicalMessage), with: nil, afterDelay: 0.0)
       self.perform(#selector(setDelayedDelegate), with: nil, afterDelay: 0.3)
+      self.view.layoutIfNeeded()
+      self.view.layoutSubviews()
     }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -197,6 +199,11 @@ class CardHomeViewController: UIViewController {
     homeCell?.homeView.spendAnalysisView.delegate = self
 
   }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+  }
+
 }
 
 
@@ -230,7 +237,7 @@ extension CardHomeViewController: UICollectionViewDelegate, UICollectionViewData
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: collectionView.bounds.width, height: 1600)
+    return CGSize(width: collectionView.bounds.width, height: 1700)
   }
 }
 
